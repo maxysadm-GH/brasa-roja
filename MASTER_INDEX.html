@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Master Brand Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--charcoal);
+            color: var(--crema);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .header svg { width: 120px; margin-bottom: 20px; }
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+        }
+        .header h1 .brasa { color: var(--brasa-gold); }
+        .header h1 .roja { color: var(--roja-red); }
+        .header .tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--brasa-gold);
+        }
+        .header .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            margin-top: 15px;
+            color: rgba(245, 239, 224, 0.7);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--roja-red);
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--brasa-gold);
+            margin-bottom: 25px;
+        }
+
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .folder-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(201, 136, 43, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        .folder-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--brasa-gold);
+            transform: translateY(-2px);
+        }
+        .folder-card .icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .folder-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .folder-card p {
+            font-size: 0.9rem;
+            color: rgba(245, 239, 224, 0.7);
+            margin-bottom: 15px;
+        }
+        .folder-card .path {
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: var(--brasa-gold);
+            background: rgba(0,0,0,0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .file-tree {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 25px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+        .file-tree .folder { color: var(--brasa-gold); }
+        .file-tree .file { color: var(--crema); margin-left: 25px; }
+        .file-tree .subfolder { color: var(--roja-red); margin-left: 25px; }
+        .file-tree .subfile { color: rgba(245, 239, 224, 0.7); margin-left: 50px; }
+
+        .quick-start {
+            background: linear-gradient(135deg, var(--roja-red), var(--deep-ember));
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .quick-start h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .quick-start ol {
+            margin-left: 20px;
+            line-height: 2;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(201, 136, 43, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <svg viewBox="0 0 100 100">
+                <ellipse cx="50" cy="78" rx="35" ry="10" fill="none" stroke="#C9882B" stroke-width="2.5"/>
+                <path d="M50 10 Q70 35 60 50 Q75 45 65 70 Q55 55 50 78 Q45 55 35 70 Q25 45 40 50 Q30 35 50 10" fill="#C63333"/>
+                <path d="M50 25 Q58 40 54 52 Q50 42 50 65 Q50 42 46 52 Q42 40 50 25" fill="#C9882B"/>
+                <circle cx="60" cy="8" r="2" fill="#C9882B"/>
+                <circle cx="55" cy="4" r="1.5" fill="#C63333"/>
+            </svg>
+            <h1><span class="brasa">BRASA</span><span class="roja">ROJA</span></h1>
+            <div class="tagline">Tradición Familiar</div>
+            <div class="subtitle">COMPLETE BRAND SYSTEM</div>
+        </div>
+
+        <!-- Main Folders -->
+        <div class="section">
+            <h2 class="section-title">Main Folders</h2>
+            <div class="folder-grid">
+                <div class="folder-card">
+                    <div class="icon">📁</div>
+                    <h3>Brand_Assets</h3>
+                    <p>All logo files (SVG), color palettes, patterns. Ready for conversion to PNG/JPG.</p>
+                    <div class="path">/Brand_Assets/</div>
+                </div>
+                <div class="folder-card">
+                    <div class="icon">📦</div>
+                    <h3>Brand_Package</h3>
+                    <p>Business cards, email signatures, social media guidelines, menu templates, TV displays.</p>
+                    <div class="path">/Brand_Package/</div>
+                </div>
+                <div class="folder-card">
+                    <div class="icon">📋</div>
+                    <h3>Deliverables</h3>
+                    <p>Website setup checklist, launch tasks, implementation guides.</p>
+                    <div class="path">/Deliverables/</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Complete File Tree -->
+        <div class="section">
+            <h2 class="section-title">Complete File Structure</h2>
+            <div class="file-tree">
+                <div class="folder">BrasaRoja/</div>
+                <div class="file">MASTER_INDEX.html ← You are here</div>
+                <div class="file">BRASA_ROJA_Brand_Guidelines.html</div>
+                <div class="file">BRASA_ROJA_Brand_Guidelines.md</div>
+                <div class="file">[Original logo files...]</div>
+
+                <div class="subfolder">Brand_Assets/</div>
+                <div class="subfile">README_Asset_Index.md</div>
+                <div class="subfile">Logos/Primary/ (3 SVG files)</div>
+                <div class="subfile">Logos/Secondary/ (1 SVG file)</div>
+                <div class="subfile">Logos/Icon_Only/ (2 SVG files)</div>
+                <div class="subfile">Logos/Wordmark/ (2 SVG files)</div>
+                <div class="subfile">Logos/Monochrome/ (3 SVG files)</div>
+                <div class="subfile">Colors/BrasaRoja_Color_Palette.svg</div>
+                <div class="subfile">Patterns/BrasaRoja_Pattern_Flame.svg</div>
+                <div class="subfile">Digital/Favicon/favicon.svg</div>
+
+                <div class="subfolder">Brand_Package/</div>
+                <div class="subfile">00_README_Brand_Package_Index.html</div>
+                <div class="subfile">01_Business_Cards.html</div>
+                <div class="subfile">02_Email_Signature.html</div>
+                <div class="subfile">03_Social_Media_Guidelines.html</div>
+                <div class="subfile">04_Menu_Template_Print.html</div>
+                <div class="subfile">05_TV_Digital_Menu_Board.html</div>
+                <div class="subfile">06_Instagram_Templates.html</div>
+
+                <div class="subfolder">Deliverables/</div>
+                <div class="subfile">Website_Setup_Checklist.html</div>
+            </div>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="quick-start">
+            <h3>Quick Start Guide</h3>
+            <ol>
+                <li><strong>View brand guidelines:</strong> Open BRASA_ROJA_Brand_Guidelines.html in browser</li>
+                <li><strong>Get logo files:</strong> Navigate to Brand_Assets/Logos/ - all SVG files are ready</li>
+                <li><strong>Convert to PNG/JPG:</strong> See README_Asset_Index.md for conversion instructions</li>
+                <li><strong>Business cards:</strong> Open Brand_Package/01_Business_Cards.html, send specs to printer</li>
+                <li><strong>Set up website:</strong> Follow Deliverables/Website_Setup_Checklist.html</li>
+                <li><strong>Social media:</strong> Use Brand_Package/03_Social_Media_Guidelines.html for content strategy</li>
+            </ol>
+        </div>
+
+        <!-- Logo Variants Summary -->
+        <div class="section" style="margin-top: 50px;">
+            <h2 class="section-title">Logo Variants Summary (12 SVG Files)</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <tr style="background: rgba(255,255,255,0.1);">
+                    <th style="padding: 12px; text-align: left; font-family: 'Cinzel', serif;">Variant</th>
+                    <th style="padding: 12px; text-align: left; font-family: 'Cinzel', serif;">File</th>
+                    <th style="padding: 12px; text-align: left; font-family: 'Cinzel', serif;">Use Case</th>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Primary (Dark BG)</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Primary_Dark.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Main signage, dark websites</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Primary (Light BG)</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Primary_Light.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Print menus, light backgrounds</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Primary (Transparent)</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Primary_Transparent.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Overlay on photos</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Horizontal</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Horizontal.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Website header, letterhead</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Icon Only</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Icon_Color.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">App icons, small spaces</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Icon Square (512px)</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Icon_Square.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Social media profiles</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Wordmark</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Wordmark_Color.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Text-only applications</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Wordmark + Tagline</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Wordmark_Tagline.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Footer, marketing</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Monochrome White</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_White.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Dark uniforms, embroidery</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Monochrome Black</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Black.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Fax, newspaper, receipts</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Monochrome Gold</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">BrasaRoja_Gold.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Foil stamping, premium print</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Favicon</td>
+                    <td style="padding: 12px; font-family: monospace; font-size: 0.8rem; color: var(--brasa-gold);">favicon.svg</td>
+                    <td style="padding: 12px; color: rgba(245,239,224,0.7);">Browser tab icon</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div style="font-family: 'Cinzel', serif; font-size: 1.3rem;">
+                <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+            </div>
+            <div style="font-family: 'Parisienne', cursive; color: var(--brasa-gold); font-size: 1.2rem; margin-top: 5px;">Tradición Familiar</div>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: rgba(245,239,224,0.5);">Complete Brand System v1.0 | January 2026</p>
+        </div>
+    </div>
+</body>
+</html>

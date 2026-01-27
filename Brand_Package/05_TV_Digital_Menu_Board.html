@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Digital Menu Board (TV Display)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #000;
+            overflow: hidden;
+        }
+
+        /* 16:9 TV Display - 1920x1080 */
+        .tv-display {
+            width: 1920px;
+            height: 1080px;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 50%, #0d0d0d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated flame background effect */
+        .flame-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 300px;
+            background: linear-gradient(to top,
+                rgba(198, 51, 51, 0.3) 0%,
+                rgba(201, 136, 43, 0.1) 50%,
+                transparent 100%);
+            animation: flicker 3s ease-in-out infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        /* Header Bar */
+        .header-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            z-index: 10;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section svg {
+            width: 70px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .logo-text .brasa { color: var(--brasa-gold); }
+        .logo-text .roja { color: var(--roja-red); }
+
+        .tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.5rem;
+            color: var(--brasa-gold);
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .time-display {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--crema);
+        }
+
+        .date-display {
+            font-size: 1rem;
+            color: var(--brasa-gold);
+        }
+
+        /* Main Content Area */
+        .content-area {
+            position: absolute;
+            top: 120px;
+            left: 60px;
+            right: 60px;
+            bottom: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Menu Column */
+        .menu-column {
+            background: rgba(0,0,0,0.5);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid rgba(201, 136, 43, 0.3);
+        }
+
+        .column-header {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--brasa-gold);
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .column-header .spanish {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.2rem;
+            color: var(--brasa-gold);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .menu-item-tv {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-item-tv:last-child {
+            border-bottom: none;
+        }
+
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-name-tv {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--crema);
+            font-weight: 600;
+        }
+
+        .item-price-tv {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--brasa-gold);
+            font-weight: 700;
+        }
+
+        .item-desc-tv {
+            font-size: 0.95rem;
+            color: rgba(245, 239, 224, 0.7);
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        /* Featured Special */
+        .featured-special {
+            position: absolute;
+            bottom: 100px;
+            left: 60px;
+            right: 60px;
+            height: 180px;
+            background: linear-gradient(90deg, var(--roja-red), var(--deep-ember));
+            border-radius: 12px;
+            display: none; /* Toggle for special promotions */
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .featured-special.active {
+            display: flex;
+        }
+
+        .special-content {
+            flex: 1;
+        }
+
+        .special-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--brasa-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+        }
+
+        .special-name {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--crema);
+            font-weight: 700;
+        }
+
+        .special-desc {
+            font-size: 1.1rem;
+            color: rgba(245, 239, 224, 0.9);
+            margin-top: 10px;
+        }
+
+        .special-price {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: var(--brasa-gold);
+            font-weight: 700;
+        }
+
+        /* Footer Bar */
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .social-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: var(--crema);
+            font-size: 1.1rem;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wifi-info {
+            text-align: right;
+            color: var(--crema);
+        }
+
+        .wifi-label {
+            font-size: 0.8rem;
+            color: var(--brasa-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .wifi-pass {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+        }
+
+        /* Scrolling ticker for announcements */
+        .ticker-bar {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: var(--brasa-gold);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        .ticker-item {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ticker-item::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--roja-red);
+            border-radius: 50%;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Animation for menu items */
+        .menu-item-tv {
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tv-display">
+        <!-- Animated Background -->
+        <div class="flame-bg"></div>
+
+        <!-- Header -->
+        <div class="header-bar">
+            <div class="logo-section">
+                <svg viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="78" rx="35" ry="10" fill="none" stroke="#C9882B" stroke-width="2.5"/>
+                    <path d="M50 10 Q70 35 60 50 Q75 45 65 70 Q55 55 50 78 Q45 55 35 70 Q25 45 40 50 Q30 35 50 10" fill="#C63333"/>
+                    <path d="M50 25 Q58 40 54 52 Q50 42 50 65 Q50 42 46 52 Q42 40 50 25" fill="#C9882B"/>
+                    <circle cx="60" cy="8" r="2" fill="#C9882B"/>
+                    <circle cx="55" cy="4" r="1.5" fill="#C63333"/>
+                </svg>
+                <div>
+                    <div class="logo-text">
+                        <span class="brasa">BRASA</span><span class="roja">ROJA</span>
+                    </div>
+                    <div class="tagline">Tradición Familiar</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="time-display" id="clock">7:30 PM</div>
+                <div class="date-display" id="date">Saturday, January 25</div>
+            </div>
+        </div>
+
+        <!-- Main Menu Content -->
+        <div class="content-area">
+            <!-- Column 1: Starters -->
+            <div class="menu-column">
+                <div class="column-header">
+                    <span>Starters</span>
+                    <span class="spanish">Para Comenzar</span>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Empanadas de Carne</span>
+                        <span class="item-price-tv">$14</span>
+                    </div>
+                    <div class="item-desc-tv">Beef, olives, egg, house salsa</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Provoleta</span>
+                        <span class="item-price-tv">$16</span>
+                    </div>
+                    <div class="item-desc-tv">Grilled provolone, oregano, chili</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Chorizo Criollo</span>
+                        <span class="item-price-tv">$15</span>
+                    </div>
+                    <div class="item-desc-tv">House sausage, chimichurri</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Ceviche del Día</span>
+                        <span class="item-price-tv">$18</span>
+                    </div>
+                    <div class="item-desc-tv">Fresh catch, citrus, sweet potato</div>
+                </div>
+            </div>
+
+            <!-- Column 2: Main Courses -->
+            <div class="menu-column">
+                <div class="column-header">
+                    <span>From the Grill</span>
+                    <span class="spanish">De la Parrilla</span>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Bife de Chorizo</span>
+                        <span class="item-price-tv">$48</span>
+                    </div>
+                    <div class="item-desc-tv">16oz ribeye, chimichurri</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Entraña</span>
+                        <span class="item-price-tv">$38</span>
+                    </div>
+                    <div class="item-desc-tv">Marinated skirt steak</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Pollo al Disco</span>
+                        <span class="item-price-tv">$32</span>
+                    </div>
+                    <div class="item-desc-tv">Half chicken, wine, peppers</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Costillas de Cerdo</span>
+                        <span class="item-price-tv">$36</span>
+                    </div>
+                    <div class="item-desc-tv">Baby back ribs, house glaze</div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Salmón a la Brasa</span>
+                        <span class="item-price-tv">$34</span>
+                    </div>
+                    <div class="item-desc-tv">Citrus butter, asparagus</div>
+                </div>
+            </div>
+
+            <!-- Column 3: Drinks & Desserts -->
+            <div class="menu-column">
+                <div class="column-header">
+                    <span>Drinks</span>
+                    <span class="spanish">Bebidas</span>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Margarita Clásica</span>
+                        <span class="item-price-tv">$14</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Brasa Sangria</span>
+                        <span class="item-price-tv">$12</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Mojito</span>
+                        <span class="item-price-tv">$13</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Agua Fresca</span>
+                        <span class="item-price-tv">$5</span>
+                    </div>
+                    <div class="item-desc-tv">Horchata, Jamaica, Tamarindo</div>
+                </div>
+
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid var(--brasa-gold);">
+                    <div class="column-header" style="margin-bottom: 15px;">
+                        <span style="font-size: 1.4rem;">Desserts</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Flan de la Abuela</span>
+                        <span class="item-price-tv">$10</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-tv">
+                    <div class="item-row">
+                        <span class="item-name-tv">Churros</span>
+                        <span class="item-price-tv">$12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scrolling Ticker -->
+        <div class="ticker-bar">
+            <div class="ticker-content">
+                <span class="ticker-item">HAPPY HOUR: Mon-Fri 4-6pm - $8 Margaritas</span>
+                <span class="ticker-item">FAMILY SUNDAYS: Kids eat free with adult entrée</span>
+                <span class="ticker-item">RESERVE NOW: brasaroja.com or call (555) 123-4567</span>
+                <span class="ticker-item">CATERING AVAILABLE for events of 20+</span>
+                <span class="ticker-item">HAPPY HOUR: Mon-Fri 4-6pm - $8 Margaritas</span>
+                <span class="ticker-item">FAMILY SUNDAYS: Kids eat free with adult entrée</span>
+                <span class="ticker-item">RESERVE NOW: brasaroja.com or call (555) 123-4567</span>
+                <span class="ticker-item">CATERING AVAILABLE for events of 20+</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-bar">
+            <div class="social-info">
+                <div class="social-item">
+                    <span style="font-size: 1.5rem;">@</span>
+                    <span>@brasaroja</span>
+                </div>
+                <div class="social-item">
+                    <span style="font-size: 1.5rem;">#</span>
+                    <span>#BrasaRoja #TradiciónFamiliar</span>
+                </div>
+            </div>
+            <div class="wifi-info">
+                <div class="wifi-label">Guest WiFi</div>
+                <div class="wifi-pass">BrasaRoja2026</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Clock Script -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeOptions = { hour: 'numeric', minute: '2-digit', hour12: true };
+            const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+
+            document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', timeOptions);
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', dateOptions);
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

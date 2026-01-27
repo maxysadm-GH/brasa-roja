@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Logo Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: letter landscape;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lora', Georgia, serif;
+            color: #1A1A1A;
+            line-height: 1.6;
+        }
+        .page {
+            width: 11in;
+            height: 8.5in;
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Page 1: Cover */
+        .cover {
+            background: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 60px;
+        }
+        .cover h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 96px;
+            font-weight: 700;
+            color: #F6F0E6;
+            line-height: 1.1;
+        }
+        .cover-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #C9882B;
+            padding-top: 15px;
+            color: #C9882B;
+            font-size: 12px;
+        }
+
+        /* Page 2: Brand Recognition */
+        .brand-recognition {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+        }
+        .brand-left {
+            background: #F6F0E6;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .brand-left img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .brand-right {
+            background: #1A1A1A;
+            padding: 40px;
+            color: #F6F0E6;
+        }
+        .brand-concepts {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            padding-top: 30px;
+        }
+        .concept {
+            text-align: center;
+            width: 120px;
+        }
+        .concept-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            background: #C9882B;
+            border-radius: 50%;
+        }
+        .concept-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .brand-applications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .app-box {
+            background: #2A2A2A;
+            height: 120px;
+            border-radius: 8px;
+        }
+        .page-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #888;
+            border-top: 1px solid #333;
+            padding-top: 10px;
+        }
+        .page-footer-light {
+            color: #666;
+            border-top-color: #ccc;
+        }
+
+        /* Page 3: Contents */
+        .contents {
+            background: #F6F0E6;
+            padding: 80px;
+        }
+        .contents h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 60px;
+        }
+        .contents-grid {
+            display: flex;
+            gap: 100px;
+        }
+        .contents-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #C41E3A;
+        }
+        .contents-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #C9882B;
+            margin-bottom: 10px;
+        }
+        .contents-section ul {
+            list-style: none;
+            font-size: 14px;
+            color: #555;
+        }
+        .contents-section li {
+            margin-bottom: 5px;
+        }
+
+        /* Page 4: Section Divider */
+        .section-divider {
+            background: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 80px;
+        }
+        .section-divider h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: #F6F0E6;
+        }
+
+        /* Page 5-6: Primary Logo */
+        .primary-logo {
+            background: #F6F0E6;
+            padding: 60px;
+        }
+        .primary-logo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1A1A1A;
+            border-bottom: 2px solid #C41E3A;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .logo-display {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .logo-description p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .clear-space-note {
+            background: #fff;
+            padding: 15px;
+            border-left: 3px solid #C9882B;
+            margin-top: 30px;
+        }
+        .clear-space-note h4 {
+            font-style: italic;
+            color: #C9882B;
+            margin-bottom: 5px;
+        }
+        .clear-space-note p {
+            font-size: 12px;
+            margin: 0;
+        }
+        .logo-container {
+            background: #1A1A1A;
+            padding: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 350px;
+            position: relative;
+        }
+        .logo-container img {
+            max-width: 80%;
+            max-height: 280px;
+        }
+        .clearspace-box {
+            position: absolute;
+            border: 1px dashed #C9882B;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        /* Page 7: Logo Variations */
+        .logo-variations {
+            background: #F6F0E6;
+            padding: 60px;
+        }
+        .logo-variations h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1A1A1A;
+            border-bottom: 2px solid #C41E3A;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .variations-intro {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 30px;
+            max-width: 400px;
+        }
+        .variations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        .variation-item h4 {
+            font-style: italic;
+            color: #C9882B;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .variation-item p {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .variation-box {
+            background: #1A1A1A;
+            height: 180px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .variation-box.light {
+            background: #F6F0E6;
+            border: 1px solid #ddd;
+        }
+        .variation-box img {
+            max-width: 70%;
+            max-height: 140px;
+        }
+
+        /* Page 8: Logo Misuse */
+        .logo-misuse {
+            background: #F6F0E6;
+            padding: 60px;
+        }
+        .logo-misuse h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1A1A1A;
+            border-bottom: 2px solid #C41E3A;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        .misuse-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .misuse-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .misuse-label {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            font-size: 12px;
+            font-style: italic;
+            width: 140px;
+            text-align: center;
+        }
+        .misuse-example {
+            background: #eee;
+            width: 150px;
+            height: 100px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 11px;
+        }
+
+        /* Page 9: Additional Assets Divider */
+        /* Uses section-divider style */
+
+        /* Page 10: Brand Pattern */
+        .brand-pattern {
+            background: #F6F0E6;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+        .brand-pattern h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1A1A1A;
+            border-bottom: 2px solid #C41E3A;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .pattern-description {
+            font-size: 14px;
+            color: #444;
+        }
+        .pattern-display {
+            background: #1A1A1A;
+            border-radius: 10px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C9882B;
+            font-size: 14px;
+        }
+
+        /* Page 11: Color Guide Divider */
+        /* Uses section-divider style */
+
+        /* Page 12: Color Palette */
+        .color-palette {
+            background: #F6F0E6;
+            padding: 60px;
+        }
+        .color-palette h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1A1A1A;
+            border-bottom: 2px solid #C41E3A;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .palette-intro {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 40px;
+            max-width: 450px;
+        }
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+        }
+        .color-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        .color-swatch {
+            height: 100px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .color-info {
+            font-size: 11px;
+        }
+        .color-info strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #1A1A1A;
+        }
+        .color-info p {
+            margin: 3px 0;
+            color: #666;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+    <h1>LOGO<br>GUIDELINES</h1>
+    <div class="cover-footer">
+        <span>Brasa Roja Brand Guidelines</span>
+        <span>JANUARY 2026</span>
+    </div>
+</div>
+
+<!-- PAGE 2: BRAND RECOGNITION -->
+<div class="page">
+    <div class="brand-recognition">
+        <div class="brand-left">
+            <img src="Logo_MAIN_1.png" alt="Brasa Roja Primary Logo">
+        </div>
+        <div class="brand-right">
+            <div class="brand-concepts">
+                <div class="concept">
+                    <div class="concept-icon" style="background: linear-gradient(135deg, #C41E3A, #8B0000);"></div>
+                    <div class="concept-label">Passion<br>&amp; Fire</div>
+                </div>
+                <div class="concept">
+                    <div class="concept-icon" style="background: linear-gradient(135deg, #D4A84B, #8B6914);"></div>
+                    <div class="concept-label">Tradition<br>&amp; Quality</div>
+                </div>
+                <div class="concept">
+                    <div class="concept-icon" style="background: linear-gradient(135deg, #CD853F, #DAA520);"></div>
+                    <div class="concept-label">Family<br>&amp; Heritage</div>
+                </div>
+            </div>
+            <div class="brand-applications">
+                <div class="app-box"></div>
+                <div class="app-box"></div>
+                <div class="app-box"></div>
+                <div class="app-box"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-footer">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 02</span>
+    </div>
+</div>
+
+<!-- PAGE 3: CONTENTS -->
+<div class="page contents">
+    <h1>CONTENTS</h1>
+    <div class="contents-grid">
+        <div class="contents-section">
+            <h2>04</h2>
+            <h3>Logo</h3>
+            <ul>
+                <li>Primary Logo</li>
+                <li>Logo Inspiration</li>
+                <li>Logo Variations</li>
+                <li>Logo Misuse</li>
+            </ul>
+        </div>
+        <div class="contents-section">
+            <h2>09</h2>
+            <h3>Additional Assets</h3>
+            <ul>
+                <li>Brand Pattern</li>
+            </ul>
+        </div>
+        <div class="contents-section">
+            <h2>11</h2>
+            <h3>Colors</h3>
+            <ul>
+                <li>Color Palette</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 03</span>
+    </div>
+</div>
+
+<!-- PAGE 4: LOGOS DIVIDER -->
+<div class="page section-divider">
+    <h1>LOGOS</h1>
+    <div class="page-footer">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 04</span>
+    </div>
+</div>
+
+<!-- PAGE 5: PRIMARY LOGO -->
+<div class="page primary-logo">
+    <h1>PRIMARY LOGO</h1>
+    <div class="logo-display">
+        <div class="logo-description">
+            <p>Our primary logo should be used in most circumstances. It should be the standard and most recognizable version of our logo.</p>
+            <p>This logo is best suited for prominent locations such as your primary signage, menus, or website header.</p>
+            <div class="clear-space-note">
+                <h4>Clear Space</h4>
+                <p>This is the area around your logo that should be left clear of other assets. Maintain a minimum clear space equal to the height of the flame icon on all sides.</p>
+            </div>
+        </div>
+        <div class="logo-container">
+            <div class="clearspace-box"></div>
+            <img src="Logo_MAIN_1.png" alt="Brasa Roja Primary Logo">
+        </div>
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 05</span>
+    </div>
+</div>
+
+<!-- PAGE 6: PRIMARY LOGO INSPIRATION -->
+<div class="page primary-logo">
+    <h1>PRIMARY LOGO</h1>
+    <div class="logo-display">
+        <div class="logo-description">
+            <p><strong>The flame</strong> represents the heart of our cooking tradition - the open fire that brings families together. The three points symbolize past, present, and future generations.</p>
+            <p><strong>The golden orbital swirl</strong> wrapping around the flame base signifies movement, warmth, and the gathering of family around the fire. It creates a sense of embrace and welcome.</p>
+            <p><strong>The rising embers</strong> trailing upward represent the passion that rises from our kitchen - sparks of flavor, memories, and tradition that ascend with every dish we serve.</p>
+            <p><strong>The typography</strong> pairs "BRASA" in gold with "ROJA" in red, directly translating to "Red Ember" while the script tagline "Tradici&oacute;n Familiar" (Family Tradition) anchors our heritage.</p>
+        </div>
+        <div class="logo-container">
+            <img src="BR_Main_1.png" alt="Brasa Roja Logo Detail">
+        </div>
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 06</span>
+    </div>
+</div>
+
+<!-- PAGE 7: LOGO VARIATIONS -->
+<div class="page logo-variations">
+    <h1>LOGO VARIATIONS</h1>
+    <p class="variations-intro">These logo variations are provided to work in situations where your primary logo may not fit the format best.</p>
+    <div class="variations-grid">
+        <div class="variation-item">
+            <h4>Primary Logo (Dark Background)</h4>
+            <p>The standard full-color logo for use on dark backgrounds. This is the preferred version for most applications.</p>
+            <div class="variation-box">
+                <img src="BR_LOGO_1.png" alt="Primary Dark">
+            </div>
+        </div>
+        <div class="variation-item">
+            <h4>Primary Logo (Light Background)</h4>
+            <p>Full-color logo adapted for light or cream-colored backgrounds such as menus and stationery.</p>
+            <div class="variation-box light">
+                <img src="Logo_MAIN_1.png" alt="Primary Light">
+            </div>
+        </div>
+        <div class="variation-item">
+            <h4>Gold Monochrome</h4>
+            <p>Single-color gold version for premium applications, embossing, or when color printing is limited.</p>
+            <div class="variation-box">
+                <span style="color:#C9882B;">Gold Mono Version</span>
+            </div>
+        </div>
+        <div class="variation-item">
+            <h4>Full-Color Transparent</h4>
+            <p>Logo with transparent background for flexible placement over images or colored backgrounds.</p>
+            <div class="variation-box" style="background: linear-gradient(45deg, #333 25%, #444 25%, #444 50%, #333 50%, #333 75%, #444 75%); background-size: 20px 20px;">
+                <span style="color:#F6F0E6;">Transparent BG</span>
+            </div>
+        </div>
+        <div class="variation-item">
+            <h4>Icon Mark</h4>
+            <p>The flame and swirl icon without text. Use for favicons, social media profile pictures, and small applications.</p>
+            <div class="variation-box">
+                <span style="color:#C9882B;">Icon Only</span>
+            </div>
+        </div>
+        <div class="variation-item">
+            <h4>White Monochrome</h4>
+            <p>Single-color white version for use on dark fabrics, signage, and high-contrast applications.</p>
+            <div class="variation-box">
+                <span style="color:#F6F0E6;">White Mono Version</span>
+            </div>
+        </div>
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 07</span>
+    </div>
+</div>
+
+<!-- PAGE 8: LOGO MISUSE -->
+<div class="page logo-misuse">
+    <h1>LOGO MISUSE</h1>
+    <div class="misuse-grid">
+        <div class="misuse-item">
+            <div class="misuse-label">Do not stretch or warp the logo</div>
+            <div class="misuse-example">[Stretched logo]</div>
+        </div>
+        <div class="misuse-item">
+            <div class="misuse-label">Do not outline the logo</div>
+            <div class="misuse-example">[Outlined logo]</div>
+        </div>
+        <div class="misuse-item">
+            <div class="misuse-label">Do not change the colors of the logo</div>
+            <div class="misuse-example">[Wrong colors]</div>
+        </div>
+        <div class="misuse-item">
+            <div class="misuse-label">Do not change the layout of the logo</div>
+            <div class="misuse-example">[Rearranged]</div>
+        </div>
+        <div class="misuse-item">
+            <div class="misuse-label">Do not crop the logo</div>
+            <div class="misuse-example">[Cropped]</div>
+        </div>
+        <div class="misuse-item">
+            <div class="misuse-label">Do not lighten the logo</div>
+            <div class="misuse-example">[Faded logo]</div>
+        </div>
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 08</span>
+    </div>
+</div>
+
+<!-- PAGE 9: ADDITIONAL ASSETS DIVIDER -->
+<div class="page section-divider">
+    <h1>ADDITIONAL<br>ASSETS</h1>
+    <div class="page-footer">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 09</span>
+    </div>
+</div>
+
+<!-- PAGE 10: BRAND PATTERN -->
+<div class="page brand-pattern">
+    <div>
+        <h1>BRAND PATTERN</h1>
+        <p class="pattern-description">Our brand patterns are in place for backgrounds, packaging, social media posts, and more in order to add more visual interest while remaining consistent with the rest of the brand.</p>
+        <p class="pattern-description" style="margin-top: 20px;">The pattern uses the flame and ember motif in a repeating arrangement, creating texture that evokes warmth and tradition.</p>
+    </div>
+    <div class="pattern-display">
+        [Flame &amp; Ember Pattern Display]
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 10</span>
+    </div>
+</div>
+
+<!-- PAGE 11: COLOR GUIDE DIVIDER -->
+<div class="page section-divider">
+    <h1>COLOR<br>GUIDE</h1>
+    <div class="page-footer">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 11</span>
+    </div>
+</div>
+
+<!-- PAGE 12: COLOR PALETTE -->
+<div class="page color-palette">
+    <h1>COLOR PALETTE</h1>
+    <p class="palette-intro">Our brand colors reflect the warmth of fire and the richness of our culinary heritage. The palette balances passionate reds with elegant golds, supported by warm neutrals that create an inviting atmosphere.</p>
+    <div class="colors-grid">
+        <div class="color-card">
+            <div class="color-swatch" style="background: linear-gradient(135deg, #E44D26, #C41E3A);"></div>
+            <div class="color-info">
+                <strong>Primary Red</strong>
+                <p>HEX: #E44D26</p>
+                <p>RGB: 228, 77, 38</p>
+                <p>CMYK: 0, 80, 90, 5</p>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: linear-gradient(135deg, #C41E3A, #8B0000);"></div>
+            <div class="color-info">
+                <strong>Deep Red</strong>
+                <p>HEX: #C41E3A</p>
+                <p>RGB: 196, 30, 58</p>
+                <p>CMYK: 15, 100, 80, 5</p>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: linear-gradient(135deg, #D4A84B, #B8860B);"></div>
+            <div class="color-info">
+                <strong>Brasa Gold</strong>
+                <p>HEX: #D4A84B</p>
+                <p>RGB: 212, 168, 75</p>
+                <p>CMYK: 15, 30, 75, 0</p>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: #B02D37;"></div>
+            <div class="color-info">
+                <strong>Accent Red</strong>
+                <p>HEX: #B02D37</p>
+                <p>RGB: 176, 45, 55</p>
+                <p>CMYK: 20, 90, 75, 10</p>
+            </div>
+        </div>
+        <div class="color-card">
+            <div class="color-swatch" style="background: #F6F0E6;"></div>
+            <div class="color-info">
+                <strong>Light Neutral</strong>
+                <p>HEX: #F6F0E6</p>
+                <p>RGB: 246, 240, 230</p>
+                <p>CMYK: 3, 4, 10, 0</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-footer page-footer-light">
+        <span>Brand Guidelines</span>
+        <span>BRASA ROJA | 12</span>
+    </div>
+</div>
+
+</body>
+</html>

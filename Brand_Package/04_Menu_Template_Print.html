@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Menu Template (Print)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+
+        @page {
+            size: 8.5in 11in;
+            margin: 0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #e0e0e0;
+        }
+
+        .menu-page {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 20px auto;
+            background: var(--crema);
+            padding: 0.75in;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        /* Decorative Border */
+        .menu-page::before {
+            content: '';
+            position: absolute;
+            top: 0.5in;
+            left: 0.5in;
+            right: 0.5in;
+            bottom: 0.5in;
+            border: 2px solid var(--brasa-gold);
+            pointer-events: none;
+        }
+
+        /* Header */
+        .menu-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--brasa-gold);
+        }
+
+        .menu-logo {
+            margin-bottom: 15px;
+        }
+
+        .menu-logo svg {
+            width: 80px;
+            height: auto;
+        }
+
+        .menu-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .menu-title .brasa { color: var(--brasa-gold); }
+        .menu-title .roja { color: var(--roja-red); }
+
+        .menu-tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.3rem;
+            color: var(--brasa-gold);
+            margin-top: 5px;
+        }
+
+        .menu-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            letter-spacing: 0.2em;
+            margin-top: 10px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin: 35px 0 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--brasa-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .section-spanish {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.1rem;
+            color: var(--brasa-gold);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        /* Menu Items */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 18px;
+        }
+
+        .item-details {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .item-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .item-name-spanish {
+            font-style: italic;
+            color: var(--brasa-gold);
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+
+        .item-description {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 3px;
+            line-height: 1.4;
+        }
+
+        .item-price {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--roja-red);
+            white-space: nowrap;
+        }
+
+        /* Dotted line between name and price */
+        .item-dots {
+            flex: 1;
+            border-bottom: 1px dotted #ccc;
+            margin: 0 10px 5px;
+            min-width: 30px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Featured Item */
+        .featured-item {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+            color: var(--crema);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .featured-item .label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--brasa-gold);
+            margin-bottom: 10px;
+        }
+
+        .featured-item .name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .featured-item .description {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .featured-item .price {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--brasa-gold);
+        }
+
+        /* Footer */
+        .menu-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--brasa-gold);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .menu-footer p {
+            margin-bottom: 5px;
+        }
+
+        .allergen-note {
+            font-style: italic;
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        /* Decorative Elements */
+        .flame-divider {
+            text-align: center;
+            margin: 30px 0;
+            color: var(--brasa-gold);
+            font-size: 1.5rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body { background: none; }
+            .menu-page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU PAGE 1 - APPETIZERS & MAINS -->
+    <div class="menu-page">
+        <!-- Header -->
+        <div class="menu-header">
+            <div class="menu-logo">
+                <svg viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="78" rx="35" ry="10" fill="none" stroke="#C9882B" stroke-width="2.5"/>
+                    <path d="M50 10 Q70 35 60 50 Q75 45 65 70 Q55 55 50 78 Q45 55 35 70 Q25 45 40 50 Q30 35 50 10" fill="#C63333"/>
+                    <path d="M50 25 Q58 40 54 52 Q50 42 50 65 Q50 42 46 52 Q42 40 50 25" fill="#C9882B"/>
+                    <circle cx="60" cy="8" r="2" fill="#C9882B"/>
+                    <circle cx="55" cy="4" r="1.5" fill="#C63333"/>
+                </svg>
+            </div>
+            <div class="menu-title">
+                <span class="brasa">BRASA</span><span class="roja">ROJA</span>
+            </div>
+            <div class="menu-tagline">Tradición Familiar</div>
+            <div class="menu-subtitle">EL ARTE DEL FUEGO</div>
+        </div>
+
+        <!-- Featured Item -->
+        <div class="featured-item">
+            <div class="label">Chef's Signature</div>
+            <div class="name">PARRILLADA FAMILIAR</div>
+            <div class="description">A feast of fire-grilled meats for the whole family. Includes chorizo, ribeye, chicken, and our famous chimichurri. Serves 4-6.</div>
+            <div class="price">$89</div>
+        </div>
+
+        <!-- Appetizers Section -->
+        <div class="section-header">
+            <span>Appetizers</span>
+            <span class="section-spanish">Para Comenzar</span>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Empanadas de Carne <span class="item-name-spanish">Beef Empanadas</span></div>
+                <div class="item-description">Hand-crimped pastries filled with seasoned beef, olives, and hard-boiled egg</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$14</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Provoleta <span class="item-name-spanish">Grilled Provolone</span></div>
+                <div class="item-description">Fire-kissed provolone with oregano, chili flakes, and crusty bread</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$16</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Chorizo Criollo <span class="item-name-spanish">Grilled Chorizo</span></div>
+                <div class="item-description">House-made pork sausage with chimichurri and grilled bread</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$15</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Ceviche del Día <span class="item-name-spanish">Ceviche of the Day</span></div>
+                <div class="item-description">Fresh catch cured in citrus with red onion, cilantro, and sweet potato</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$18</div>
+        </div>
+
+        <!-- From the Grill Section -->
+        <div class="section-header">
+            <span>From the Grill</span>
+            <span class="section-spanish">De la Parrilla</span>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Bife de Chorizo <span class="item-name-spanish">Ribeye Steak</span></div>
+                <div class="item-description">16oz prime ribeye, flame-grilled to your preference, with chimichurri</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$48</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Entraña <span class="item-name-spanish">Skirt Steak</span></div>
+                <div class="item-description">Marinated skirt steak with roasted peppers and crispy potatoes</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$38</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Pollo al Disco <span class="item-name-spanish">Chicken al Disco</span></div>
+                <div class="item-description">Half chicken braised in wine, tomatoes, and peppers on the open flame</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$32</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Costillas de Cerdo <span class="item-name-spanish">Pork Ribs</span></div>
+                <div class="item-description">Slow-roasted baby back ribs with house glaze and pickled vegetables</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$36</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <div class="item-name">Salmón a la Brasa <span class="item-name-spanish">Grilled Salmon</span></div>
+                <div class="item-description">Atlantic salmon with citrus butter, grilled asparagus, and quinoa</div>
+            </div>
+            <div class="item-dots"></div>
+            <div class="item-price">$34</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="menu-footer">
+            <p><strong style="color: var(--roja-red);">BRASA ROJA</strong> | 123 Main Street, City, ST 12345 | (555) 123-4567</p>
+            <p>brasaroja.com | @brasaroja</p>
+            <p class="allergen-note">Please inform your server of any allergies. Consuming raw or undercooked meats may increase risk of foodborne illness.</p>
+        </div>
+    </div>
+
+    <!-- MENU PAGE 2 - SIDES, DESSERTS, DRINKS -->
+    <div class="menu-page">
+        <!-- Compact Header for Page 2 -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div style="font-family: 'Cinzel', serif; font-size: 1.5rem;">
+                <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <!-- Left Column -->
+            <div>
+                <!-- Sides Section -->
+                <div class="section-header">
+                    <span>Sides</span>
+                    <span class="section-spanish">Acompañamientos</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Papas Bravas</div>
+                        <div class="item-description">Crispy potatoes with spicy aioli</div>
+                    </div>
+                    <div class="item-price">$9</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Ensalada Mixta</div>
+                        <div class="item-description">Mixed greens, tomato, onion, herbs</div>
+                    </div>
+                    <div class="item-price">$8</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Elote Asado</div>
+                        <div class="item-description">Grilled corn with cotija and lime</div>
+                    </div>
+                    <div class="item-price">$7</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Arroz con Frijoles</div>
+                        <div class="item-description">Rice and beans, family style</div>
+                    </div>
+                    <div class="item-price">$8</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Yuca Frita</div>
+                        <div class="item-description">Fried cassava with garlic mojo</div>
+                    </div>
+                    <div class="item-price">$9</div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="section-header">
+                    <span>Desserts</span>
+                    <span class="section-spanish">Postres</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Flan de la Abuela</div>
+                        <div class="item-description">Grandmother's caramel custard</div>
+                    </div>
+                    <div class="item-price">$10</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Churros con Chocolate</div>
+                        <div class="item-description">Fresh churros with spiced chocolate</div>
+                    </div>
+                    <div class="item-price">$12</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Tres Leches</div>
+                        <div class="item-description">Three milk cake with berries</div>
+                    </div>
+                    <div class="item-price">$11</div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Beverages -->
+                <div class="section-header">
+                    <span>Beverages</span>
+                    <span class="section-spanish">Bebidas</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Agua Fresca</div>
+                        <div class="item-description">Horchata, Jamaica, or Tamarindo</div>
+                    </div>
+                    <div class="item-price">$5</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Mexican Coca-Cola</div>
+                        <div class="item-description">Made with real cane sugar</div>
+                    </div>
+                    <div class="item-price">$4</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Café de Olla</div>
+                        <div class="item-description">Traditional spiced coffee</div>
+                    </div>
+                    <div class="item-price">$5</div>
+                </div>
+
+                <!-- Cocktails -->
+                <div class="section-header">
+                    <span>Cocktails</span>
+                    <span class="section-spanish">Cócteles</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Margarita Clásica</div>
+                        <div class="item-description">Tequila, lime, agave, salt rim</div>
+                    </div>
+                    <div class="item-price">$14</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Brasa Sangria</div>
+                        <div class="item-description">Red wine, brandy, citrus, berries</div>
+                    </div>
+                    <div class="item-price">$12</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Mojito</div>
+                        <div class="item-description">Rum, mint, lime, soda</div>
+                    </div>
+                    <div class="item-price">$13</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Paloma</div>
+                        <div class="item-description">Tequila, grapefruit, lime, salt</div>
+                    </div>
+                    <div class="item-price">$13</div>
+                </div>
+
+                <!-- Beer & Wine -->
+                <div class="section-header">
+                    <span>Beer & Wine</span>
+                    <span class="section-spanish">Cerveza y Vino</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Draft Beer</div>
+                        <div class="item-description">Ask about rotating selections</div>
+                    </div>
+                    <div class="item-price">$7-9</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">House Wine</div>
+                        <div class="item-description">Red, White, or Rosé</div>
+                    </div>
+                    <div class="item-price">$10/15</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="menu-footer" style="margin-top: 60px;">
+            <p style="font-family: 'Parisienne', cursive; font-size: 1.2rem; color: var(--brasa-gold); margin-bottom: 15px;">
+                "La comida es amor hecho visible"
+            </p>
+            <p class="allergen-note">18% gratuity may be added to parties of 6 or more. All prices subject to applicable taxes.</p>
+        </div>
+    </div>
+
+    <!-- PRINT SPECIFICATIONS PAGE -->
+    <div class="menu-page" style="background: white;">
+        <h1 style="font-family: 'Cinzel', serif; color: var(--roja-red); margin-bottom: 30px;">Menu Print Specifications</h1>
+
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+            <tr style="background: var(--charcoal); color: white;">
+                <th style="padding: 12px; text-align: left; font-family: 'Cinzel', serif;">Specification</th>
+                <th style="padding: 12px; text-align: left; font-family: 'Cinzel', serif;">Value</th>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Page Size</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">8.5" x 11" (Letter)</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Bleed</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">0.125" on all sides</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Color Mode</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">CMYK</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Paper Stock (Premium)</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">100lb Gloss Text or 80lb Linen</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Paper Stock (Daily Use)</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">80lb Matte Text, easy to update</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Finish</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">Soft Touch Matte Laminate (spill resistant)</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;"><strong>Binding (Multi-page)</strong></td>
+                <td style="padding: 12px; border-bottom: 1px solid #eee;">Saddle stitch or tri-fold</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px;"><strong>File Format</strong></td>
+                <td style="padding: 12px;">PDF/X-1a, 300 DPI, fonts outlined</td>
+            </tr>
+        </table>
+
+        <h2 style="font-family: 'Cinzel', serif; color: var(--roja-red); margin: 30px 0 15px;">Alternative Menu Formats</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--charcoal);">Tri-Fold (8.5x14)</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Great for takeout menus. Folds to 4.67" x 8.5"</p>
+            </div>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--charcoal);">Table Tent (4x6)</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Perfect for specials and promotions</p>
+            </div>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1rem; color: var(--charcoal);">Booklet (5.5x8.5)</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Premium multi-page for extensive menus</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

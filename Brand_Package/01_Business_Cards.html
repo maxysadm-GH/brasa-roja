@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Business Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #e0e0e0;
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--charcoal);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .card-wrapper {
+            text-align: center;
+        }
+
+        .card-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--roja-red);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Standard US Business Card: 3.5" x 2" = 350px x 200px at 100dpi display */
+        .business-card {
+            width: 350px;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* FRONT - Dark Version */
+        .card-front-dark {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-front-dark .logo-area {
+            text-align: center;
+        }
+
+        .card-front-dark svg {
+            width: 70px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .card-front-dark .wordmark {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .card-front-dark .wordmark .brasa { color: var(--brasa-gold); }
+        .card-front-dark .wordmark .roja { color: var(--roja-red); }
+
+        .card-front-dark .tagline {
+            font-family: 'Parisienne', cursive;
+            color: var(--brasa-gold);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* BACK - Contact Info */
+        .card-back {
+            background: var(--crema);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-back .person-info {
+            border-bottom: 2px solid var(--roja-red);
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card-back .person-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .card-back .person-title {
+            font-size: 0.75rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .card-back .contact-info {
+            font-size: 0.7rem;
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .card-back .contact-info span {
+            display: block;
+        }
+
+        .card-back .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 3px;
+        }
+
+        .card-back .contact-icon {
+            width: 12px;
+            height: 12px;
+            fill: var(--roja-red);
+        }
+
+        .card-back .bottom-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .card-back .website {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            color: var(--brasa-gold);
+            letter-spacing: 0.05em;
+        }
+
+        .card-back .small-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            font-weight: 700;
+        }
+
+        .card-back .small-logo .brasa { color: var(--brasa-gold); }
+        .card-back .small-logo .roja { color: var(--roja-red); }
+
+        /* Staff/Manager Card - Horizontal Layout */
+        .card-horizontal {
+            background: linear-gradient(90deg, var(--charcoal) 35%, var(--crema) 35%);
+        }
+
+        .card-horizontal .left-panel {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .card-horizontal .left-panel svg {
+            width: 50px;
+        }
+
+        .card-horizontal .left-panel .mini-wordmark {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .card-horizontal .left-panel .mini-wordmark .brasa { color: var(--brasa-gold); }
+        .card-horizontal .left-panel .mini-wordmark .roja { color: var(--roja-red); }
+
+        .card-horizontal .right-panel {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 65%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-horizontal .right-panel .person-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .card-horizontal .right-panel .person-title {
+            font-size: 0.65rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+            margin-bottom: 12px;
+        }
+
+        .card-horizontal .right-panel .contact-info {
+            font-size: 0.6rem;
+            color: var(--charcoal);
+            line-height: 1.5;
+        }
+
+        /* Print Specs Section */
+        .specs-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .specs-section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--roja-red);
+            margin-bottom: 20px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table th {
+            background: var(--charcoal);
+            color: var(--crema);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+
+        @media print {
+            body { background: white; }
+            .business-card { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <h1>BRASA ROJA - Business Cards</h1>
+    <p class="subtitle">Print-ready templates at 3.5" x 2" standard size</p>
+
+    <!-- Owner/Executive Card -->
+    <div class="card-container">
+        <div class="card-wrapper">
+            <div class="card-label">Front (Dark)</div>
+            <div class="business-card card-front-dark">
+                <div class="logo-area">
+                    <svg viewBox="0 0 100 100">
+                        <ellipse cx="50" cy="75" rx="35" ry="10" fill="none" stroke="#C9882B" stroke-width="3"/>
+                        <path d="M50 10 Q70 35 60 50 Q75 45 65 70 Q55 55 50 78 Q45 55 35 70 Q25 45 40 50 Q30 35 50 10" fill="#C63333"/>
+                        <path d="M50 25 Q58 40 54 52 Q50 42 50 65 Q50 42 46 52 Q42 40 50 25" fill="#C9882B"/>
+                        <circle cx="60" cy="8" r="2" fill="#C9882B"/>
+                        <circle cx="55" cy="4" r="1.5" fill="#C63333"/>
+                        <circle cx="65" cy="5" r="1" fill="#8B7355"/>
+                    </svg>
+                    <div class="wordmark">
+                        <span class="brasa">BRASA</span><span class="roja">ROJA</span>
+                    </div>
+                    <div class="tagline">Tradición Familiar</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="card-label">Back (Contact Info)</div>
+            <div class="business-card card-back">
+                <div class="person-info">
+                    <div class="person-name">CARLOS MENDOZA</div>
+                    <div class="person-title">Owner & Head Chef</div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-row">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="contact-row">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span>carlos@brasaroja.com</span>
+                    </div>
+                    <div class="contact-row">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>123 Main Street, City, ST 12345</span>
+                    </div>
+                </div>
+                <div class="bottom-bar">
+                    <span class="website">BRASAROJA.COM</span>
+                    <span class="small-logo"><span class="brasa">BRASA</span><span class="roja">ROJA</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manager/Staff Card - Horizontal Layout -->
+    <div class="card-container">
+        <div class="card-wrapper">
+            <div class="card-label">Manager Card - Horizontal Style</div>
+            <div class="business-card card-horizontal">
+                <div class="left-panel">
+                    <svg viewBox="0 0 100 100">
+                        <ellipse cx="50" cy="75" rx="35" ry="10" fill="none" stroke="#C9882B" stroke-width="3"/>
+                        <path d="M50 10 Q70 35 60 50 Q75 45 65 70 Q55 55 50 78 Q45 55 35 70 Q25 45 40 50 Q30 35 50 10" fill="#C63333"/>
+                        <path d="M50 25 Q58 40 54 52 Q50 42 50 65 Q50 42 46 52 Q42 40 50 25" fill="#C9882B"/>
+                    </svg>
+                    <div class="mini-wordmark">
+                        <span class="brasa">BRASA</span><span class="roja">ROJA</span>
+                    </div>
+                </div>
+                <div class="right-panel">
+                    <div class="person-name">MARIA GARCIA</div>
+                    <div class="person-title">General Manager</div>
+                    <div class="contact-info">
+                        <span>(555) 123-4567</span><br>
+                        <span>maria@brasaroja.com</span><br>
+                        <span>123 Main Street, City, ST 12345</span><br>
+                        <span style="color: var(--brasa-gold); margin-top: 5px; display: inline-block;">brasaroja.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Specifications -->
+    <div class="specs-section">
+        <h2>Print Specifications</h2>
+        <table class="specs-table">
+            <tr>
+                <th>Specification</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Card Size</td>
+                <td>3.5" x 2" (88.9mm x 50.8mm) - US Standard</td>
+            </tr>
+            <tr>
+                <td>Bleed</td>
+                <td>0.125" (3.175mm) on all sides</td>
+            </tr>
+            <tr>
+                <td>Safe Zone</td>
+                <td>0.125" from trim edge</td>
+            </tr>
+            <tr>
+                <td>Paper Stock</td>
+                <td>16pt Matte or Soft Touch Laminate (Recommended)</td>
+            </tr>
+            <tr>
+                <td>Alternative Stock</td>
+                <td>18pt Cotton or 32pt Ultra Thick (Premium)</td>
+            </tr>
+            <tr>
+                <td>Finish Options</td>
+                <td>Soft Touch Matte, Spot UV on logo, Gold Foil on wordmark</td>
+            </tr>
+            <tr>
+                <td>Color Mode</td>
+                <td>CMYK - 4/4 (full color both sides)</td>
+            </tr>
+            <tr>
+                <td>File Format</td>
+                <td>PDF/X-1a, 300 DPI, fonts outlined</td>
+            </tr>
+        </table>
+
+        <h3 style="margin-top: 30px; font-family: 'Cinzel', serif; color: var(--roja-red);">Recommended Vendors</h3>
+        <ul style="margin-top: 15px; line-height: 2;">
+            <li><strong>Premium:</strong> MOO, Vistaprint Premium, Jukebox Print</li>
+            <li><strong>Budget:</strong> GotPrint, 4over4, PrintPlace</li>
+            <li><strong>Luxury (Foil/Letterpress):</strong> Mama's Sauce, Studio On Fire</li>
+        </ul>
+    </div>
+</body>
+</html>

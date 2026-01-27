@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Complete Brand Package Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--charcoal);
+            color: var(--crema);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--brasa-gold);
+        }
+
+        .header svg {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+
+        .header h1 .brasa { color: var(--brasa-gold); }
+        .header h1 .roja { color: var(--roja-red); }
+
+        .header .tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.8rem;
+            color: var(--brasa-gold);
+            margin-bottom: 20px;
+        }
+
+        .header .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--crema);
+            letter-spacing: 0.15em;
+        }
+
+        .header .date {
+            font-size: 0.9rem;
+            color: rgba(245, 239, 224, 0.6);
+            margin-top: 10px;
+        }
+
+        /* Package Contents */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--roja-red);
+            margin: 50px 0 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--brasa-gold);
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .package-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(201, 136, 43, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .package-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--brasa-gold);
+        }
+
+        .package-item .number {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--brasa-gold);
+            margin-bottom: 10px;
+        }
+
+        .package-item h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--crema);
+            margin-bottom: 10px;
+        }
+
+        .package-item p {
+            font-size: 0.9rem;
+            color: rgba(245, 239, 224, 0.7);
+            line-height: 1.6;
+        }
+
+        .package-item .filename {
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: var(--brasa-gold);
+            margin-top: 15px;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* File Structure */
+        .file-tree {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .file-tree .folder {
+            color: var(--brasa-gold);
+        }
+
+        .file-tree .file {
+            color: var(--crema);
+            margin-left: 20px;
+        }
+
+        /* Color Specs Quick Reference */
+        .color-row {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .color-chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        .color-swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+        }
+
+        .color-info {
+            font-size: 0.8rem;
+        }
+
+        .color-name {
+            font-weight: bold;
+            color: var(--crema);
+        }
+
+        .color-hex {
+            color: var(--brasa-gold);
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .checklist li::before {
+            content: '[ ]';
+            font-family: 'Courier New', monospace;
+            color: var(--brasa-gold);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--roja-red), var(--deep-ember));
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contact-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(201, 136, 43, 0.3);
+        }
+
+        .footer .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .footer .version {
+            font-size: 0.8rem;
+            color: rgba(245, 239, 224, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .package-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <svg viewBox="0 0 100 100">
+                <ellipse cx="50" cy="78" rx="35" ry="10" fill="none" stroke="#C9882B" stroke-width="2.5"/>
+                <path d="M50 10 Q70 35 60 50 Q75 45 65 70 Q55 55 50 78 Q45 55 35 70 Q25 45 40 50 Q30 35 50 10" fill="#C63333"/>
+                <path d="M50 25 Q58 40 54 52 Q50 42 50 65 Q50 42 46 52 Q42 40 50 25" fill="#C9882B"/>
+                <circle cx="60" cy="8" r="2" fill="#C9882B"/>
+                <circle cx="55" cy="4" r="1.5" fill="#C63333"/>
+            </svg>
+            <h1><span class="brasa">BRASA</span><span class="roja">ROJA</span></h1>
+            <div class="tagline">Tradición Familiar</div>
+            <div class="subtitle">COMPLETE BRAND PACKAGE</div>
+            <div class="date">January 2026 | Version 1.0</div>
+        </div>
+
+        <!-- What's Included -->
+        <h2 class="section-title">Package Contents</h2>
+
+        <div class="package-grid">
+            <div class="package-item">
+                <div class="number">01</div>
+                <h3>Business Cards</h3>
+                <p>Owner, manager, and staff card templates. Print-ready specifications for 3.5" x 2" US standard. Includes paper stock recommendations and vendor list.</p>
+                <div class="filename">01_Business_Cards.html</div>
+            </div>
+
+            <div class="package-item">
+                <div class="number">02</div>
+                <h3>Email Signatures</h3>
+                <p>HTML email signatures for Gmail, Outlook, and Apple Mail. Full and minimal versions. Copy-paste ready with setup instructions.</p>
+                <div class="filename">02_Email_Signature.html</div>
+            </div>
+
+            <div class="package-item">
+                <div class="number">03</div>
+                <h3>Social Media Guidelines</h3>
+                <p>Complete strategy for Instagram, Facebook, TikTok. Brand voice, content pillars, hashtag strategy, posting calendar, caption templates, crisis management.</p>
+                <div class="filename">03_Social_Media_Guidelines.html</div>
+            </div>
+
+            <div class="package-item">
+                <div class="number">04</div>
+                <h3>Menu Templates (Print)</h3>
+                <p>8.5" x 11" print-ready menu templates. Appetizers, mains, sides, desserts, drinks. Includes print specifications and paper stock recommendations.</p>
+                <div class="filename">04_Menu_Template_Print.html</div>
+            </div>
+
+            <div class="package-item">
+                <div class="number">05</div>
+                <h3>TV Digital Menu Board</h3>
+                <p>1920x1080 digital signage template for in-restaurant TV displays. Animated elements, live clock, scrolling announcements, WiFi info.</p>
+                <div class="filename">05_TV_Digital_Menu_Board.html</div>
+            </div>
+
+            <div class="package-item">
+                <div class="number">06</div>
+                <h3>Instagram Templates</h3>
+                <p>Feed posts (1080x1080) and story templates (1080x1920). Food features, quotes, announcements, polls, behind-the-scenes. Export specifications included.</p>
+                <div class="filename">06_Instagram_Templates.html</div>
+            </div>
+        </div>
+
+        <!-- Also in Parent Folder -->
+        <h2 class="section-title">Brand Guidelines (Parent Folder)</h2>
+
+        <div class="package-grid">
+            <div class="package-item">
+                <div class="number">BG</div>
+                <h3>Brand Guidelines (HTML)</h3>
+                <p>11-page visual brand guidelines document. Covers logo usage, clear space, variations, misuse, color palette, typography, print specs, uniform applications.</p>
+                <div class="filename">BRASA_ROJA_Brand_Guidelines.html</div>
+            </div>
+
+            <div class="package-item">
+                <div class="number">MD</div>
+                <h3>Brand Guidelines (Markdown)</h3>
+                <p>Text-based brand guidelines for easy reference and editing. Same content as HTML version in developer-friendly format.</p>
+                <div class="filename">BRASA_ROJA_Brand_Guidelines.md</div>
+            </div>
+        </div>
+
+        <!-- File Structure -->
+        <h2 class="section-title">File Structure</h2>
+
+        <div class="file-tree">
+            <div class="folder">BrasaRoja/</div>
+            <div class="file">BRASA_ROJA_Brand_Guidelines.html</div>
+            <div class="file">BRASA_ROJA_Brand_Guidelines.md</div>
+            <div class="file">[Existing logo files...]</div>
+            <div class="folder" style="margin-left: 20px;">Brand_Package/</div>
+            <div class="file" style="margin-left: 40px;">00_README_Brand_Package_Index.html (this file)</div>
+            <div class="file" style="margin-left: 40px;">01_Business_Cards.html</div>
+            <div class="file" style="margin-left: 40px;">02_Email_Signature.html</div>
+            <div class="file" style="margin-left: 40px;">03_Social_Media_Guidelines.html</div>
+            <div class="file" style="margin-left: 40px;">04_Menu_Template_Print.html</div>
+            <div class="file" style="margin-left: 40px;">05_TV_Digital_Menu_Board.html</div>
+            <div class="file" style="margin-left: 40px;">06_Instagram_Templates.html</div>
+        </div>
+
+        <!-- Quick Reference: Colors -->
+        <h2 class="section-title">Quick Reference: Brand Colors</h2>
+
+        <div class="color-row">
+            <div class="color-chip">
+                <div class="color-swatch" style="background: #C9882B;"></div>
+                <div class="color-info">
+                    <div class="color-name">Brasa Gold</div>
+                    <div class="color-hex">#C9882B | PMS 7564 C</div>
+                </div>
+            </div>
+            <div class="color-chip">
+                <div class="color-swatch" style="background: #C63333;"></div>
+                <div class="color-info">
+                    <div class="color-name">Roja Red</div>
+                    <div class="color-hex">#C63333 | PMS 1797 C</div>
+                </div>
+            </div>
+            <div class="color-chip">
+                <div class="color-swatch" style="background: #8B2500;"></div>
+                <div class="color-info">
+                    <div class="color-name">Deep Ember</div>
+                    <div class="color-hex">#8B2500 | PMS 7622 C</div>
+                </div>
+            </div>
+            <div class="color-chip">
+                <div class="color-swatch" style="background: #2D2D2D;"></div>
+                <div class="color-info">
+                    <div class="color-name">Charcoal</div>
+                    <div class="color-hex">#2D2D2D | Black 7 C</div>
+                </div>
+            </div>
+            <div class="color-chip">
+                <div class="color-swatch" style="background: #F5EFE0; border: 1px solid #ccc;"></div>
+                <div class="color-info">
+                    <div class="color-name">Crema</div>
+                    <div class="color-hex">#F5EFE0 | PMS 7527 C</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Launch Checklist -->
+        <h2 class="section-title">Brand Launch Checklist</h2>
+
+        <ul class="checklist">
+            <li>Convert logo files to vector formats (AI, EPS, SVG)</li>
+            <li>Order business cards from printer</li>
+            <li>Set up email signatures for all staff</li>
+            <li>Create Instagram/Facebook accounts with branded profile</li>
+            <li>Upload profile photo (icon only, 320x320)</li>
+            <li>Set up Facebook cover image (820x312)</li>
+            <li>Schedule first week of social media posts</li>
+            <li>Print menus (get proof before full run)</li>
+            <li>Set up TV digital menu board</li>
+            <li>Order staff uniforms with embroidered logo</li>
+            <li>Install exterior signage</li>
+            <li>Create Google Business Profile with branding</li>
+            <li>Set up Yelp page with logo and photos</li>
+            <li>Train staff on brand voice and social media guidelines</li>
+        </ul>
+
+        <!-- Contact -->
+        <div class="contact-section">
+            <h3>Need Help?</h3>
+            <p>This brand package was designed for Brasa Roja restaurant.</p>
+            <p>For questions about implementation, contact your brand manager.</p>
+            <p style="margin-top: 20px; font-family: 'Cinzel', serif;">
+                <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--crema);">ROJA</span>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="logo">
+                <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+            </div>
+            <div class="tagline" style="font-family: 'Parisienne', cursive; color: var(--brasa-gold); font-size: 1.1rem;">Tradición Familiar</div>
+            <div class="version">Brand Package v1.0 | January 2026</div>
+        </div>
+    </div>
+</body>
+</html>

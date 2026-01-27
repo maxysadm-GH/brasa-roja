@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Instagram Templates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #f0f0f0;
+            padding: 40px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--charcoal);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .templates-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--roja-red);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--brasa-gold);
+        }
+
+        .templates-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .template-wrapper {
+            text-align: center;
+        }
+
+        .template-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Instagram Post - 1080x1080 scaled to 360x360 for preview */
+        .ig-post {
+            width: 360px;
+            height: 360px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Instagram Story - 1080x1920 scaled to 202x360 for preview */
+        .ig-story {
+            width: 202px;
+            height: 360px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Template 1: Food Feature */
+        .template-food {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        .template-food .photo-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 40%;
+            background: linear-gradient(180deg, var(--roja-red) 0%, var(--deep-ember) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.9rem;
+        }
+
+        .template-food .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .template-food .dish-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--crema);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .template-food .dish-desc {
+            font-size: 0.85rem;
+            color: rgba(245, 239, 224, 0.8);
+            margin-bottom: 15px;
+        }
+
+        .template-food .price-tag {
+            display: inline-block;
+            background: var(--brasa-gold);
+            color: var(--charcoal);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+
+        .template-food .logo-small {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+        }
+
+        .template-food .logo-small .brasa { color: var(--brasa-gold); }
+        .template-food .logo-small .roja { color: var(--roja-red); }
+
+        /* Template 2: Quote/Story */
+        .template-quote {
+            background: var(--crema);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .template-quote .quote-mark {
+            font-size: 4rem;
+            color: var(--brasa-gold);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .template-quote .quote-text {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .template-quote .attribution {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .template-quote .logo-bottom {
+            position: absolute;
+            bottom: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+        }
+
+        /* Template 3: Announcement */
+        .template-announce {
+            background: var(--roja-red);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .template-announce .badge {
+            background: var(--brasa-gold);
+            color: var(--charcoal);
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .template-announce .headline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--crema);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .template-announce .details {
+            font-size: 0.9rem;
+            color: rgba(245, 239, 224, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .template-announce .cta {
+            border: 2px solid var(--crema);
+            color: var(--crema);
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Template 4: Menu Feature */
+        .template-menu {
+            background: var(--charcoal);
+            padding: 25px;
+        }
+
+        .template-menu .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--brasa-gold);
+        }
+
+        .template-menu .header .title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .template-menu .header .spanish {
+            font-family: 'Parisienne', cursive;
+            color: var(--brasa-gold);
+            font-size: 1rem;
+        }
+
+        .template-menu .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted rgba(255,255,255,0.2);
+        }
+
+        .template-menu .item-name {
+            font-family: 'Cinzel', serif;
+            color: var(--crema);
+            font-size: 0.85rem;
+        }
+
+        .template-menu .item-price {
+            color: var(--brasa-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+        }
+
+        /* Story Template 1: Daily Special */
+        .story-special {
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--deep-ember) 100%);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .story-special .top-badge {
+            text-align: center;
+            background: var(--brasa-gold);
+            color: var(--charcoal);
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            padding: 6px 12px;
+            border-radius: 15px;
+            align-self: center;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .story-special .photo-placeholder {
+            flex: 1;
+            background: rgba(0,0,0,0.3);
+            margin: 15px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+        }
+
+        .story-special .dish-info {
+            text-align: center;
+        }
+
+        .story-special .dish-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--crema);
+            font-weight: 700;
+        }
+
+        .story-special .dish-price {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--brasa-gold);
+            margin-top: 5px;
+        }
+
+        .story-special .swipe-up {
+            text-align: center;
+            margin-top: 15px;
+            color: var(--crema);
+            font-size: 0.7rem;
+        }
+
+        .story-special .swipe-up::after {
+            content: ' ^';
+        }
+
+        /* Story Template 2: Poll/Question */
+        .story-poll {
+            background: var(--crema);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .story-poll .question {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin: 30px 0 20px;
+        }
+
+        .story-poll .option {
+            background: white;
+            border: 2px solid var(--roja-red);
+            color: var(--charcoal);
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 25px;
+        }
+
+        .story-poll .option:first-of-type {
+            margin-top: 0;
+        }
+
+        .story-poll .logo {
+            margin-top: auto;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+        }
+
+        /* Story Template 3: Behind the Scenes */
+        .story-bts {
+            background: var(--charcoal);
+            position: relative;
+        }
+
+        .story-bts .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--roja-red) 0%, var(--charcoal) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+        }
+
+        .story-bts .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        }
+
+        .story-bts .tag {
+            background: var(--brasa-gold);
+            color: var(--charcoal);
+            font-family: 'Cinzel', serif;
+            font-size: 0.5rem;
+            padding: 4px 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .story-bts .caption {
+            font-size: 0.75rem;
+            color: var(--crema);
+        }
+
+        /* Specifications Table */
+        .specs-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .specs-section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--roja-red);
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--charcoal);
+            color: white;
+            font-family: 'Cinzel', serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>BRASA ROJA - Instagram Templates</h1>
+    <p class="subtitle">Ready-to-use templates for feed posts and stories (1080x1080 & 1080x1920)</p>
+
+    <!-- FEED POST TEMPLATES -->
+    <div class="templates-section">
+        <h2 class="section-title">Feed Post Templates (1080x1080px)</h2>
+
+        <div class="templates-grid">
+            <!-- Template 1: Food Feature -->
+            <div class="template-wrapper">
+                <div class="template-label">Food Feature Post</div>
+                <div class="ig-post template-food">
+                    <div class="photo-area">[FOOD PHOTO HERE]</div>
+                    <div class="content">
+                        <div class="dish-name">BIFE DE CHORIZO</div>
+                        <div class="dish-desc">16oz prime ribeye, flame-grilled with our signature chimichurri</div>
+                        <div class="price-tag">$48</div>
+                    </div>
+                    <div class="logo-small">
+                        <span class="brasa">BRASA</span><span class="roja">ROJA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 2: Quote -->
+            <div class="template-wrapper">
+                <div class="template-label">Quote/Story Post</div>
+                <div class="ig-post template-quote">
+                    <div class="quote-mark">"</div>
+                    <div class="quote-text">La comida es amor hecho visible</div>
+                    <div class="attribution">- Abuela Maria, 1962</div>
+                    <div class="logo-bottom">
+                        <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 3: Announcement -->
+            <div class="template-wrapper">
+                <div class="template-label">Announcement Post</div>
+                <div class="ig-post template-announce">
+                    <div class="badge">This Weekend Only</div>
+                    <div class="headline">PARRILLADA NIGHT</div>
+                    <div class="details">Saturday 6-10pm<br>Live music & family-style grilling</div>
+                    <div class="cta">Reserve Now</div>
+                </div>
+            </div>
+
+            <!-- Template 4: Menu Feature -->
+            <div class="template-wrapper">
+                <div class="template-label">Menu Feature Post</div>
+                <div class="ig-post template-menu">
+                    <div class="header">
+                        <div class="title">New Cocktails</div>
+                        <div class="spanish">Nuevos Cócteles</div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Margarita Clásica</span>
+                        <span class="item-price">$14</span>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Brasa Sangria</span>
+                        <span class="item-price">$12</span>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mojito</span>
+                        <span class="item-price">$13</span>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Paloma</span>
+                        <span class="item-price">$13</span>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mezcal Negroni</span>
+                        <span class="item-price">$15</span>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <span style="font-family: 'Cinzel', serif; font-size: 0.7rem;">
+                            <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STORY TEMPLATES -->
+    <div class="templates-section">
+        <h2 class="section-title">Story Templates (1080x1920px)</h2>
+
+        <div class="templates-grid">
+            <!-- Story 1: Daily Special -->
+            <div class="template-wrapper">
+                <div class="template-label">Daily Special Story</div>
+                <div class="ig-story story-special">
+                    <div class="top-badge">Today's Special</div>
+                    <div class="photo-placeholder">[FOOD PHOTO]</div>
+                    <div class="dish-info">
+                        <div class="dish-name">COSTILLAS DE CERDO</div>
+                        <div class="dish-price">$36</div>
+                    </div>
+                    <div class="swipe-up">Swipe up to reserve</div>
+                </div>
+            </div>
+
+            <!-- Story 2: Poll -->
+            <div class="template-wrapper">
+                <div class="template-label">Poll/Engagement Story</div>
+                <div class="ig-story story-poll">
+                    <div style="font-family: 'Cinzel', serif; font-size: 0.7rem; color: var(--roja-red);">
+                        <span style="color: var(--brasa-gold);">BRASA</span><span>ROJA</span>
+                    </div>
+                    <div class="question">What's your go-to order?</div>
+                    <div class="option">Bife de Chorizo</div>
+                    <div class="option">Pollo al Disco</div>
+                    <div class="option">Costillas de Cerdo</div>
+                    <div class="option">Salmón a la Brasa</div>
+                    <div class="logo" style="margin-top: 30px;">
+                        <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 3: Behind the Scenes -->
+            <div class="template-wrapper">
+                <div class="template-label">Behind the Scenes Story</div>
+                <div class="ig-story story-bts">
+                    <div class="video-placeholder">[VIDEO CONTENT]</div>
+                    <div class="overlay">
+                        <div class="tag">Behind the Flames</div>
+                        <div class="caption">Prepping for tonight's service. This is where the magic happens.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPECIFICATIONS -->
+    <div class="specs-section">
+        <h2>Export Specifications</h2>
+        <table>
+            <tr>
+                <th>Format</th>
+                <th>Dimensions</th>
+                <th>File Type</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Feed Post (Square)</td>
+                <td>1080 x 1080 px</td>
+                <td>JPG or PNG</td>
+                <td>Under 30MB, sRGB color</td>
+            </tr>
+            <tr>
+                <td>Feed Post (Portrait)</td>
+                <td>1080 x 1350 px</td>
+                <td>JPG or PNG</td>
+                <td>4:5 ratio, more feed visibility</td>
+            </tr>
+            <tr>
+                <td>Story</td>
+                <td>1080 x 1920 px</td>
+                <td>JPG, PNG, MP4</td>
+                <td>9:16 ratio, keep text in safe zone</td>
+            </tr>
+            <tr>
+                <td>Reel Cover</td>
+                <td>1080 x 1920 px</td>
+                <td>JPG or PNG</td>
+                <td>Same as story</td>
+            </tr>
+            <tr>
+                <td>Profile Photo</td>
+                <td>320 x 320 px</td>
+                <td>JPG or PNG</td>
+                <td>Displays as circle, use icon only</td>
+            </tr>
+        </table>
+
+        <h3 style="margin-top: 30px; font-family: 'Cinzel', serif; color: var(--roja-red);">Design Tools</h3>
+        <p style="margin-top: 10px;">Create these templates using:</p>
+        <ul style="margin: 15px 0 0 20px; line-height: 2;">
+            <li><strong>Canva</strong> - Free, templates available, team collaboration</li>
+            <li><strong>Adobe Express</strong> - Professional quality, brand kit feature</li>
+            <li><strong>Figma</strong> - Design system approach, reusable components</li>
+            <li><strong>Later/Planoly</strong> - Schedule + design in one platform</li>
+        </ul>
+    </div>
+</body>
+</html>

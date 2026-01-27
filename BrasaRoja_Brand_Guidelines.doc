@@ -1,0 +1,331 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<title>Brasa Roja - Logo Guidelines</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page {
+    size: 11in 8.5in;
+    margin: 0.5in;
+}
+body {
+    font-family: Georgia, serif;
+    font-size: 11pt;
+    color: #1A1A1A;
+    line-height: 1.5;
+}
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 36pt;
+    font-weight: bold;
+    color: #1A1A1A;
+    page-break-before: always;
+    margin-top: 0;
+}
+h1.first {
+    page-break-before: auto;
+}
+h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #C41E3A;
+    border-bottom: 2px solid #C41E3A;
+    padding-bottom: 8pt;
+    margin-top: 20pt;
+}
+h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #C9882B;
+    margin-top: 15pt;
+}
+p {
+    margin-bottom: 10pt;
+}
+.cover {
+    text-align: left;
+    padding-top: 300pt;
+}
+.cover h1 {
+    font-size: 72pt;
+    color: #1A1A1A;
+    line-height: 1.1;
+    page-break-before: auto;
+}
+.footer {
+    font-size: 9pt;
+    color: #888;
+    border-top: 1px solid #ccc;
+    padding-top: 5pt;
+    margin-top: 30pt;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15pt 0;
+}
+td {
+    padding: 10pt;
+    vertical-align: top;
+}
+.color-box {
+    width: 80pt;
+    height: 60pt;
+    display: inline-block;
+}
+.section-divider {
+    background-color: #1A1A1A;
+    color: #F6F0E6;
+    padding: 200pt 40pt 40pt 40pt;
+    page-break-before: always;
+}
+.note-box {
+    background-color: #F6F0E6;
+    border-left: 4pt solid #C9882B;
+    padding: 10pt 15pt;
+    margin: 15pt 0;
+}
+ul {
+    margin-left: 20pt;
+}
+li {
+    margin-bottom: 5pt;
+}
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+<h1 class="first" style="font-size:72pt;">LOGO<br>GUIDELINES</h1>
+<p style="margin-top:200pt;"><strong>Brasa Roja Brand Guidelines</strong><br>January 2026</p>
+</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- CONTENTS -->
+<h1>CONTENTS</h1>
+
+<table>
+<tr>
+<td style="width:33%;">
+<p style="font-size:48pt;font-weight:bold;color:#C41E3A;margin:0;">04</p>
+<h3>Logo</h3>
+<ul style="list-style:none;margin:0;padding:0;">
+<li>Primary Logo</li>
+<li>Logo Inspiration</li>
+<li>Logo Variations</li>
+<li>Logo Misuse</li>
+</ul>
+</td>
+<td style="width:33%;">
+<p style="font-size:48pt;font-weight:bold;color:#C41E3A;margin:0;">09</p>
+<h3>Additional Assets</h3>
+<ul style="list-style:none;margin:0;padding:0;">
+<li>Brand Pattern</li>
+</ul>
+</td>
+<td style="width:33%;">
+<p style="font-size:48pt;font-weight:bold;color:#C41E3A;margin:0;">11</p>
+<h3>Colors</h3>
+<ul style="list-style:none;margin:0;padding:0;">
+<li>Color Palette</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 03</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- LOGOS SECTION -->
+<div style="background-color:#1A1A1A;color:#F6F0E6;padding:40pt;margin:-36pt -36pt 0 -36pt;">
+<h1 style="color:#F6F0E6;page-break-before:auto;">LOGOS</h1>
+</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- PRIMARY LOGO -->
+<h2>PRIMARY LOGO</h2>
+
+<p>Our primary logo should be used in most circumstances. It should be the standard and most recognizable version of our logo.</p>
+
+<p>This logo is best suited for prominent locations such as your primary signage, menus, or website header.</p>
+
+<div class="note-box">
+<h3 style="margin-top:0;">Clear Space</h3>
+<p style="margin-bottom:0;">This is the area around your logo that should be left clear of other assets. Maintain a minimum clear space equal to the height of the flame icon on all sides.</p>
+</div>
+
+<p style="text-align:center;margin:30pt 0;"><em>[Insert Primary Logo Image Here - See: Logo_MAIN_1.png]</em></p>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 05</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- PRIMARY LOGO INSPIRATION -->
+<h2>PRIMARY LOGO</h2>
+
+<p><strong>The flame</strong> represents the heart of our cooking tradition - the open fire that brings families together. The three points symbolize past, present, and future generations.</p>
+
+<p><strong>The golden orbital swirl</strong> wrapping around the flame base signifies movement, warmth, and the gathering of family around the fire. It creates a sense of embrace and welcome.</p>
+
+<p><strong>The rising embers</strong> trailing upward represent the passion that rises from our kitchen - sparks of flavor, memories, and tradition that ascend with every dish we serve.</p>
+
+<p><strong>The typography</strong> pairs "BRASA" in gold with "ROJA" in red, directly translating to "Red Ember" while the script tagline "Tradici&oacute;n Familiar" (Family Tradition) anchors our heritage.</p>
+
+<p style="text-align:center;margin:30pt 0;"><em>[Insert Logo Detail Image Here - See: BR_Main_1.png]</em></p>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 06</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- LOGO VARIATIONS -->
+<h2>LOGO VARIATIONS</h2>
+
+<p>These logo variations are provided to work in situations where your primary logo may not fit the format best.</p>
+
+<h3>Primary Logo (Dark Background)</h3>
+<p>The standard full-color logo for use on dark backgrounds. This is the preferred version for most applications.</p>
+
+<h3>Primary Logo (Light Background)</h3>
+<p>Full-color logo adapted for light or cream-colored backgrounds such as menus and stationery.</p>
+
+<h3>Gold Monochrome</h3>
+<p>Single-color gold version for premium applications, embossing, or when color printing is limited.</p>
+
+<h3>Full-Color Transparent</h3>
+<p>Logo with transparent background for flexible placement over images or colored backgrounds.</p>
+
+<h3>Icon Mark</h3>
+<p>The flame and swirl icon without text. Use for favicons, social media profile pictures, and small applications.</p>
+
+<h3>White Monochrome</h3>
+<p>Single-color white version for use on dark fabrics, signage, and high-contrast applications.</p>
+
+<p style="text-align:center;margin:30pt 0;"><em>[Insert Logo Variants Grid Here - See: Logo Variants 1.png]</em></p>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 07</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- LOGO MISUSE -->
+<h2>LOGO MISUSE</h2>
+
+<table>
+<tr>
+<td style="border:1px solid #ddd;padding:15pt;text-align:center;"><strong>Do not stretch or warp the logo</strong></td>
+<td style="border:1px solid #ddd;padding:15pt;text-align:center;"><strong>Do not outline the logo</strong></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;padding:15pt;text-align:center;"><strong>Do not change the colors of the logo</strong></td>
+<td style="border:1px solid #ddd;padding:15pt;text-align:center;"><strong>Do not change the layout of the logo</strong></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;padding:15pt;text-align:center;"><strong>Do not crop the logo</strong></td>
+<td style="border:1px solid #ddd;padding:15pt;text-align:center;"><strong>Do not lighten the logo</strong></td>
+</tr>
+</table>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 08</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- ADDITIONAL ASSETS -->
+<div style="background-color:#1A1A1A;color:#F6F0E6;padding:40pt;margin:-36pt -36pt 0 -36pt;">
+<h1 style="color:#F6F0E6;page-break-before:auto;">ADDITIONAL ASSETS</h1>
+</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- BRAND PATTERN -->
+<h2>BRAND PATTERN</h2>
+
+<p>Our brand patterns are in place for backgrounds, packaging, social media posts, and more in order to add more visual interest while remaining consistent with the rest of the brand.</p>
+
+<p>The pattern uses the flame and ember motif in a repeating arrangement, creating texture that evokes warmth and tradition.</p>
+
+<p style="text-align:center;margin:30pt 0;background:#1A1A1A;padding:60pt;color:#C9882B;"><em>[Flame &amp; Ember Pattern Display]</em></p>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 10</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- COLOR GUIDE -->
+<div style="background-color:#1A1A1A;color:#F6F0E6;padding:40pt;margin:-36pt -36pt 0 -36pt;">
+<h1 style="color:#F6F0E6;page-break-before:auto;">COLOR GUIDE</h1>
+</div>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- COLOR PALETTE -->
+<h2>COLOR PALETTE</h2>
+
+<p>Our brand colors reflect the warmth of fire and the richness of our culinary heritage. The palette balances passionate reds with elegant golds, supported by warm neutrals that create an inviting atmosphere.</p>
+
+<table style="margin-top:30pt;">
+<tr>
+<td style="padding:15pt;border:1px solid #ddd;">
+<div style="background:linear-gradient(135deg, #E44D26, #C41E3A);width:100%;height:60pt;"></div>
+<p style="margin-top:10pt;"><strong>Primary Red</strong><br>
+HEX: #E44D26<br>
+RGB: 228, 77, 38<br>
+CMYK: 0, 80, 90, 5</p>
+</td>
+<td style="padding:15pt;border:1px solid #ddd;">
+<div style="background:#C41E3A;width:100%;height:60pt;"></div>
+<p style="margin-top:10pt;"><strong>Deep Red</strong><br>
+HEX: #C41E3A<br>
+RGB: 196, 30, 58<br>
+CMYK: 15, 100, 80, 5</p>
+</td>
+<td style="padding:15pt;border:1px solid #ddd;">
+<div style="background:linear-gradient(135deg, #D4A84B, #B8860B);width:100%;height:60pt;"></div>
+<p style="margin-top:10pt;"><strong>Brasa Gold</strong><br>
+HEX: #D4A84B<br>
+RGB: 212, 168, 75<br>
+CMYK: 15, 30, 75, 0</p>
+</td>
+</tr>
+<tr>
+<td style="padding:15pt;border:1px solid #ddd;">
+<div style="background:#B02D37;width:100%;height:60pt;"></div>
+<p style="margin-top:10pt;"><strong>Accent Red</strong><br>
+HEX: #B02D37<br>
+RGB: 176, 45, 55<br>
+CMYK: 20, 90, 75, 10</p>
+</td>
+<td style="padding:15pt;border:1px solid #ddd;">
+<div style="background:#F6F0E6;width:100%;height:60pt;border:1px solid #ddd;"></div>
+<p style="margin-top:10pt;"><strong>Light Neutral</strong><br>
+HEX: #F6F0E6<br>
+RGB: 246, 240, 230<br>
+CMYK: 3, 4, 10, 0</p>
+</td>
+<td style="padding:15pt;border:1px solid #ddd;">
+<div style="background:#1A1A1A;width:100%;height:60pt;"></div>
+<p style="margin-top:10pt;"><strong>Charcoal Black</strong><br>
+HEX: #1A1A1A<br>
+RGB: 26, 26, 26<br>
+CMYK: 75, 68, 67, 90</p>
+</td>
+</tr>
+</table>
+
+<div class="footer">Brand Guidelines &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRASA ROJA | 12</div>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Website Setup Deliverables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--crema);
+            color: var(--charcoal);
+            line-height: 1.6;
+            padding: 40px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--roja-red);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--brasa-gold);
+        }
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--roja-red);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            margin: 25px 0 15px;
+        }
+        .checklist {
+            list-style: none;
+            margin: 15px 0;
+        }
+        .checklist li {
+            padding: 12px 15px;
+            background: #fafafa;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-left: 4px solid var(--brasa-gold);
+        }
+        .checklist li.critical {
+            border-left-color: var(--roja-red);
+            background: #fff5f5;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--brasa-gold);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .task-content {
+            flex: 1;
+        }
+        .task-title {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .task-detail {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .code-block {
+            background: var(--charcoal);
+            color: #f0f0f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .highlight-box {
+            background: #fff8e6;
+            border-left: 4px solid var(--brasa-gold);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: var(--charcoal);
+            color: white;
+            font-family: 'Cinzel', serif;
+        }
+        .priority-high { color: var(--roja-red); font-weight: bold; }
+        .priority-med { color: var(--brasa-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Website Setup Deliverables</h1>
+        <p class="subtitle">Complete checklist for brasaroja.lovable.app and production launch</p>
+
+        <!-- PHASE 1: IMMEDIATE -->
+        <h2>Phase 1: Immediate Website Updates</h2>
+
+        <ul class="checklist">
+            <li class="critical">
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Upload Favicon</div>
+                    <div class="task-detail">Use favicon.svg or convert to .ico (32x32, 16x16). Place in root directory or /public folder.</div>
+                </div>
+            </li>
+            <li class="critical">
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Replace Logo in Header</div>
+                    <div class="task-detail">Use BrasaRoja_Horizontal.svg for desktop, BrasaRoja_Icon_Color.svg for mobile.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Update Meta Tags</div>
+                    <div class="task-detail">Title: "Brasa Roja | Tradición Familiar - Latin Fire-Cooked Cuisine"</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Add Open Graph Image</div>
+                    <div class="task-detail">Create 1200x630px image for social sharing. Use Primary logo on dark background.</div>
+                </div>
+            </li>
+        </ul>
+
+        <h3>Meta Tags Code</h3>
+        <div class="code-block">
+&lt;!-- Primary Meta Tags --&gt;
+&lt;title&gt;Brasa Roja | Tradición Familiar - Latin Fire-Cooked Cuisine&lt;/title&gt;
+&lt;meta name="title" content="Brasa Roja | Tradición Familiar"&gt;
+&lt;meta name="description" content="Experience the art of fire-cooked Latin cuisine. Family recipes, open-flame cooking, and generations of tradition. Reserve your table today."&gt;
+
+&lt;!-- Open Graph / Facebook --&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:url" content="https://brasaroja.com/"&gt;
+&lt;meta property="og:title" content="Brasa Roja | Tradición Familiar"&gt;
+&lt;meta property="og:description" content="Experience the art of fire-cooked Latin cuisine."&gt;
+&lt;meta property="og:image" content="https://brasaroja.com/images/og-image.jpg"&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;meta property="twitter:card" content="summary_large_image"&gt;
+&lt;meta property="twitter:url" content="https://brasaroja.com/"&gt;
+&lt;meta property="twitter:title" content="Brasa Roja | Tradición Familiar"&gt;
+&lt;meta property="twitter:image" content="https://brasaroja.com/images/og-image.jpg"&gt;
+
+&lt;!-- Favicon --&gt;
+&lt;link rel="icon" type="image/svg+xml" href="/favicon.svg"&gt;
+&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;
+        </div>
+
+        <!-- PHASE 2: BRANDING -->
+        <h2>Phase 2: Visual Branding Implementation</h2>
+
+        <ul class="checklist">
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Update CSS Color Variables</div>
+                    <div class="task-detail">Replace existing colors with brand palette throughout the site.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Install Brand Fonts</div>
+                    <div class="task-detail">Add Cinzel (headlines), Lora (body), Parisienne (accents) via Google Fonts.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Update Button Styles</div>
+                    <div class="task-detail">Primary buttons: Roja Red background. Secondary: Gold outline.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Add Footer Logo</div>
+                    <div class="task-detail">Use BrasaRoja_Primary_Light.svg or wordmark in footer with social links.</div>
+                </div>
+            </li>
+        </ul>
+
+        <h3>CSS Variables</h3>
+        <div class="code-block">
+:root {
+  /* Primary Brand Colors */
+  --brasa-gold: #C9882B;
+  --roja-red: #C63333;
+  --deep-ember: #8B2500;
+
+  /* Neutral Colors */
+  --charcoal: #2D2D2D;
+  --crema: #F5EFE0;
+  --humo: #8B7355;
+
+  /* Typography */
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-accent: 'Parisienne', cursive;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(45, 45, 45, 0.1);
+  --shadow-md: 0 4px 20px rgba(45, 45, 45, 0.15);
+  --shadow-lg: 0 10px 40px rgba(45, 45, 45, 0.2);
+}
+
+/* Dark theme variant */
+[data-theme="dark"] {
+  --bg-primary: var(--charcoal);
+  --bg-secondary: #1a1a1a;
+  --text-primary: var(--crema);
+  --text-secondary: rgba(245, 239, 224, 0.7);
+}
+        </div>
+
+        <h3>Google Fonts Import</h3>
+        <div class="code-block">
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet"&gt;
+        </div>
+
+        <!-- PHASE 3: CONTENT -->
+        <h2>Phase 3: Content & Pages</h2>
+
+        <ul class="checklist">
+            <li class="critical">
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Home Page Hero</div>
+                    <div class="task-detail">Full-width hero with flame video/image background. "El Arte del Fuego" headline. CTA to reservations.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Menu Page</div>
+                    <div class="task-detail">Digital menu with sections: Starters, From the Grill, Sides, Desserts, Drinks. Include prices.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">About/Story Page</div>
+                    <div class="task-detail">"Tradición Familiar" story. Family photos if available. Chef bio.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Contact/Location Page</div>
+                    <div class="task-detail">Address, phone, hours, Google Map embed, reservation form/link.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Gallery Page</div>
+                    <div class="task-detail">Food photography, restaurant interior, kitchen action shots.</div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- PHASE 4: FUNCTIONALITY -->
+        <h2>Phase 4: Functionality & Integrations</h2>
+
+        <ul class="checklist">
+            <li class="critical">
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Reservation System</div>
+                    <div class="task-detail">Integrate OpenTable, Resy, or Yelp Reservations. Add prominent "Reserve" button.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Online Ordering (Optional)</div>
+                    <div class="task-detail">For takeout: Square, Toast, or ChowNow integration.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Google Analytics</div>
+                    <div class="task-detail">Set up GA4 tracking. Track reservations, menu views, contact clicks.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Google Business Profile Link</div>
+                    <div class="task-detail">Verify website URL in Google Business. Add structured data for LocalBusiness.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Instagram Feed Widget</div>
+                    <div class="task-detail">Embed live Instagram feed on homepage or dedicated section.</div>
+                </div>
+            </li>
+        </ul>
+
+        <h3>Structured Data (LocalBusiness)</h3>
+        <div class="code-block">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Brasa Roja",
+  "alternateName": "Brasa Roja - Tradición Familiar",
+  "image": "https://brasaroja.com/images/restaurant-exterior.jpg",
+  "url": "https://brasaroja.com",
+  "telephone": "+1-555-123-4567",
+  "priceRange": "$$",
+  "servesCuisine": ["Latin American", "Argentinian", "Grilled Meats"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Street",
+    "addressLocality": "City",
+    "addressRegion": "ST",
+    "postalCode": "12345",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 00.000000,
+    "longitude": -00.000000
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "21:00"
+    }
+  ],
+  "acceptsReservations": "True",
+  "menu": "https://brasaroja.com/menu"
+}
+&lt;/script&gt;
+        </div>
+
+        <!-- ASSET CHECKLIST -->
+        <h2>Website Asset Checklist</h2>
+
+        <table>
+            <tr>
+                <th>Asset</th>
+                <th>Size</th>
+                <th>Format</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>Favicon</td>
+                <td>32x32, 16x16</td>
+                <td>SVG, ICO, PNG</td>
+                <td>/favicon.svg</td>
+            </tr>
+            <tr>
+                <td>Apple Touch Icon</td>
+                <td>180x180</td>
+                <td>PNG</td>
+                <td>/apple-touch-icon.png</td>
+            </tr>
+            <tr>
+                <td>Header Logo (Desktop)</td>
+                <td>200-300px wide</td>
+                <td>SVG</td>
+                <td>/images/logo.svg</td>
+            </tr>
+            <tr>
+                <td>Header Logo (Mobile)</td>
+                <td>40-50px</td>
+                <td>SVG</td>
+                <td>/images/logo-icon.svg</td>
+            </tr>
+            <tr>
+                <td>OG Image</td>
+                <td>1200x630</td>
+                <td>JPG</td>
+                <td>/images/og-image.jpg</td>
+            </tr>
+            <tr>
+                <td>Hero Background</td>
+                <td>1920x1080+</td>
+                <td>JPG/WebP</td>
+                <td>/images/hero-bg.jpg</td>
+            </tr>
+            <tr>
+                <td>Footer Logo</td>
+                <td>150-200px wide</td>
+                <td>SVG</td>
+                <td>/images/logo-footer.svg</td>
+            </tr>
+        </table>
+
+        <!-- DOMAIN SETUP -->
+        <h2>Domain & Hosting Notes</h2>
+
+        <div class="highlight-box">
+            <strong>Current URL:</strong> brasaroja.lovable.app<br><br>
+            <strong>Recommended:</strong> Purchase brasaroja.com and set up redirect from lovable.app subdomain.
+        </div>
+
+        <ul class="checklist">
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Purchase Domain</div>
+                    <div class="task-detail">Register brasaroja.com via Namecheap, Google Domains, or GoDaddy.</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">SSL Certificate</div>
+                    <div class="task-detail">Ensure HTTPS is enabled (most hosts include free SSL).</div>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox"></div>
+                <div class="task-content">
+                    <div class="task-title">Set Up Email</div>
+                    <div class="task-detail">Create info@brasaroja.com, reservations@brasaroja.com via Google Workspace or Zoho.</div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- FOOTER -->
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid var(--brasa-gold); text-align: center;">
+            <div style="font-family: 'Cinzel', serif; font-size: 1.2rem;">
+                <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">Website Deliverables v1.0 | January 2026</p>
+        </div>
+    </div>
+</body>
+</html>

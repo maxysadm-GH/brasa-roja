@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa Roja - Brand Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+            --humo: #8B7355;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--crema);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--crema);
+            min-height: 100vh;
+            padding: 60px;
+            page-break-after: always;
+        }
+
+        .page-dark {
+            background: var(--charcoal);
+            color: var(--crema);
+        }
+
+        .page-red {
+            background: var(--roja-red);
+            color: var(--crema);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', 'Trajan Pro', serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+            border-bottom: 3px solid var(--roja-red);
+            padding-bottom: 0.3em;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5em 0 0.5em;
+            color: var(--roja-red);
+        }
+
+        .tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--brasa-gold);
+        }
+
+        .footer-line {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            border-top: 2px solid var(--roja-red);
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        /* Cover Page */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .cover h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+        }
+
+        .cover-meta {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+
+        /* Logo Display */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            margin: 30px 0;
+            background: var(--charcoal);
+            border-radius: 8px;
+        }
+
+        .logo-container.light {
+            background: var(--crema);
+            border: 1px solid #ddd;
+        }
+
+        .logo-flame {
+            width: 120px;
+            height: auto;
+        }
+
+        .logo-wordmark {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-wordmark .brasa {
+            color: var(--brasa-gold);
+        }
+
+        .logo-wordmark .roja {
+            color: var(--roja-red);
+        }
+
+        .logo-tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.2rem;
+            color: var(--brasa-gold);
+            margin-top: 5px;
+        }
+
+        /* Clear Space Diagram */
+        .clearspace-diagram {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            gap: 0;
+            max-width: 500px;
+            margin: 30px auto;
+            border: 2px dashed var(--roja-red);
+        }
+
+        .clearspace-diagram > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .clearspace-diagram .measure {
+            color: var(--roja-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .clearspace-diagram .center {
+            background: var(--charcoal);
+            color: var(--crema);
+            padding: 30px;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .color-swatch {
+            height: 120px;
+        }
+
+        .color-info {
+            padding: 20px;
+        }
+
+        .color-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .color-values {
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .color-values span {
+            display: block;
+        }
+
+        .color-values strong {
+            display: inline-block;
+            width: 70px;
+        }
+
+        /* Logo Variations Grid */
+        .variations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .variation-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .variation-preview {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--charcoal);
+        }
+
+        .variation-preview.light {
+            background: var(--crema);
+        }
+
+        .variation-info {
+            padding: 20px;
+        }
+
+        .variation-info h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .variation-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Misuse Grid */
+        .misuse-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .misuse-card {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .misuse-icon {
+            font-size: 2rem;
+            color: var(--roja-red);
+            margin-bottom: 10px;
+        }
+
+        .misuse-example {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .misuse-text {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Typography Section */
+        .type-sample {
+            margin: 30px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .type-sample-title {
+            font-size: 0.8rem;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+
+        .type-cinzel {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .type-lora {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.2rem;
+        }
+
+        .type-parisienne {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--brasa-gold);
+        }
+
+        /* Print Specs Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--charcoal);
+            color: var(--crema);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: #fafafa;
+        }
+
+        /* Uniform Application */
+        .uniform-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .uniform-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .uniform-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .uniform-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .uniform-spec {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* SVG Flame Icon */
+        .flame-svg {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Print styles */
+        @media print {
+            .page {
+                page-break-after: always;
+                padding: 40px;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="page page-dark cover">
+        <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+            <svg class="flame-svg" viewBox="0 0 100 140" style="width: 200px;">
+                <!-- Swirl base -->
+                <ellipse cx="50" cy="100" rx="45" ry="15" fill="none" stroke="#C9882B" stroke-width="4"/>
+                <!-- Main flame -->
+                <path d="M50 20 Q70 50 60 70 Q75 60 65 90 Q55 75 50 95 Q45 75 35 90 Q25 60 40 70 Q30 50 50 20" fill="#C63333"/>
+                <!-- Inner flame -->
+                <path d="M50 40 Q60 55 55 70 Q50 60 50 80 Q50 60 45 70 Q40 55 50 40" fill="#C9882B"/>
+                <!-- Embers -->
+                <circle cx="60" cy="15" r="2" fill="#C9882B"/>
+                <circle cx="55" cy="8" r="1.5" fill="#C63333"/>
+                <circle cx="65" cy="5" r="1" fill="#C9882B"/>
+                <circle cx="58" cy="2" r="1.5" fill="#8B7355"/>
+                <circle cx="70" cy="12" r="1" fill="#C9882B"/>
+            </svg>
+        </div>
+        <h1>BRAND<br>GUIDELINES</h1>
+        <p class="tagline">Tradición Familiar</p>
+        <div class="cover-meta">
+            <p>January 2026</p>
+        </div>
+        <div class="footer-line" style="border-color: var(--brasa-gold);">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 01</span>
+        </div>
+    </div>
+
+    <!-- BRAND OVERVIEW -->
+    <div class="page">
+        <h2>BRAND OVERVIEW</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+            <div>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                    <svg viewBox="0 0 100 100" style="width: 80px;">
+                        <ellipse cx="50" cy="70" rx="35" ry="12" fill="none" stroke="#C9882B" stroke-width="3"/>
+                        <path d="M50 15 Q65 40 55 55 Q65 50 58 70 Q52 58 50 75 Q48 58 42 70 Q35 50 45 55 Q35 40 50 15" fill="#C63333"/>
+                    </svg>
+                    <div>
+                        <div style="font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 700;">
+                            <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+                        </div>
+                        <div style="font-family: 'Parisienne', cursive; color: var(--brasa-gold);">Tradición Familiar</div>
+                    </div>
+                </div>
+
+                <h3>Brand Story</h3>
+                <p><strong>Brasa Roja</strong> embodies the warmth of family tradition and the art of fire-cooked cuisine. The name translates to "Red Ember" - representing the glowing heart of our cooking fires that have brought families together for generations.</p>
+
+                <h3>Brand Values</h3>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li style="margin-bottom: 10px;"><strong style="color: var(--roja-red);">Tradición</strong> - Authentic recipes passed down through generations</li>
+                    <li style="margin-bottom: 10px;"><strong style="color: var(--roja-red);">Familia</strong> - Every guest is family</li>
+                    <li style="margin-bottom: 10px;"><strong style="color: var(--roja-red);">Fuego</strong> - The passion and craft of open-flame cooking</li>
+                    <li style="margin-bottom: 10px;"><strong style="color: var(--roja-red);">Calidad</strong> - Only the finest ingredients</li>
+                </ul>
+            </div>
+
+            <div>
+                <div style="background: var(--charcoal); padding: 40px; border-radius: 8px; text-align: center;">
+                    <svg viewBox="0 0 200 250" style="width: 180px;">
+                        <!-- Swirl -->
+                        <ellipse cx="100" cy="180" rx="80" ry="25" fill="none" stroke="#C9882B" stroke-width="6"/>
+                        <!-- Flame -->
+                        <path d="M100 30 Q140 80 120 120 Q150 100 130 160 Q110 130 100 175 Q90 130 70 160 Q50 100 80 120 Q60 80 100 30" fill="#C63333"/>
+                        <path d="M100 60 Q120 90 110 120 Q100 100 100 145 Q100 100 90 120 Q80 90 100 60" fill="#C9882B"/>
+                        <!-- Embers -->
+                        <circle cx="120" cy="25" r="4" fill="#C9882B"/>
+                        <circle cx="110" cy="15" r="3" fill="#C63333"/>
+                        <circle cx="130" cy="10" r="2" fill="#C9882B"/>
+                        <circle cx="115" cy="5" r="3" fill="#8B7355"/>
+                        <circle cx="140" cy="20" r="2" fill="#C9882B"/>
+                        <circle cx="125" cy="3" r="2" fill="#C63333"/>
+                        <!-- Text -->
+                        <text x="100" y="215" text-anchor="middle" font-family="Cinzel, serif" font-size="24" font-weight="700">
+                            <tspan fill="#C9882B">BRASA</tspan><tspan fill="#C63333">ROJA</tspan>
+                        </text>
+                        <text x="100" y="238" text-anchor="middle" font-family="Parisienne, cursive" font-size="14" fill="#C9882B">Tradición Familiar</text>
+                    </svg>
+                </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 8px;">
+                    <h4 style="font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 10px;">Logo Symbolism</h4>
+                    <ul style="font-size: 0.9rem; list-style: none;">
+                        <li style="margin-bottom: 8px;"><strong>Flame:</strong> Passion, warmth, cooking tradition</li>
+                        <li style="margin-bottom: 8px;"><strong>Swirl:</strong> Movement, gathering, community</li>
+                        <li style="margin-bottom: 8px;"><strong>Embers:</strong> Rising quality, celebration</li>
+                        <li><strong>Colors:</strong> Fire (red), Gold (premium), Warmth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 02</span>
+        </div>
+    </div>
+
+    <!-- PRIMARY LOGO -->
+    <div class="page page-dark">
+        <h2 style="border-color: var(--brasa-gold); color: var(--crema);">PRIMARY LOGO</h2>
+
+        <p style="max-width: 500px; margin-bottom: 30px;">Our primary logo should be used in most circumstances. It should be the standard and most recognizable version of our logo. This logo is best suited for prominent locations such as signage, menus, and website headers.</p>
+
+        <div style="display: flex; gap: 60px; align-items: flex-start;">
+            <div style="flex: 1;">
+                <!-- Clear Space Diagram -->
+                <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 8px;">
+                    <div style="border: 2px dashed var(--roja-red); padding: 40px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: var(--roja-red); font-weight: bold;">[A]</div>
+                        <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); color: var(--roja-red); font-weight: bold;">[A]</div>
+                        <div style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--roja-red); font-weight: bold;">[A]</div>
+                        <div style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--roja-red); font-weight: bold;">[A]</div>
+
+                        <div style="text-align: center;">
+                            <svg viewBox="0 0 200 200" style="width: 180px;">
+                                <ellipse cx="100" cy="145" rx="60" ry="18" fill="none" stroke="#C9882B" stroke-width="5"/>
+                                <path d="M100 25 Q130 65 115 95 Q140 80 125 130 Q105 105 100 145 Q95 105 75 130 Q60 80 85 95 Q70 65 100 25" fill="#C63333"/>
+                                <path d="M100 50 Q115 75 108 100 Q100 85 100 125 Q100 85 92 100 Q85 75 100 50" fill="#C9882B"/>
+                                <circle cx="115" cy="20" r="3" fill="#C9882B"/>
+                                <circle cx="108" cy="12" r="2" fill="#C63333"/>
+                                <circle cx="122" cy="8" r="1.5" fill="#8B7355"/>
+                                <text x="100" y="175" text-anchor="middle" font-family="Cinzel, serif" font-size="18" font-weight="700">
+                                    <tspan fill="#C9882B">BRASA</tspan><tspan fill="#C63333">ROJA</tspan>
+                                </text>
+                                <text x="100" y="192" text-anchor="middle" font-family="serif" font-style="italic" font-size="10" fill="#C9882B">Tradición Familiar</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex: 1;">
+                <h3 style="color: var(--brasa-gold);">Clear Space</h3>
+                <p style="font-size: 0.95rem; margin-bottom: 20px;">This is the area around your logo that should be left clear of other assets. Use the height of the letter "A" in BRASA as the measurement unit.</p>
+
+                <h3 style="color: var(--brasa-gold);">Minimum Size</h3>
+                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <p style="margin-bottom: 10px;"><strong>Print:</strong> 1.5 inches (38mm) minimum width</p>
+                    <p style="margin-bottom: 10px;"><strong>Digital:</strong> 150 pixels minimum width</p>
+                    <p style="font-style: italic; font-size: 0.9rem; color: var(--brasa-gold);">Below these sizes, use the Icon Mark only</p>
+                </div>
+
+                <h3 style="color: var(--brasa-gold);">Best Used For</h3>
+                <ul style="font-size: 0.95rem; margin-top: 10px; list-style: none;">
+                    <li style="margin-bottom: 8px;">Restaurant exterior signage</li>
+                    <li style="margin-bottom: 8px;">Menu covers</li>
+                    <li style="margin-bottom: 8px;">Website headers</li>
+                    <li style="margin-bottom: 8px;">Marketing materials</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-line" style="border-color: var(--brasa-gold);">
+            <span style="color: var(--crema);">Brand Guidelines</span>
+            <span style="color: var(--crema);">BRASA ROJA | 03</span>
+        </div>
+    </div>
+
+    <!-- LOGO VARIATIONS -->
+    <div class="page">
+        <h2>LOGO VARIATIONS</h2>
+        <p>These logo variations are provided to work in situations where your primary logo may not fit the format best.</p>
+
+        <div class="variations-grid">
+            <div class="variation-card">
+                <div class="variation-preview">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <svg viewBox="0 0 60 80" style="width: 50px;">
+                            <ellipse cx="30" cy="60" rx="25" ry="8" fill="none" stroke="#C9882B" stroke-width="3"/>
+                            <path d="M30 10 Q45 30 38 45 Q50 38 42 58 Q35 48 30 65 Q25 48 18 58 Q10 38 22 45 Q15 30 30 10" fill="#C63333"/>
+                        </svg>
+                        <div>
+                            <div style="font-family: 'Cinzel', serif; font-size: 1rem;">
+                                <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+                            </div>
+                            <div style="font-size: 0.6rem; color: var(--crema);">TRADICION FAMILIAR</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="variation-info">
+                    <h4>Secondary Logo (Horizontal)</h4>
+                    <p>Use when horizontal space is limited. Icon positioned left with wordmark right.</p>
+                </div>
+            </div>
+
+            <div class="variation-card">
+                <div class="variation-preview light">
+                    <div style="font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;">
+                        <span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span>
+                    </div>
+                </div>
+                <div class="variation-info">
+                    <h4>Wordmark Only</h4>
+                    <p>Text-only version for use when icon is already present nearby or space is limited.</p>
+                </div>
+            </div>
+
+            <div class="variation-card">
+                <div class="variation-preview">
+                    <svg viewBox="0 0 100 120" style="width: 80px;">
+                        <ellipse cx="50" cy="90" rx="40" ry="12" fill="none" stroke="#C9882B" stroke-width="4"/>
+                        <path d="M50 10 Q75 45 62 65 Q85 55 70 90 Q55 70 50 100 Q45 70 30 90 Q15 55 38 65 Q25 45 50 10" fill="#C63333"/>
+                        <path d="M50 30 Q62 50 55 70 Q50 55 50 85 Q50 55 45 70 Q38 50 50 30" fill="#C9882B"/>
+                        <circle cx="62" cy="8" r="3" fill="#C9882B"/>
+                        <circle cx="55" cy="3" r="2" fill="#C63333"/>
+                        <circle cx="70" cy="5" r="1.5" fill="#8B7355"/>
+                    </svg>
+                </div>
+                <div class="variation-info">
+                    <h4>Icon Mark</h4>
+                    <p>Flame icon only for favicons, app icons, profile photos, and small embroidery.</p>
+                </div>
+            </div>
+
+            <div class="variation-card">
+                <div class="variation-preview" style="background: var(--brasa-gold);">
+                    <svg viewBox="0 0 100 120" style="width: 70px;">
+                        <ellipse cx="50" cy="90" rx="40" ry="12" fill="none" stroke="white" stroke-width="4"/>
+                        <path d="M50 10 Q75 45 62 65 Q85 55 70 90 Q55 70 50 100 Q45 70 30 90 Q15 55 38 65 Q25 45 50 10" fill="white"/>
+                        <text x="50" y="115" text-anchor="middle" font-family="Cinzel, serif" font-size="12" font-weight="700" fill="white">BRASAROJA</text>
+                    </svg>
+                </div>
+                <div class="variation-info">
+                    <h4>Monochrome (White)</h4>
+                    <p>Single-color version for embroidery, screen printing, or colored backgrounds.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 04</span>
+        </div>
+    </div>
+
+    <!-- LOGO MISUSE -->
+    <div class="page">
+        <h2>LOGO MISUSE</h2>
+        <p>To maintain brand integrity, avoid the following modifications to the logo.</p>
+
+        <div class="misuse-grid">
+            <div class="misuse-card">
+                <div class="misuse-icon">&#10060;</div>
+                <div class="misuse-example" style="transform: scaleX(1.5);">
+                    <span style="font-family: 'Cinzel', serif; font-size: 0.8rem;"><span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span></span>
+                </div>
+                <p class="misuse-text">Do not stretch or distort</p>
+            </div>
+
+            <div class="misuse-card">
+                <div class="misuse-icon">&#10060;</div>
+                <div class="misuse-example">
+                    <span style="font-family: 'Cinzel', serif; font-size: 0.9rem; color: purple;">BRASAROJA</span>
+                </div>
+                <p class="misuse-text">Do not change the colors</p>
+            </div>
+
+            <div class="misuse-card">
+                <div class="misuse-icon">&#10060;</div>
+                <div class="misuse-example" style="overflow: hidden;">
+                    <span style="font-family: 'Cinzel', serif; font-size: 1.2rem; margin-left: -20px;"><span style="color: var(--brasa-gold);">BRASA</span></span>
+                </div>
+                <p class="misuse-text">Do not crop the logo</p>
+            </div>
+
+            <div class="misuse-card">
+                <div class="misuse-icon">&#10060;</div>
+                <div class="misuse-example">
+                    <span style="font-family: 'Cinzel', serif; font-size: 0.9rem; -webkit-text-stroke: 1px var(--roja-red); color: transparent;">BRASAROJA</span>
+                </div>
+                <p class="misuse-text">Do not outline the logo</p>
+            </div>
+
+            <div class="misuse-card">
+                <div class="misuse-icon">&#10060;</div>
+                <div class="misuse-example" style="transform: rotate(15deg);">
+                    <span style="font-family: 'Cinzel', serif; font-size: 0.8rem;"><span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span></span>
+                </div>
+                <p class="misuse-text">Do not rotate the logo</p>
+            </div>
+
+            <div class="misuse-card">
+                <div class="misuse-icon">&#10060;</div>
+                <div class="misuse-example" style="opacity: 0.3;">
+                    <span style="font-family: 'Cinzel', serif; font-size: 0.9rem;"><span style="color: var(--brasa-gold);">BRASA</span><span style="color: var(--roja-red);">ROJA</span></span>
+                </div>
+                <p class="misuse-text">Do not reduce opacity</p>
+            </div>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 05</span>
+        </div>
+    </div>
+
+    <!-- COLOR PALETTE -->
+    <div class="page page-red">
+        <h2 style="border-color: var(--crema); color: var(--crema);">COLOR PALETTE</h2>
+        <p>Our brand colors represent the warmth of fire, the premium quality of our offerings, and the inviting atmosphere of our restaurants.</p>
+
+        <div class="footer-line" style="border-color: var(--crema);">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 06</span>
+        </div>
+    </div>
+
+    <!-- COLOR SPECS -->
+    <div class="page">
+        <h2>COLOR SPECIFICATIONS</h2>
+
+        <h3>Primary Colors</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #C9882B;"></div>
+                <div class="color-info">
+                    <div class="color-name">BRASA GOLD</div>
+                    <div class="color-values">
+                        <span><strong>HEX</strong> #C9882B</span>
+                        <span><strong>RGB</strong> 201, 136, 43</span>
+                        <span><strong>CMYK</strong> 15, 45, 90, 5</span>
+                        <span><strong>Pantone</strong> PMS 7564 C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-swatch" style="background: #C63333;"></div>
+                <div class="color-info">
+                    <div class="color-name">ROJA RED</div>
+                    <div class="color-values">
+                        <span><strong>HEX</strong> #C63333</span>
+                        <span><strong>RGB</strong> 198, 51, 51</span>
+                        <span><strong>CMYK</strong> 10, 90, 80, 5</span>
+                        <span><strong>Pantone</strong> PMS 1797 C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8B2500;"></div>
+                <div class="color-info">
+                    <div class="color-name">DEEP EMBER</div>
+                    <div class="color-values">
+                        <span><strong>HEX</strong> #8B2500</span>
+                        <span><strong>RGB</strong> 139, 37, 0</span>
+                        <span><strong>CMYK</strong> 25, 90, 100, 25</span>
+                        <span><strong>Pantone</strong> PMS 7622 C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Secondary Colors</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #2D2D2D;"></div>
+                <div class="color-info">
+                    <div class="color-name">CHARCOAL</div>
+                    <div class="color-values">
+                        <span><strong>HEX</strong> #2D2D2D</span>
+                        <span><strong>RGB</strong> 45, 45, 45</span>
+                        <span><strong>CMYK</strong> 70, 65, 65, 75</span>
+                        <span><strong>Pantone</strong> Black 7 C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-swatch" style="background: #F5EFE0;"></div>
+                <div class="color-info">
+                    <div class="color-name">CREMA</div>
+                    <div class="color-values">
+                        <span><strong>HEX</strong> #F5EFE0</span>
+                        <span><strong>RGB</strong> 245, 239, 224</span>
+                        <span><strong>CMYK</strong> 3, 4, 12, 0</span>
+                        <span><strong>Pantone</strong> PMS 7527 C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8B7355;"></div>
+                <div class="color-info">
+                    <div class="color-name">HUMO (Smoke)</div>
+                    <div class="color-values">
+                        <span><strong>HEX</strong> #8B7355</span>
+                        <span><strong>RGB</strong> 139, 115, 85</span>
+                        <span><strong>CMYK</strong> 35, 40, 55, 15</span>
+                        <span><strong>Pantone</strong> PMS 7531 C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 07</span>
+        </div>
+    </div>
+
+    <!-- TYPOGRAPHY -->
+    <div class="page">
+        <h2>TYPOGRAPHY</h2>
+        <p>Our typography combines classic elegance with warmth and readability.</p>
+
+        <div class="type-sample">
+            <div class="type-sample-title">Primary / Headlines</div>
+            <div class="type-cinzel" style="color: var(--charcoal);">CINZEL BOLD</div>
+            <div class="type-cinzel" style="font-size: 1.2rem; margin-top: 10px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+            <div class="type-cinzel" style="font-size: 1.2rem;">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Use for: Headlines, signage, menu headers, "BRASAROJA" wordmark</p>
+        </div>
+
+        <div class="type-sample">
+            <div class="type-sample-title">Secondary / Body Text</div>
+            <div class="type-lora" style="font-size: 1.5rem;">Lora Regular & Italic</div>
+            <div class="type-lora" style="margin-top: 10px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+            <div class="type-lora">abcdefghijklmnopqrstuvwxyz 0123456789</div>
+            <div class="type-lora" style="font-style: italic; margin-top: 5px;">The quick brown fox jumps over the lazy dog.</div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Use for: Menu descriptions, body copy, marketing materials</p>
+        </div>
+
+        <div class="type-sample">
+            <div class="type-sample-title">Accent / Tagline</div>
+            <div class="type-parisienne">Parisienne Script</div>
+            <div class="type-parisienne" style="font-size: 1.5rem; margin-top: 10px;">Tradición Familiar</div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Use for: Tagline only, special occasion messaging</p>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 08</span>
+        </div>
+    </div>
+
+    <!-- PRINT SPECIFICATIONS -->
+    <div class="page page-dark">
+        <h2 style="border-color: var(--brasa-gold); color: var(--crema);">PRINT SPECIFICATIONS</h2>
+        <p style="margin-bottom: 30px;">Specifications for signage, uniforms, and marketing materials.</p>
+
+        <h3 style="color: var(--brasa-gold);">Signage Materials</h3>
+        <table>
+            <tr>
+                <th>Application</th>
+                <th>Material</th>
+                <th>Specifications</th>
+            </tr>
+            <tr>
+                <td>Outdoor Sign (Illuminated)</td>
+                <td>Aluminum + LED</td>
+                <td>3M 3630-43 Tomato Red, 3M 3630-25 Sunflower</td>
+            </tr>
+            <tr>
+                <td>Window Decal</td>
+                <td>Vinyl</td>
+                <td>3M 680CR-72 Ruby Red Reflective</td>
+            </tr>
+            <tr>
+                <td>Menu Board</td>
+                <td>Print</td>
+                <td>300 DPI, CMYK, PDF/X-1a</td>
+            </tr>
+            <tr>
+                <td>Vehicle Wrap</td>
+                <td>Vinyl</td>
+                <td>3M 180mC with 8518 Laminate</td>
+            </tr>
+        </table>
+
+        <h3 style="color: var(--brasa-gold);">Embroidery Thread Specifications</h3>
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Madeira Polyneon</th>
+                <th>Isacord Alternative</th>
+            </tr>
+            <tr>
+                <td><span style="display: inline-block; width: 20px; height: 20px; background: #C9882B; border-radius: 3px; vertical-align: middle; margin-right: 10px;"></span>Brasa Gold</td>
+                <td>#1725</td>
+                <td>#0821</td>
+            </tr>
+            <tr>
+                <td><span style="display: inline-block; width: 20px; height: 20px; background: #C63333; border-radius: 3px; vertical-align: middle; margin-right: 10px;"></span>Roja Red</td>
+                <td>#1839</td>
+                <td>#1913</td>
+            </tr>
+            <tr>
+                <td><span style="display: inline-block; width: 20px; height: 20px; background: #8B2500; border-radius: 3px; vertical-align: middle; margin-right: 10px;"></span>Deep Ember</td>
+                <td>#1674</td>
+                <td>#1355</td>
+            </tr>
+            <tr>
+                <td><span style="display: inline-block; width: 20px; height: 20px; background: white; border: 1px solid #ccc; border-radius: 3px; vertical-align: middle; margin-right: 10px;"></span>White</td>
+                <td>#1801</td>
+                <td>#0010</td>
+            </tr>
+        </table>
+
+        <div class="footer-line" style="border-color: var(--brasa-gold);">
+            <span style="color: var(--crema);">Brand Guidelines</span>
+            <span style="color: var(--crema);">BRASA ROJA | 09</span>
+        </div>
+    </div>
+
+    <!-- UNIFORM APPLICATIONS -->
+    <div class="page">
+        <h2>UNIFORM APPLICATIONS</h2>
+        <p>Guidelines for logo placement on staff uniforms and apparel.</p>
+
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Logo Type</th>
+                <th>Size</th>
+                <th>Placement</th>
+            </tr>
+            <tr>
+                <td>Polo Shirt</td>
+                <td>Icon + Wordmark</td>
+                <td>3.5" wide</td>
+                <td>Left chest</td>
+            </tr>
+            <tr>
+                <td>Chef Coat</td>
+                <td>Icon only</td>
+                <td>2" wide</td>
+                <td>Left chest</td>
+            </tr>
+            <tr>
+                <td>Apron (Bib)</td>
+                <td>Full logo</td>
+                <td>5" wide</td>
+                <td>Center chest</td>
+            </tr>
+            <tr>
+                <td>Baseball Cap</td>
+                <td>Icon only</td>
+                <td>2.5" wide</td>
+                <td>Front center</td>
+            </tr>
+            <tr>
+                <td>Server Apron (Waist)</td>
+                <td>Wordmark</td>
+                <td>4" wide</td>
+                <td>Center pocket</td>
+            </tr>
+            <tr>
+                <td>Jacket (Back)</td>
+                <td>Full logo</td>
+                <td>10" wide</td>
+                <td>Center back</td>
+            </tr>
+        </table>
+
+        <div style="background: #fff5f5; border-left: 4px solid var(--roja-red); padding: 20px; margin-top: 30px; border-radius: 0 8px 8px 0;">
+            <h4 style="font-family: 'Cinzel', serif; margin-bottom: 10px; color: var(--roja-red);">Embroidery Notes</h4>
+            <ul style="font-size: 0.95rem;">
+                <li>Use Icon Mark only for items under 2" width</li>
+                <li>Remove fine ember particles for sizes under 3"</li>
+                <li>Use simplified flame (no gradient) for best stitch quality</li>
+                <li>White thread on dark fabrics, Charcoal on light fabrics</li>
+            </ul>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 10</span>
+        </div>
+    </div>
+
+    <!-- FILE FORMATS -->
+    <div class="page">
+        <h2>FILE DELIVERY</h2>
+        <p>Provide these file formats to vendors and partners.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 30px;">
+            <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0;">Vector Files (Required)</h3>
+                <ul style="list-style: none;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>AI</strong> - Adobe Illustrator (editable)</li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>EPS</strong> - Universal vector format</li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>SVG</strong> - Web applications</li>
+                    <li style="padding: 8px 0;"><strong>PDF</strong> - Print-ready, outlined fonts</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0;">Raster Files (Support)</h3>
+                <ul style="list-style: none;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>PNG</strong> - Transparent, 300 DPI</li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>JPG</strong> - Solid backgrounds, 300 DPI</li>
+                    <li style="padding: 8px 0;"><strong>TIFF</strong> - Archival quality</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0;">Specialized Files</h3>
+                <ul style="list-style: none;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>DST/PES</strong> - Embroidery machines</li>
+                    <li style="padding: 8px 0;"><strong>DXF</strong> - CNC/laser cutting</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--charcoal); color: var(--crema); padding: 25px; border-radius: 8px;">
+                <h3 style="margin-top: 0; color: var(--brasa-gold);">Quality Standards</h3>
+                <ul style="list-style: none; font-size: 0.95rem;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Print: 300 DPI minimum</li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Large signage: 150 DPI acceptable</li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Web: 72 DPI, RGB color</li>
+                    <li style="padding: 8px 0;">Always provide CMYK for print</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: linear-gradient(135deg, var(--roja-red), var(--deep-ember)); border-radius: 8px; color: white;">
+            <div style="font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 700; margin-bottom: 10px;">
+                <span style="color: var(--brasa-gold);">BRASA</span>ROJA
+            </div>
+            <div style="font-family: 'Parisienne', cursive; font-size: 1.5rem;">Tradición Familiar</div>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9;">Brand Guidelines v1.0 | January 2026</p>
+        </div>
+
+        <div class="footer-line">
+            <span>Brand Guidelines</span>
+            <span>BRASA ROJA | 11</span>
+        </div>
+    </div>
+
+</body>
+</html>
