@@ -148,22 +148,31 @@
 
 ## 4. Validación de Assets de Marca
 
-### Directorio: `Brand_Assets/`
+### Directorio: `Brand_Assets/` (CORREGIDO)
 
-| Archivo | Ubicación | Estado |
-|---------|-----------|--------|
-| Logo_Primary.png | Logo/ | ✅ Copiado |
-| Logo_Transparent.png | Logo/ | ✅ Copiado |
-| Logo_Dark_Background.png | Logo/ | ✅ Copiado |
-| Logo_Gold_Monochrome.png | Logo/ | ✅ Copiado |
-| Icon_Primary.png | Icon/ | ✅ Copiado |
-| Icon_Transparent.png | Icon/ | ✅ Copiado |
-| Wordmark_Primary.png | Wordmark/ | ✅ Copiado |
+**Estructura actualizada con nombres en español:**
+
+| Carpeta | Archivos | Estado |
+|---------|----------|--------|
+| `Logo_Principal/` | Logo_Fondo_Oscuro.png, Logo_Fondo_Oscuro_Alt.png | ✅ |
+| `Logo_Transparente/` | Logo_Transparente_Master.png (5.7MB) | ✅ TRANSPARENCIA REAL |
+| `Icono/` | Icono_Fondo_Oscuro.png, Icono_Variante.png | ✅ |
+| `Variantes/` | Guia_Variantes_Logo.png, Logo_Fondo_Crema.png, etc. | ✅ |
+| `Referencias/` | Moodboard_Conceptos.png | ✅ |
+
+### Verificación de Transparencia
+
+| Archivo | Transparencia Real | Notas |
+|---------|-------------------|-------|
+| `Logo_Transparente_Master.png` | ✅ SÍ | Archivo maestro para diseño |
+| `Logo_Fondo_Oscuro.png` | ❌ No | Tiene fondo #2D2D2D |
+| `Icono_Fondo_Oscuro.png` | ❌ No | Tiene fondo oscuro |
+| `Logo_Fondo_Crema.png` | ❌ No | Tiene fondo crema |
 
 ### Documentación de Assets
 | Archivo | Estado |
 |---------|--------|
-| Brand_Assets/README.md | ✅ Creado |
+| Brand_Assets/README.md | ✅ Actualizado con guía completa |
 
 ---
 

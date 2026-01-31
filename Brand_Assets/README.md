@@ -1,106 +1,137 @@
-# Brasa Roja - Assets de Marca
-## Archivos de Logo Limpios y Organizados
+# Brand Assets - Brasa Roja
+## Archivos de Marca Oficiales
 
 ---
 
-## Estructura de Archivos
+## Estructura de Carpetas
 
 ```
 Brand_Assets/
-├── Logo/
-│   ├── Logo_Primary.png           # Logo principal completo
-│   ├── Logo_Transparent.png       # Logo con fondo transparente
-│   ├── Logo_Dark_Background.png   # Versión para fondos oscuros
-│   └── Logo_Gold_Monochrome.png   # Versión monocromática dorada
-│
-├── Icon/
-│   ├── Icon_Primary.png           # Icono de llama principal
-│   └── Icon_Transparent.png       # Icono con fondo transparente
-│
-└── Wordmark/
-    └── Wordmark_Primary.png       # Solo texto "BRASA ROJA"
+├── Logo_Principal/          # Logos oficiales con fondo
+├── Logo_Transparente/       # Logos con fondo transparente
+├── Icono/                   # Icono de llama
+├── Variantes/               # Variaciones de color y estilo
+└── Referencias/             # Guías y moodboards
 ```
 
 ---
 
-## Uso Recomendado
+## 📁 Logo_Principal/
 
-### Logo Principal (`Logo_Primary.png`)
-- Website principal (header)
-- Menús impresos (portada)
-- Señalética exterior
-- Materiales de marketing premium
+Logos principales para uso general.
 
-### Logo Transparente (`Logo_Transparent.png`)
-- Superposición sobre imágenes
-- Diseños con fondos personalizados
-- Presentaciones y documentos
+| Archivo | Descripción | Fondo | Uso Recomendado |
+|---------|-------------|-------|-----------------|
+| `Logo_Fondo_Oscuro.png` | Logo principal completo | Oscuro (#2D2D2D) | Web, redes sociales, menús digitales |
+| `Logo_Fondo_Oscuro_Alt.png` | Variante del logo principal | Oscuro | Alternativa cuando se necesite |
 
-### Logo Fondo Oscuro (`Logo_Dark_Background.png`)
-- Fondos negros o muy oscuros
-- Modo nocturno de aplicaciones
-- Publicaciones de Instagram con fondo oscuro
-
-### Logo Monocromático (`Logo_Gold_Monochrome.png`)
-- Impresión de un solo color
-- Grabado y repujado
-- Aplicaciones premium
-
-### Icono (`Icon_Primary.png` / `Icon_Transparent.png`)
-- Favicon del sitio web
-- Avatar de redes sociales
-- Apps móviles
-- Elementos pequeños (menos de 100px)
-
-### Wordmark (`Wordmark_Primary.png`)
-- Cuando el icono ya está presente
-- Espacios horizontales reducidos
-- Pies de página
+**Nota:** Estos logos tienen fondo oscuro integrado. Para uso sobre otros fondos, usar la versión transparente.
 
 ---
 
-## Especificaciones Técnicas
+## 📁 Logo_Transparente/
 
-| Archivo | Dimensiones | Formato | Fondo |
-|---------|-------------|---------|-------|
-| Logo_Primary.png | Alta resolución | PNG | Oscuro |
-| Logo_Transparent.png | Alta resolución | PNG | Transparente |
-| Logo_Dark_Background.png | Alta resolución | PNG | Oscuro |
-| Logo_Gold_Monochrome.png | Alta resolución | PNG | Oscuro |
-| Icon_Primary.png | Alta resolución | PNG | Oscuro |
-| Icon_Transparent.png | Alta resolución | PNG | Transparente |
-| Wordmark_Primary.png | Alta resolución | PNG | Claro |
+Logos con fondo transparente para máxima flexibilidad.
 
----
+| Archivo | Descripción | Tamaño | Estado |
+|---------|-------------|--------|--------|
+| `Logo_Transparente_Master.png` | **ARCHIVO MAESTRO** con transparencia real | 5.7 MB | ✅ Listo para usar |
 
-## Tamaños Mínimos
-
-| Tipo | Print (mínimo) | Digital (mínimo) |
-|------|----------------|------------------|
-| Logo completo | 1.5" / 38mm | 150px |
-| Icono | 0.5" / 12mm | 48px |
-| Wordmark | 1" / 25mm | 100px |
+**Uso:** Este es el archivo principal para:
+- Diseño gráfico
+- Impresión sobre cualquier fondo
+- Merchandising
+- Materiales de marketing
 
 ---
 
-## Colores de Marca
+## 📁 Icono/
 
-| Color | Hex | Uso Principal |
-|-------|-----|---------------|
-| Brasa Gold | `#C9882B` | "BRASA", acentos dorados |
-| Roja Red | `#C63333` | Llama, "ROJA" |
-| Deep Ember | `#8B2500` | Profundidad de llama |
-| Charcoal | `#2D2D2D` | Fondos oscuros |
-| Crema | `#F5EFE0` | Fondos claros |
+Icono de llama (símbolo de marca) para uso independiente.
+
+| Archivo | Descripción | Fondo | Uso |
+|---------|-------------|-------|-----|
+| `Icono_Fondo_Oscuro.png` | Llama con órbita y chispas | Oscuro | Favicon, apps, avatares |
+| `Icono_Variante.png` | Variante del icono | Oscuro | Alternativa |
+
+**⚠️ Pendiente:** Crear versión del icono con fondo transparente.
 
 ---
 
-## Licencia
+## 📁 Variantes/
 
-Todos los assets son propiedad de **Brasa Roja**.
-Contactar para permisos de uso.
+Variaciones de color y estilo del logo.
+
+| Archivo | Descripción | Fondo | Notas |
+|---------|-------------|-------|-------|
+| `Guia_Variantes_Logo.png` | Guía visual de todas las variantes | Varios | Referencia para diseñadores |
+| `Logo_Fondo_Crema.png` | Logo sobre fondo crema | Crema (#F5EFE0) | Para fondos claros |
+| `Logo_Monocromo_Dorado.png` | Versión monocromática dorada | Oscuro | Uso elegante/premium |
+| `Wordmark_Solo_Texto.png` | Solo texto "BRASA ROJA" | Claro | Cuando el icono no cabe |
+
+---
+
+## 📁 Referencias/
+
+Materiales de referencia y conceptos.
+
+| Archivo | Descripción | Uso |
+|---------|-------------|-----|
+| `Moodboard_Conceptos.png` | Moodboard con variantes y conceptos | Solo referencia interna |
+
+---
+
+## Estado de Archivos
+
+### ✅ Listos para Producción
+- `Logo_Transparente_Master.png` - Transparencia real verificada
+- `Logo_Fondo_Oscuro.png` - Logo principal
+- `Guia_Variantes_Logo.png` - Referencia de variantes
+
+### ⚠️ Requieren Atención
+| Archivo | Problema | Acción Necesaria |
+|---------|----------|------------------|
+| `Icono_Fondo_Oscuro.png` | Tiene fondo oscuro | Crear versión transparente |
+| `Logo_Fondo_Crema.png` | Nombre dice "transparent" pero tiene fondo | Renombrado correctamente |
+
+---
+
+## Colores Oficiales
+
+| Color | Hex | RGB | Uso |
+|-------|-----|-----|-----|
+| **Brasa Gold** | `#C9882B` | 201, 136, 43 | Texto "BRASA", acentos |
+| **Roja Red** | `#C63333` | 198, 51, 51 | Llama, texto "ROJA" |
+| **Deep Ember** | `#8B2500` | 139, 37, 0 | Profundidad de llama |
+| **Charcoal** | `#2D2D2D` | 45, 45, 45 | Fondos oscuros |
+| **Crema** | `#F5EFE0` | 245, 239, 224 | Fondos claros |
+
+---
+
+## Reglas de Uso
+
+### ✅ Correcto
+- Usar `Logo_Transparente_Master.png` para diseño
+- Mantener proporciones originales
+- Respetar zona de exclusión (altura de letra "A")
+- Tamaño mínimo: 150px ancho (digital), 1.5" (impreso)
+
+### ❌ Incorrecto
+- Estirar o distorsionar el logo
+- Cambiar los colores oficiales
+- Usar sobre fondos que dificulten la lectura
+- Agregar efectos (sombras, brillos, etc.)
+
+---
+
+## Archivos Fuente (Raíz del Proyecto)
+
+Los archivos originales permanecen en la raíz del proyecto:
+- `Logo_MAIN_1.png` → Copiado a `Logo_Principal/`
+- `BRasa_Roja_TBG.png` → Copiado a `Logo_Transparente/`
+- `ICON.png` → Copiado a `Icono/`
 
 ---
 
 *Brasa Roja - Tradición Familiar*
-*Enero 2026*
+*Última actualización: Enero 2026*

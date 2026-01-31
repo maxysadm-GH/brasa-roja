@@ -1,0 +1,85 @@
+# ================================
+# BRASA ROJA - .gitignore
+# ================================
+
+# ========== SECRETOS Y API KEYS ==========
+# NUNCA subir estos archivos a GitHub
+.env
+.env.local
+.env.development
+.env.production
+# Mantener .env.example como template
+!.env.example
+
+# Archivos de configuración con secretos
+secrets.json
+secrets.yaml
+secrets.yml
+api-keys.json
+credentials.json
+config.local.json
+
+# ========== CLAVES Y CERTIFICADOS ==========
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# ========== AFIP (Argentina) ==========
+# Certificados de facturación electrónica
+afip/
+*.wsaa
+certificado_afip.*
+
+# ========== INTEGRACIONES ==========
+# MercadoPago
+mercadopago.json
+
+# WhatsApp Business
+whatsapp-credentials.*
+
+# Google
+google-credentials.json
+service-account.json
+
+# ========== SISTEMA OPERATIVO ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== IDEs ==========
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ========== LOGS ==========
+logs/
+*.log
+npm-debug.log*
+
+# ========== DEPENDENCIAS ==========
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ========== BUILD ==========
+dist/
+build/
+*.min.js
+*.min.css
+
+# ========== TEMPORAL ==========
+tmp/
+temp/
+.cache/
+
+# ========== BACKUPS ==========
+*.bak
+*.backup
+*.old

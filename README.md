@@ -26,17 +26,22 @@ brasa-roja/
 │   ├── BrasaRoja_Brand_Guidelines.html    # Guía de marca (HTML)
 │   └── MASTER_INDEX.html                  # Índice maestro de assets
 │
-├── Brand_Assets/                          # ✨ LOGOS LIMPIOS ORGANIZADOS
-│   ├── Logo/
-│   │   ├── Logo_Primary.png               # Logo principal
-│   │   ├── Logo_Transparent.png           # Fondo transparente
-│   │   ├── Logo_Dark_Background.png       # Para fondos oscuros
-│   │   └── Logo_Gold_Monochrome.png       # Monocromático dorado
-│   ├── Icon/
-│   │   ├── Icon_Primary.png               # Icono de llama
-│   │   └── Icon_Transparent.png           # Icono transparente
-│   └── Wordmark/
-│       └── Wordmark_Primary.png           # Solo texto
+├── Brand_Assets/                          # ✨ LOGOS ORGANIZADOS
+│   ├── Logo_Principal/
+│   │   ├── Logo_Fondo_Oscuro.png          # Logo principal (fondo oscuro)
+│   │   └── Logo_Fondo_Oscuro_Alt.png      # Variante alternativa
+│   ├── Logo_Transparente/
+│   │   └── Logo_Transparente_Master.png   # ⭐ LOGO CON TRANSPARENCIA REAL
+│   ├── Icono/
+│   │   ├── Icono_Fondo_Oscuro.png         # Icono de llama
+│   │   └── Icono_Variante.png             # Variante del icono
+│   ├── Variantes/
+│   │   ├── Guia_Variantes_Logo.png        # Referencia de todas las variantes
+│   │   ├── Logo_Fondo_Crema.png           # Para fondos claros
+│   │   ├── Logo_Monocromo_Dorado.png      # Versión elegante
+│   │   └── Wordmark_Solo_Texto.png        # Solo texto
+│   └── Referencias/
+│       └── Moodboard_Conceptos.png        # Conceptos y moodboard
 │
 ├── Brand_Package/                         # Materiales de marketing
 │   ├── 01_Business_Cards.html
@@ -83,11 +88,16 @@ brasa-roja/
 
 ## Logos Principales
 
-### Logo Primario
-![Logo Brasa Roja](Brand_Assets/Logo/Logo_Primary.png)
+### Logo Primario (Fondo Oscuro)
+![Logo Brasa Roja](Brand_Assets/Logo_Principal/Logo_Fondo_Oscuro.png)
+
+### Logo Transparente (Para Diseño)
+![Logo Transparente](Brand_Assets/Logo_Transparente/Logo_Transparente_Master.png)
 
 ### Icono (Llama)
-![Icono Brasa Roja](Brand_Assets/Icon/Icon_Primary.png)
+![Icono Brasa Roja](Brand_Assets/Icono/Icono_Fondo_Oscuro.png)
+
+> **Nota:** El archivo `Logo_Transparente_Master.png` es el único con transparencia real verificada. Usarlo para diseño gráfico e impresión.
 
 ---
 
