@@ -1,0 +1,29 @@
+{
+  "name": "brasa-design",
+  "version": "1.0.0",
+  "description": "Procesamiento de assets de marca: remoción de fondos, variantes de logo, preparación para impresión",
+  "language": "es-AR",
+  "author": "Brasa Roja",
+  "capabilities": [
+    "background_removal",
+    "logo_variants",
+    "print_preparation",
+    "sticker_generation",
+    "merchandise_assets"
+  ],
+  "integrations": {
+    "removebg": {
+      "enabled": true,
+      "api_key_env": "REMOVEBG_API_KEY",
+      "free_tier": "50 calls/month"
+    }
+  },
+  "input_formats": ["png", "jpg", "jpeg", "webp"],
+  "output_formats": ["png"],
+  "use_cases": [
+    "Remover fondo de logos para impresión en ropa",
+    "Crear stickers con fondos de colores",
+    "Preparar assets para merchandising",
+    "Generar variantes de logo (claro/oscuro/transparente)"
+  ]
+}
