@@ -140,14 +140,14 @@
                 <div class="checkbox"></div>
                 <div class="task-content">
                     <div class="task-title">Upload Favicon</div>
-                    <div class="task-detail">Use favicon.svg or convert to .ico (32x32, 16x16). Place in root directory or /public folder.</div>
+                    <div class="task-detail">Use <code>Assets/Digital/Favicon_32.png</code> or convert icon to .ico (32x32, 16x16). Source: <code>Clean Files/BR Icon NBG.png</code></div>
                 </div>
             </li>
             <li class="critical">
                 <div class="checkbox"></div>
                 <div class="task-content">
                     <div class="task-title">Replace Logo in Header</div>
-                    <div class="task-detail">Use BrasaRoja_Horizontal.svg for desktop, BrasaRoja_Icon_Color.svg for mobile.</div>
+                    <div class="task-detail">Use <code>Assets/Logo_Full/Logo_Transparent.png</code> for header. Source: <code>Clean Files/Main_Logo_NBG.png</code></div>
                 </div>
             </li>
             <li>
@@ -407,51 +407,65 @@
                 <th>Asset</th>
                 <th>Size</th>
                 <th>Format</th>
-                <th>Location</th>
+                <th>Source File</th>
+                <th>Deploy Location</th>
             </tr>
             <tr>
                 <td>Favicon</td>
                 <td>32x32, 16x16</td>
-                <td>SVG, ICO, PNG</td>
-                <td>/favicon.svg</td>
+                <td>PNG/ICO</td>
+                <td>Assets/Digital/Favicon_32.png</td>
+                <td>/favicon.png</td>
             </tr>
             <tr>
                 <td>Apple Touch Icon</td>
                 <td>180x180</td>
                 <td>PNG</td>
+                <td>Assets/Digital/Apple_Touch_180.png</td>
                 <td>/apple-touch-icon.png</td>
             </tr>
             <tr>
-                <td>Header Logo (Desktop)</td>
+                <td>Header Logo</td>
                 <td>200-300px wide</td>
-                <td>SVG</td>
-                <td>/images/logo.svg</td>
+                <td>PNG</td>
+                <td>Assets/Logo_Full/Logo_Transparent.png</td>
+                <td>/images/logo.png</td>
             </tr>
             <tr>
-                <td>Header Logo (Mobile)</td>
+                <td>Header Icon (Mobile)</td>
                 <td>40-50px</td>
-                <td>SVG</td>
-                <td>/images/logo-icon.svg</td>
+                <td>PNG</td>
+                <td>Assets/Logo_Icon/Icon_Transparent.png</td>
+                <td>/images/logo-icon.png</td>
             </tr>
             <tr>
                 <td>OG Image</td>
                 <td>1200x630</td>
-                <td>JPG</td>
+                <td>PNG/JPG</td>
+                <td>Assets/Digital/OG_Image_1200x630.png</td>
                 <td>/images/og-image.jpg</td>
             </tr>
             <tr>
-                <td>Hero Background</td>
-                <td>1920x1080+</td>
-                <td>JPG/WebP</td>
-                <td>/images/hero-bg.jpg</td>
+                <td>Email Logo</td>
+                <td>80x80</td>
+                <td>PNG</td>
+                <td>Assets/Digital/Email_Logo_80.png</td>
+                <td>/images/email-logo.png</td>
             </tr>
             <tr>
                 <td>Footer Logo</td>
                 <td>150-200px wide</td>
-                <td>SVG</td>
-                <td>/images/logo-footer.svg</td>
+                <td>PNG</td>
+                <td>Assets/Logo_Full/Logo_Transparent.png</td>
+                <td>/images/logo-footer.png</td>
             </tr>
         </table>
+
+        <div class="highlight-box">
+            <strong>Source of Truth:</strong> All logo assets should be derived from the files in <code>Clean Files/</code> folder:<br>
+            • <code>Main_Logo_NBG.png</code> (1024x1024) - Full logo with text<br>
+            • <code>BR Icon NBG.png</code> (415x517) - Icon only (flame)
+        </div>
 
         <!-- DOMAIN SETUP -->
         <h2>Domain & Hosting Notes</h2>

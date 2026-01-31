@@ -4,6 +4,31 @@
 
 ---
 
+# SOURCE OF TRUTH
+
+## Clean Files (DO NOT MODIFY)
+| File | Location | Dimensions | Use |
+|------|----------|------------|-----|
+| `Main_Logo_NBG.png` | Clean Files/ | 1024x1024 | Full logo with text |
+| `BR Icon NBG.png` | Clean Files/ | 415x517 | Icon only (flame) |
+
+## Assets Folder Structure
+```
+Assets/
+├── Source/                    # Protected copies of originals
+├── Logo_Full/                 # Full logo variants
+├── Logo_Icon/                 # Icon variants
+├── Stickers/                  # 300dpi print-ready stickers
+├── Apparel/                   # Embroidery optimized
+│   ├── Light_Garment/
+│   ├── Dark_Garment/
+│   └── Simplified/
+├── Packaging/                 # CMYK print production
+└── Digital/                   # Web assets (favicon, OG, email)
+```
+
+---
+
 # TABLE OF CONTENTS
 
 1. **Brand Overview** - Brand Story & Values
@@ -303,6 +328,78 @@ Subtle accent for ember particles and decorative elements.
 - To-go containers: Icon stamp or sticker
 - Bags: Full logo
 - Napkins: Icon embossed or printed
+
+---
+
+# 9. STICKER SPECIFICATIONS
+
+## Sticker Variants
+
+| Type | Size | Resolution | Backgrounds |
+|------|------|------------|-------------|
+| Full Logo Circle | 3" diameter | 900px @ 300dpi | White, Cream, Charcoal, Black, Transparent (die-cut) |
+| Icon Circle | 2" diameter | 600px @ 300dpi | Same as above |
+| Mini Icon | 1" diameter | 300px @ 300dpi | Same as above |
+| Rectangle | 4x3" | 1200x900px | Full logo with bleed |
+
+## Print Production Notes
+- All stickers should be exported at 300dpi minimum
+- Include 0.125" bleed for cut tolerance
+- Die-cut stickers: use transparent background PNG
+- Standard stickers: add background color matching brand palette
+- CMYK color mode for professional printing
+
+---
+
+# 10. CLOTHING & EMBROIDERY SPECIFICATIONS
+
+## Garment Placement Guide
+
+| Garment | Logo Type | Size | Placement | Thread Notes |
+|---------|-----------|------|-----------|--------------|
+| Polo Shirt (Light) | Full logo | 3.5" | Left chest | Gold, Red, Ember threads |
+| Polo Shirt (Dark) | Full logo | 3.5" | Left chest | Add white outline |
+| Chef Coat | Icon only | 2" | Left chest | Simplified flame |
+| Apron | Full logo | 5" | Center chest | Full detail |
+| Baseball Cap | Icon only | 2.5" | Front center | Simplified flame |
+| T-shirt (Back) | Full logo | 10" | Center back | Full detail |
+
+## Embroidery Thread Specifications
+
+| Color | Madeira Polyneon | Isacord Alternative | Use |
+|-------|------------------|---------------------|-----|
+| Brasa Gold | #1725 | #0821 | Primary accent |
+| Roja Red | #1839 | #1913 | Flame, wordmark |
+| Deep Ember | #1674 | #1355 | Flame depth |
+| White | #1801 | #0010 | Light garment outline |
+| Black | #1800 | #0020 | Dark detail |
+
+## Simplified Embroidery Mark
+For items under 2" width, use the simplified icon mark:
+- Remove fine ember particles
+- Use solid colors (no gradients)
+- Reduce stitch density for small sizes
+
+---
+
+# 11. PACKAGING SPECIFICATIONS
+
+## Packaging Applications
+
+| Application | Asset | Resolution | Color Mode | Notes |
+|-------------|-------|------------|------------|-------|
+| To-go Box | Icon stamp | 300dpi | 1-color | Single color emboss/deboss |
+| Paper Bag | Full logo | 300dpi | CMYK | Full color print |
+| Napkin | Icon simplified | 300dpi | 1-2 color | Emboss or foil stamp |
+| Gift Card | Full logo | 300dpi | CMYK | Full color, spot UV optional |
+| Tissue Paper | Pattern | 150dpi | 1-2 color | Repeat flame pattern |
+| Sticker Seal | Icon circle | 300dpi | CMYK | 1-2" diameter |
+
+## Foil Stamping
+For premium applications:
+- Use Assets/Packaging/Foil_Logo_Gold.png as reference
+- Recommended foil: Metallic Gold or Copper
+- Works best on dark paper stock
 
 ---
 
