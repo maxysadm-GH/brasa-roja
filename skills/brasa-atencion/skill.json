@@ -1,0 +1,29 @@
+{
+  "name": "brasa-atencion",
+  "version": "1.0.0",
+  "description": "Atención al cliente multicanal para Brasa Roja",
+  "author": "Brasa Roja",
+  "language": "es-AR",
+  "category": "customer-service",
+  "tags": ["atencion", "cliente", "whatsapp", "chatbot", "faq"],
+  "capabilities": [
+    "responder_consultas",
+    "gestionar_quejas",
+    "programa_fidelizacion",
+    "encuestas_satisfaccion",
+    "celebraciones_especiales",
+    "informacion_general"
+  ],
+  "integrations": [
+    "whatsapp-business",
+    "instagram-dm",
+    "facebook-messenger",
+    "google-reviews"
+  ],
+  "config": {
+    "tiempo_respuesta_objetivo_segundos": 30,
+    "horario_atencion": "09:00-01:00",
+    "escalamiento_humano": true,
+    "idiomas": ["es-AR"]
+  }
+}

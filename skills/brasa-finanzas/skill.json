@@ -1,0 +1,31 @@
+{
+  "name": "brasa-finanzas",
+  "version": "1.0.0",
+  "description": "Gestión financiera y facturación para Brasa Roja",
+  "author": "Brasa Roja",
+  "language": "es-AR",
+  "category": "finance",
+  "tags": ["finanzas", "facturacion", "afip", "ventas", "argentina"],
+  "capabilities": [
+    "facturacion_electronica",
+    "control_caja",
+    "reportes_ventas",
+    "analisis_rentabilidad",
+    "gestion_pagos",
+    "propinas",
+    "impuestos"
+  ],
+  "integrations": [
+    "afip-facturacion",
+    "mercadopago",
+    "posnet"
+  ],
+  "config": {
+    "moneda": "ARS",
+    "iva_general": 21,
+    "iva_reducido": 10.5,
+    "tipos_factura": ["A", "B", "C"],
+    "controlador_fiscal": true,
+    "cuit": "[COMPLETAR]"
+  }
+}

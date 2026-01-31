@@ -1,0 +1,41 @@
+{
+  "name": "brasa-reservas",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de reservas para Brasa Roja",
+  "author": "Brasa Roja",
+  "language": "es-AR",
+  "category": "restaurant-operations",
+  "tags": ["reservas", "restaurante", "argentina", "parrilla"],
+  "capabilities": [
+    "consultar_disponibilidad",
+    "crear_reserva",
+    "modificar_reserva",
+    "cancelar_reserva",
+    "enviar_confirmacion",
+    "lista_espera",
+    "reportes_ocupacion"
+  ],
+  "integrations": [
+    "google-calendar",
+    "whatsapp-business",
+    "sms-gateway"
+  ],
+  "config": {
+    "horarios": {
+      "martes_domingo_almuerzo": "12:00-15:30",
+      "martes_domingo_cena": "20:00-00:00",
+      "lunes": "cerrado"
+    },
+    "capacidad_total": 80,
+    "mesas": {
+      "2_personas": 8,
+      "4_personas": 10,
+      "6_personas": 4,
+      "8_personas": 2
+    },
+    "duracion_promedio_minutos": 90,
+    "anticipacion_maxima_dias": 30,
+    "confirmacion_automatica": true,
+    "recordatorio_horas_antes": 24
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "brasa-menu",
+  "version": "1.0.0",
+  "description": "Gestión del menú y carta de Brasa Roja",
+  "author": "Brasa Roja",
+  "language": "es-AR",
+  "category": "restaurant-operations",
+  "tags": ["menu", "carta", "parrilla", "argentina", "gastronomia"],
+  "capabilities": [
+    "mostrar_menu_completo",
+    "buscar_platos",
+    "recomendar_platos",
+    "informar_precios",
+    "verificar_disponibilidad",
+    "informar_alergenos",
+    "sugerir_maridaje",
+    "menu_del_dia"
+  ],
+  "config": {
+    "moneda": "ARS",
+    "iva_incluido": true,
+    "actualizar_precios": "semanal",
+    "mostrar_calorias": false,
+    "idiomas": ["es-AR", "en"]
+  }
+}

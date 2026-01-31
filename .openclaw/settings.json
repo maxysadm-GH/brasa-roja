@@ -1,0 +1,133 @@
+{
+  "agent": {
+    "name": "Brasa Roja Assistant",
+    "version": "1.0.0",
+    "language": "es-AR",
+    "description": "Asistente virtual para el restaurante Brasa Roja"
+  },
+  "brand": {
+    "name": "Brasa Roja",
+    "tagline": "Tradición Familiar",
+    "website": "https://brasaroja.lovable.app",
+    "colors": {
+      "brasa_gold": "#C9882B",
+      "roja_red": "#C63333",
+      "deep_ember": "#8B2500",
+      "charcoal": "#2D2D2D",
+      "crema": "#F5EFE0",
+      "humo": "#8B7355"
+    },
+    "typography": {
+      "headlines": "Cinzel",
+      "body": "Lora",
+      "tagline": "Parisienne"
+    }
+  },
+  "personality": {
+    "tone": "cálido, familiar, profesional",
+    "style": "argentino, cercano, respetuoso",
+    "values": ["tradición", "familia", "fuego", "calidad"],
+    "language_rules": {
+      "use_voseo": true,
+      "formal_usted": false,
+      "argentine_expressions": true
+    }
+  },
+  "skills": {
+    "enabled": [
+      "brasa-reservas",
+      "brasa-menu",
+      "brasa-atencion",
+      "brasa-marketing",
+      "brasa-inventario",
+      "brasa-finanzas"
+    ],
+    "path": "./skills"
+  },
+  "integrations": {
+    "whatsapp_business": {
+      "enabled": true,
+      "phone": "[CONFIGURAR]"
+    },
+    "instagram": {
+      "enabled": true,
+      "handle": "@brasaroja"
+    },
+    "google_my_business": {
+      "enabled": true,
+      "place_id": "[CONFIGURAR]"
+    },
+    "mercadopago": {
+      "enabled": true,
+      "merchant_id": "[CONFIGURAR]"
+    },
+    "afip": {
+      "enabled": true,
+      "cuit": "[CONFIGURAR]"
+    }
+  },
+  "restaurant": {
+    "name": "Brasa Roja",
+    "type": "Parrilla Argentina",
+    "location": {
+      "country": "Argentina",
+      "city": "[CONFIGURAR]",
+      "address": "[CONFIGURAR]"
+    },
+    "hours": {
+      "monday": "closed",
+      "tuesday": {
+        "lunch": "12:00-15:30",
+        "dinner": "20:00-00:00"
+      },
+      "wednesday": {
+        "lunch": "12:00-15:30",
+        "dinner": "20:00-00:00"
+      },
+      "thursday": {
+        "lunch": "12:00-15:30",
+        "dinner": "20:00-00:00"
+      },
+      "friday": {
+        "lunch": "12:00-15:30",
+        "dinner": "20:00-00:00"
+      },
+      "saturday": {
+        "lunch": "12:00-15:30",
+        "dinner": "20:00-00:00"
+      },
+      "sunday": {
+        "lunch": "12:00-16:00",
+        "dinner": "20:00-23:00"
+      }
+    },
+    "capacity": {
+      "total_seats": 80,
+      "tables": {
+        "2_seats": 8,
+        "4_seats": 10,
+        "6_seats": 4,
+        "8_seats": 2
+      },
+      "private_room": 30
+    }
+  },
+  "features": {
+    "reservations": {
+      "enabled": true,
+      "max_advance_days": 30,
+      "auto_confirm": true,
+      "reminder_hours": 24
+    },
+    "menu": {
+      "show_prices": true,
+      "currency": "ARS",
+      "show_allergens": true,
+      "show_vegetarian": true
+    },
+    "loyalty_program": {
+      "enabled": true,
+      "name": "Club Brasa Roja"
+    }
+  }
+}

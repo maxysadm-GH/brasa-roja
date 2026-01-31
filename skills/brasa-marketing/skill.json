@@ -1,0 +1,31 @@
+{
+  "name": "brasa-marketing",
+  "version": "1.0.0",
+  "description": "Automatización de marketing y redes sociales para Brasa Roja",
+  "author": "Brasa Roja",
+  "language": "es-AR",
+  "category": "marketing",
+  "tags": ["marketing", "social-media", "instagram", "contenido", "promociones"],
+  "capabilities": [
+    "generar_contenido",
+    "programar_publicaciones",
+    "responder_comentarios",
+    "crear_promociones",
+    "gestionar_resenas",
+    "email_marketing",
+    "analizar_engagement"
+  ],
+  "integrations": [
+    "instagram-api",
+    "facebook-api",
+    "google-my-business",
+    "mailchimp"
+  ],
+  "config": {
+    "plataformas": ["instagram", "facebook", "google"],
+    "frecuencia_publicacion": "diaria",
+    "horarios_optimos": ["12:00", "19:00", "21:00"],
+    "hashtags_marca": ["#BrasaRoja", "#TradiciónFamiliar", "#ParrillaArgentina"],
+    "tono_marca": "cálido, familiar, premium"
+  }
+}

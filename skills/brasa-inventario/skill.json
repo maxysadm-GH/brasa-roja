@@ -1,0 +1,31 @@
+{
+  "name": "brasa-inventario",
+  "version": "1.0.0",
+  "description": "Control de stock e insumos para Brasa Roja",
+  "author": "Brasa Roja",
+  "language": "es-AR",
+  "category": "inventory",
+  "tags": ["inventario", "stock", "insumos", "proveedores", "costos"],
+  "capabilities": [
+    "registrar_stock",
+    "alertas_stock_bajo",
+    "pedidos_automaticos",
+    "control_vencimientos",
+    "calcular_costos",
+    "reportes_consumo",
+    "gestion_proveedores"
+  ],
+  "config": {
+    "unidades": {
+      "carnes": "kg",
+      "bebidas": "unidades",
+      "verduras": "kg",
+      "condimentos": "unidades"
+    },
+    "alertas": {
+      "stock_bajo_porcentaje": 20,
+      "vencimiento_dias_aviso": 3
+    },
+    "proveedores_preferidos": true
+  }
+}
