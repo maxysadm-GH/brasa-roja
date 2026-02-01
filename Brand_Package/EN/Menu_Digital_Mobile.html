@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>BRASA ROJA - Menu</title>
+    <link rel="icon" href="../../Assets/Digital/Favicon_32.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+            --humo: #8B7355;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--charcoal);
+            color: var(--crema);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, var(--charcoal) 0%, rgba(45,45,45,0.95) 100%);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--brasa-gold);
+        }
+
+        .header-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right .time {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            color: var(--brasa-gold);
+        }
+
+        /* Category Navigation */
+        .category-nav {
+            background: var(--charcoal);
+            padding: 15px 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            border-bottom: 1px solid rgba(201, 136, 43, 0.3);
+            position: sticky;
+            top: 82px;
+            z-index: 99;
+        }
+
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-inner {
+            display: inline-flex;
+            padding: 0 20px;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            padding: 10px 18px;
+            background: transparent;
+            border: 1px solid var(--brasa-gold);
+            color: var(--crema);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-btn.active,
+        .nav-btn:hover {
+            background: var(--brasa-gold);
+            color: var(--charcoal);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--roja-red) 0%, var(--deep-ember) 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 15px;
+        }
+
+        .hero-price {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--brasa-gold);
+        }
+
+        .hero-note {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 0 0 100px;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 30px 20px;
+            border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--roja-red);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            font-size: 13px;
+            color: var(--humo);
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        /* Menu Items */
+        .menu-item {
+            background: rgba(245, 239, 224, 0.03);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 136, 43, 0.1);
+            transition: all 0.3s;
+        }
+
+        .menu-item:active {
+            transform: scale(0.98);
+            background: rgba(245, 239, 224, 0.08);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .item-name {
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--crema);
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .item-price {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--brasa-gold);
+        }
+
+        .item-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 9px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        .badge.signature {
+            background: var(--roja-red);
+            color: white;
+        }
+
+        .badge.spicy {
+            background: var(--deep-ember);
+            color: white;
+        }
+
+        .badge.popular {
+            background: var(--brasa-gold);
+            color: white;
+        }
+
+        .badge.gf {
+            background: transparent;
+            border: 1px solid var(--humo);
+            color: var(--humo);
+        }
+
+        .item-desc {
+            font-size: 13px;
+            color: var(--humo);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Featured Item */
+        .menu-item.featured {
+            background: rgba(201, 136, 43, 0.1);
+            border: 2px solid var(--brasa-gold);
+        }
+
+        .menu-item.featured .item-name {
+            color: var(--brasa-gold);
+        }
+
+        /* Drinks Grid */
+        .drinks-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .drink-card {
+            background: rgba(245, 239, 224, 0.03);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(201, 136, 43, 0.1);
+        }
+
+        .drink-name {
+            font-size: 14px;
+            color: var(--crema);
+            margin-bottom: 5px;
+        }
+
+        .drink-price {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            color: var(--brasa-gold);
+            font-weight: 600;
+        }
+
+        /* Sides Grid */
+        .sides-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .side-item {
+            background: rgba(245, 239, 224, 0.05);
+            border-radius: 20px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1 1 calc(50% - 5px);
+            min-width: 140px;
+        }
+
+        .side-name {
+            font-size: 13px;
+            color: var(--crema);
+        }
+
+        .side-price {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            color: var(--brasa-gold);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--charcoal);
+            border-top: 2px solid var(--brasa-gold);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .footer-tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 24px;
+            color: var(--brasa-gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-info {
+            font-size: 13px;
+            color: var(--humo);
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(139, 115, 85, 0.3);
+        }
+
+        .footer-social a {
+            color: var(--brasa-gold);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--brasa-gold);
+            color: var(--charcoal);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .scroll-top.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Legend */
+        .legend {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            background: rgba(45, 45, 45, 0.8);
+            border-bottom: 1px solid rgba(201, 136, 43, 0.2);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: var(--humo);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="../../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja" class="header-logo">
+        <div class="header-right">
+            <span class="time" id="time">12:00 PM</span>
+        </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+        <div class="nav-inner">
+            <button class="nav-btn active" onclick="scrollToSection('featured')">Featured</button>
+            <button class="nav-btn" onclick="scrollToSection('appetizers')">Appetizers</button>
+            <button class="nav-btn" onclick="scrollToSection('mains')">Mains</button>
+            <button class="nav-btn" onclick="scrollToSection('sides')">Sides</button>
+            <button class="nav-btn" onclick="scrollToSection('drinks')">Drinks</button>
+            <button class="nav-btn" onclick="scrollToSection('desserts')">Desserts</button>
+        </div>
+    </nav>
+
+    <!-- Legend -->
+    <div class="legend">
+        <span class="legend-item"><span class="badge signature" style="font-size: 8px;">Signature</span> House Special</span>
+        <span class="legend-item"><span class="badge spicy" style="font-size: 8px;">Spicy</span> Hot & Spicy</span>
+        <span class="legend-item"><span class="badge gf" style="font-size: 8px;">GF</span> Gluten-Free</span>
+    </div>
+
+    <!-- Featured Hero -->
+    <section class="hero" id="featured">
+        <div class="hero-title">Parrillada Mixta</div>
+        <div class="hero-subtitle">The Ultimate Grill Experience for Two</div>
+        <div class="hero-price">$68</div>
+        <div class="hero-note">Ribeye, short ribs, chorizo, morcilla, sweetbreads & chicken</div>
+    </section>
+
+    <main class="main-content">
+        <!-- Appetizers -->
+        <section class="menu-section" id="appetizers">
+            <div class="section-header">
+                <h2 class="section-title">Aperitivos</h2>
+                <p class="section-subtitle">Fire-kissed starters</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Empanadas de Carne</span>
+                    <span class="item-price">$12</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge signature">Signature</span>
+                </div>
+                <p class="item-desc">Hand-folded pastries filled with seasoned beef, olives & raisins</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Chorizo a la Parrilla</span>
+                    <span class="item-price">$14</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge spicy">Spicy</span>
+                </div>
+                <p class="item-desc">Grilled Argentine chorizo with chimichurri sauce</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Provoleta</span>
+                    <span class="item-price">$11</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge gf">GF</span>
+                </div>
+                <p class="item-desc">Grilled provolone with oregano & red pepper flakes</p>
+            </div>
+        </section>
+
+        <!-- Main Courses -->
+        <section class="menu-section" id="mains">
+            <div class="section-header">
+                <h2 class="section-title">Platos Principales</h2>
+                <p class="section-subtitle">Cooked over open flame with natural hardwoods</p>
+            </div>
+
+            <div class="menu-item featured">
+                <div class="item-header">
+                    <span class="item-name">Parrillada Mixta</span>
+                    <span class="item-price">$68</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge popular">Chef's Choice</span>
+                </div>
+                <p class="item-desc">The ultimate grill: ribeye, short ribs, chorizo, morcilla, sweetbreads & chicken. Serves 2-3</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Bife de Chorizo</span>
+                    <span class="item-price">$42</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge gf">GF</span>
+                </div>
+                <p class="item-desc">16oz prime New York strip, grilled to perfection</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Costillas de Res</span>
+                    <span class="item-price">$38</span>
+                </div>
+                <p class="item-desc">Slow-roasted beef short ribs with red wine reduction</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Pollo a la Brasa</span>
+                    <span class="item-price">$26</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge signature">Signature</span>
+                    <span class="badge gf">GF</span>
+                </div>
+                <p class="item-desc">Free-range chicken marinated 24 hours, rotisserie grilled</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Cordero al Asador</span>
+                    <span class="item-price">$44</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge gf">GF</span>
+                </div>
+                <p class="item-desc">Lamb rack with rosemary, garlic & mint chimichurri</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Salm&oacute;n a la Plancha</span>
+                    <span class="item-price">$32</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge gf">GF</span>
+                </div>
+                <p class="item-desc">Atlantic salmon with lemon caper butter</p>
+            </div>
+        </section>
+
+        <!-- Sides -->
+        <section class="menu-section" id="sides">
+            <div class="section-header">
+                <h2 class="section-title">Acompa&ntilde;amientos</h2>
+            </div>
+
+            <div class="sides-list">
+                <div class="side-item">
+                    <span class="side-name">Papas Fritas</span>
+                    <span class="side-price">$8</span>
+                </div>
+                <div class="side-item">
+                    <span class="side-name">Ensalada Mixta</span>
+                    <span class="side-price">$9</span>
+                </div>
+                <div class="side-item">
+                    <span class="side-name">Pur&eacute; de Papa</span>
+                    <span class="side-price">$7</span>
+                </div>
+                <div class="side-item">
+                    <span class="side-name">Vegetales Asados</span>
+                    <span class="side-price">$10</span>
+                </div>
+                <div class="side-item">
+                    <span class="side-name">Arroz con Hongos</span>
+                    <span class="side-price">$8</span>
+                </div>
+                <div class="side-item">
+                    <span class="side-name">Espinacas</span>
+                    <span class="side-price">$9</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drinks -->
+        <section class="menu-section" id="drinks">
+            <div class="section-header">
+                <h2 class="section-title">Bebidas</h2>
+                <p class="section-subtitle">Wines, cocktails & more</p>
+            </div>
+
+            <h3 style="font-family: 'Cinzel', serif; font-size: 14px; color: var(--brasa-gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.1em;">Vinos Tintos</h3>
+            <div class="drinks-grid" style="margin-bottom: 25px;">
+                <div class="drink-card">
+                    <div class="drink-name">Malbec</div>
+                    <div class="drink-price">$12 / $48</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Cabernet</div>
+                    <div class="drink-price">$11 / $44</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Carmenere</div>
+                    <div class="drink-price">$13 / $52</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Reserva</div>
+                    <div class="drink-price">$16 / $64</div>
+                </div>
+            </div>
+
+            <h3 style="font-family: 'Cinzel', serif; font-size: 14px; color: var(--brasa-gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.1em;">C&oacute;cteles</h3>
+            <div class="drinks-grid" style="margin-bottom: 25px;">
+                <div class="drink-card">
+                    <div class="drink-name">Old Fashioned</div>
+                    <div class="drink-price">$14</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Pisco Sour</div>
+                    <div class="drink-price">$12</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Mojito</div>
+                    <div class="drink-price">$13</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Sangr&iacute;a</div>
+                    <div class="drink-price">$9 / $32</div>
+                </div>
+            </div>
+
+            <h3 style="font-family: 'Cinzel', serif; font-size: 14px; color: var(--brasa-gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.1em;">Cervezas</h3>
+            <div class="drinks-grid">
+                <div class="drink-card">
+                    <div class="drink-name">Quilmes</div>
+                    <div class="drink-price">$6</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Patagonia</div>
+                    <div class="drink-price">$7</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Austral IPA</div>
+                    <div class="drink-price">$8</div>
+                </div>
+                <div class="drink-card">
+                    <div class="drink-name">Agua</div>
+                    <div class="drink-price">$4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts -->
+        <section class="menu-section" id="desserts">
+            <div class="section-header">
+                <h2 class="section-title">Postres</h2>
+                <p class="section-subtitle">Sweet endings</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Flan Casero</span>
+                    <span class="item-price">$10</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge signature">House Made</span>
+                </div>
+                <p class="item-desc">Traditional caramel custard with dulce de leche drizzle</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Churros con Chocolate</span>
+                    <span class="item-price">$9</span>
+                </div>
+                <p class="item-desc">Crispy cinnamon churros with warm chocolate sauce</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Tres Leches</span>
+                    <span class="item-price">$11</span>
+                </div>
+                <p class="item-desc">Classic three-milk cake with whipped cream & berries</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Alfajores (3)</span>
+                    <span class="item-price">$8</span>
+                </div>
+                <p class="item-desc">Shortbread cookies filled with dulce de leche</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Helado Artesanal</span>
+                    <span class="item-price">$7</span>
+                </div>
+                <div class="item-badges">
+                    <span class="badge gf">GF</span>
+                </div>
+                <p class="item-desc">Two scoops: vanilla, chocolate, or dulce de leche</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="../../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja" class="footer-logo">
+        <p class="footer-tagline">Tradici&oacute;n Familiar</p>
+        <div class="footer-info">
+            123 Main Street, City, State 12345<br>
+            (555) 123-4567<br>
+            Open Daily: 11am - 10pm
+        </div>
+        <div class="footer-social">
+            <a href="#">@brasaroja</a>
+            <a href="#">brasaroja.com</a>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
+
+    <script>
+        // Update time
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+            document.getElementById('time').textContent = timeStr;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // Scroll to section
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const navHeight = document.querySelector('.category-nav').offsetHeight;
+            const legendHeight = document.querySelector('.legend').offsetHeight;
+            const offset = headerHeight + navHeight + legendHeight;
+
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+            });
+
+            // Update active nav button
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+
+            // Update active nav based on scroll position
+            const sections = ['featured', 'appetizers', 'mains', 'sides', 'drinks', 'desserts'];
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const navHeight = document.querySelector('.category-nav').offsetHeight;
+            const legendHeight = document.querySelector('.legend').offsetHeight;
+            const offset = headerHeight + navHeight + legendHeight + 50;
+
+            sections.forEach(id => {
+                const section = document.getElementById(id);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= offset && rect.bottom > offset) {
+                        document.querySelectorAll('.nav-btn').forEach(btn => {
+                            btn.classList.remove('active');
+                            if (btn.getAttribute('onclick').includes(id)) {
+                                btn.classList.add('active');
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

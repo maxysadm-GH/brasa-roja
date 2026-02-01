@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASA ROJA - Professional Product Mockups</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+            --humo: #8B7355;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+            color: var(--crema);
+            min-height: 100vh;
+        }
+
+        /* Hero Header */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 40px;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(198, 51, 51, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(201, 136, 43, 0.1) 0%, transparent 50%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+
+        .hero-logo {
+            width: 280px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 60px rgba(201, 136, 43, 0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            color: var(--crema);
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--brasa-gold);
+            font-weight: 400;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 60px;
+            position: relative;
+        }
+
+        .section-dark {
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 50%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--brasa-gold);
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brasa-gold));
+        }
+
+        .section-title::before { right: calc(50% + 120px); }
+        .section-title::after { left: calc(50% + 120px); transform: scaleX(-1); }
+
+        /* Showcase Grid */
+        .showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 80px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .showcase-item {
+            position: relative;
+        }
+
+        .showcase-visual {
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 50px 100px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        .showcase-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 136, 43, 0.05) 0%, transparent 50%);
+            animation: shimmer 8s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .showcase-label {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .showcase-label h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--crema);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .showcase-label p {
+            font-size: 0.9rem;
+            color: var(--humo);
+        }
+
+        /* ==================== UNIFORM: POLO SHIRT ==================== */
+        .polo-mockup {
+            position: relative;
+            width: 320px;
+            height: 380px;
+        }
+
+        .polo-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .polo-logo-placement {
+            position: absolute;
+            top: 115px;
+            left: 65px;
+            width: 85px;
+        }
+
+        /* ==================== UNIFORM: CHEF COAT ==================== */
+        .chef-mockup {
+            position: relative;
+            width: 300px;
+            height: 400px;
+        }
+
+        .chef-logo-placement {
+            position: absolute;
+            top: 100px;
+            left: 55px;
+            width: 60px;
+        }
+
+        /* ==================== UNIFORM: APRON ==================== */
+        .apron-mockup {
+            position: relative;
+            width: 280px;
+            height: 400px;
+        }
+
+        .apron-logo-placement {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+        }
+
+        /* ==================== COFFEE CUP ==================== */
+        .cup-mockup {
+            position: relative;
+            width: 280px;
+            height: 340px;
+        }
+
+        .cup-logo-placement {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%) perspective(200px) rotateY(-8deg);
+            width: 100px;
+        }
+
+        /* ==================== PAPER CUP ==================== */
+        .paper-cup-mockup {
+            position: relative;
+            width: 200px;
+            height: 320px;
+        }
+
+        .paper-cup-logo {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+        }
+
+        /* ==================== FRIES BOX ==================== */
+        .fries-mockup {
+            position: relative;
+            width: 200px;
+            height: 320px;
+        }
+
+        .fries-logo-placement {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+        }
+
+        /* ==================== PAPER BAG ==================== */
+        .bag-mockup {
+            position: relative;
+            width: 280px;
+            height: 380px;
+        }
+
+        .bag-logo-placement {
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+        }
+
+        /* ==================== SALAD BOWL ==================== */
+        .bowl-mockup {
+            position: relative;
+            width: 340px;
+            height: 280px;
+        }
+
+        .bowl-logo-placement {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ==================== CAP ==================== */
+        .cap-mockup {
+            position: relative;
+            width: 300px;
+            height: 240px;
+        }
+
+        .cap-logo-placement {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 80px 40px;
+            border-top: 1px solid rgba(201, 136, 43, 0.2);
+        }
+
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer p {
+            color: var(--humo);
+            font-size: 0.85rem;
+        }
+
+        /* External Mockup Links */
+        .mockup-tools {
+            background: rgba(201, 136, 43, 0.05);
+            border: 1px solid rgba(201, 136, 43, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .mockup-tools h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--brasa-gold);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-link {
+            display: block;
+            background: rgba(45, 45, 45, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .tool-link:hover {
+            background: rgba(201, 136, 43, 0.1);
+            border-color: var(--brasa-gold);
+            transform: translateY(-3px);
+        }
+
+        .tool-link strong {
+            display: block;
+            color: var(--crema);
+            font-family: 'Cinzel', serif;
+            margin-bottom: 5px;
+        }
+
+        .tool-link span {
+            font-size: 0.8rem;
+            color: var(--humo);
+        }
+
+        @media (max-width: 1100px) {
+            .showcase {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 60px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <img src="../../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja" class="hero-logo">
+        <h1>MOCKUPS</h1>
+        <h2>Brand Applications</h2>
+    </section>
+
+    <!-- Staff Uniforms -->
+    <section class="section section-dark">
+        <h2 class="section-title">Staff Uniforms</h2>
+
+        <div class="showcase">
+            <!-- Polo Shirt -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="polo-mockup">
+                        <svg class="polo-svg" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Body -->
+                            <path d="M60 90 L60 360 Q60 375 75 375 L245 375 Q260 375 260 360 L260 90" fill="#1a1a1a"/>
+                            <!-- Left Sleeve -->
+                            <path d="M60 90 L10 130 Q5 135 8 145 L35 200 Q40 210 50 205 L60 160" fill="#1a1a1a"/>
+                            <!-- Right Sleeve -->
+                            <path d="M260 90 L310 130 Q315 135 312 145 L285 200 Q280 210 270 205 L260 160" fill="#1a1a1a"/>
+                            <!-- Collar Left -->
+                            <path d="M120 20 L100 85 L140 95 L155 40 Z" fill="#222"/>
+                            <!-- Collar Right -->
+                            <path d="M200 20 L220 85 L180 95 L165 40 Z" fill="#222"/>
+                            <!-- Placket -->
+                            <rect x="150" y="40" width="20" height="100" fill="#1f1f1f"/>
+                            <!-- Buttons -->
+                            <circle cx="160" cy="60" r="4" fill="#C9882B"/>
+                            <circle cx="160" cy="85" r="4" fill="#C9882B"/>
+                            <circle cx="160" cy="110" r="4" fill="#C9882B"/>
+                            <!-- Collar Trim -->
+                            <path d="M120 20 L155 40 L165 40 L200 20" stroke="#C9882B" stroke-width="3" fill="none"/>
+                            <!-- Sleeve Trim -->
+                            <path d="M8 145 L35 200" stroke="#C9882B" stroke-width="2"/>
+                            <path d="M312 145 L285 200" stroke="#C9882B" stroke-width="2"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Full/Logo_Transparent.png" class="polo-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Staff Polo</h3>
+                    <p>Left chest, 3.5" embroidery</p>
+                </div>
+            </div>
+
+            <!-- Chef Coat -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="chef-mockup">
+                        <svg viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Body -->
+                            <path d="M50 70 L50 380 L250 380 L250 70" fill="white"/>
+                            <!-- Left Sleeve -->
+                            <path d="M50 70 L5 110 Q0 115 3 125 L25 190 Q30 200 40 195 L50 140" fill="white"/>
+                            <!-- Right Sleeve -->
+                            <path d="M250 70 L295 110 Q300 115 297 125 L275 190 Q270 200 260 195 L250 140" fill="white"/>
+                            <!-- Collar Stand -->
+                            <rect x="90" y="20" width="120" height="55" rx="5" fill="white" stroke="#ddd" stroke-width="2"/>
+                            <!-- Double Breast Panel Left -->
+                            <rect x="80" y="75" width="65" height="280" fill="#f8f8f8"/>
+                            <!-- Double Breast Panel Right -->
+                            <rect x="155" y="75" width="65" height="280" fill="#f5f5f5"/>
+                            <!-- Buttons Left -->
+                            <circle cx="100" cy="120" r="6" fill="#333"/>
+                            <circle cx="100" cy="170" r="6" fill="#333"/>
+                            <circle cx="100" cy="220" r="6" fill="#333"/>
+                            <circle cx="100" cy="270" r="6" fill="#333"/>
+                            <!-- Buttons Right -->
+                            <circle cx="200" cy="120" r="6" fill="#333"/>
+                            <circle cx="200" cy="170" r="6" fill="#333"/>
+                            <circle cx="200" cy="220" r="6" fill="#333"/>
+                            <circle cx="200" cy="270" r="6" fill="#333"/>
+                            <!-- Pocket -->
+                            <rect x="160" y="320" width="60" height="40" fill="none" stroke="#ddd" stroke-width="2" rx="3"/>
+                            <!-- Seams -->
+                            <line x1="50" y1="70" x2="50" y2="380" stroke="#eee" stroke-width="1"/>
+                            <line x1="250" y1="70" x2="250" y2="380" stroke="#eee" stroke-width="1"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Icon/Icon_Transparent.png" class="chef-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Chef Coat</h3>
+                    <p>Icon only, 2" embroidery</p>
+                </div>
+            </div>
+
+            <!-- Apron -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="apron-mockup">
+                        <svg viewBox="0 0 280 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Neck Strap -->
+                            <path d="M100 5 Q140 -5 180 5" stroke="#2D2D2D" stroke-width="8" fill="none" stroke-linecap="round"/>
+                            <!-- Body -->
+                            <path d="M40 30 L40 380 Q40 395 55 395 L225 395 Q240 395 240 380 L240 30 Q200 20 140 20 Q80 20 40 30" fill="#2D2D2D"/>
+                            <!-- Waist Ties -->
+                            <path d="M40 180 L-20 200" stroke="#2D2D2D" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M240 180 L300 200" stroke="#2D2D2D" stroke-width="8" stroke-linecap="round"/>
+                            <!-- Front Pocket -->
+                            <path d="M70 280 L70 360 L210 360 L210 280" fill="none" stroke="#444" stroke-width="2"/>
+                            <line x1="140" y1="280" x2="140" y2="360" stroke="#444" stroke-width="2"/>
+                            <!-- Stitching Detail -->
+                            <path d="M50 40 L50 385" stroke="#444" stroke-width="1" stroke-dasharray="4 4"/>
+                            <path d="M230 40 L230 385" stroke="#444" stroke-width="1" stroke-dasharray="4 4"/>
+                            <!-- Top Edge Accent -->
+                            <path d="M40 30 Q140 15 240 30" stroke="#C9882B" stroke-width="3"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Full/Logo_Transparent.png" class="apron-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Server Apron</h3>
+                    <p>Center chest, 5" embroidery</p>
+                </div>
+            </div>
+
+            <!-- Cap -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="cap-mockup">
+                        <svg viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Crown Back -->
+                            <ellipse cx="150" cy="100" rx="120" ry="80" fill="#1a1a1a"/>
+                            <!-- Crown Panels -->
+                            <path d="M150 20 Q80 30 50 100 Q80 95 150 90 Q220 95 250 100 Q220 30 150 20" fill="#222"/>
+                            <!-- Panel Seams -->
+                            <path d="M150 20 L150 90" stroke="#333" stroke-width="1"/>
+                            <path d="M100 35 L85 95" stroke="#333" stroke-width="1"/>
+                            <path d="M200 35 L215 95" stroke="#333" stroke-width="1"/>
+                            <!-- Brim -->
+                            <ellipse cx="150" cy="160" rx="140" ry="35" fill="#1a1a1a"/>
+                            <ellipse cx="150" cy="155" rx="130" ry="28" fill="#222"/>
+                            <!-- Brim Edge -->
+                            <path d="M20 160 Q150 200 280 160" stroke="#111" stroke-width="3"/>
+                            <!-- Button Top -->
+                            <circle cx="150" cy="25" r="10" fill="#2D2D2D" stroke="#C9882B" stroke-width="2"/>
+                            <!-- Sweatband hint -->
+                            <path d="M35 130 Q150 150 265 130" stroke="#C9882B" stroke-width="2"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Icon/Icon_Transparent.png" class="cap-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Baseball Cap</h3>
+                    <p>Front center, 2.5" embroidery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drinkware -->
+    <section class="section">
+        <h2 class="section-title">Drinkware</h2>
+
+        <div class="showcase">
+            <!-- Ceramic Mug -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="cup-mockup">
+                        <svg viewBox="0 0 280 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shadow -->
+                            <ellipse cx="140" cy="320" rx="100" ry="15" fill="rgba(0,0,0,0.3)"/>
+                            <!-- Mug Body -->
+                            <path d="M50 60 L45 280 Q45 310 75 310 L205 310 Q235 310 235 280 L230 60" fill="url(#mugGradient)"/>
+                            <!-- Rim -->
+                            <ellipse cx="140" cy="60" rx="95" ry="20" fill="url(#rimGradient)"/>
+                            <ellipse cx="140" cy="60" rx="85" ry="15" fill="#5c3a21"/>
+                            <!-- Coffee Surface -->
+                            <ellipse cx="140" cy="65" rx="80" ry="12" fill="#3d2314"/>
+                            <!-- Handle -->
+                            <path d="M230 100 Q290 100 290 180 Q290 260 230 260" stroke="url(#handleGradient)" stroke-width="25" fill="none" stroke-linecap="round"/>
+                            <!-- Steam -->
+                            <path d="M100 30 Q105 10 100 -10" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="none"/>
+                            <path d="M140 25 Q145 5 140 -15" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none"/>
+                            <path d="M180 30 Q185 10 180 -10" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="none"/>
+                            <!-- Defs -->
+                            <defs>
+                                <linearGradient id="mugGradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#e8e8e8"/>
+                                    <stop offset="50%" stop-color="white"/>
+                                    <stop offset="100%" stop-color="#d0d0d0"/>
+                                </linearGradient>
+                                <linearGradient id="rimGradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#d0d0d0"/>
+                                    <stop offset="50%" stop-color="white"/>
+                                    <stop offset="100%" stop-color="#c0c0c0"/>
+                                </linearGradient>
+                                <linearGradient id="handleGradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#d0d0d0"/>
+                                    <stop offset="100%" stop-color="white"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <img src="../../Assets/Logo_Full/Logo_Transparent.png" class="cup-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Ceramic Mug</h3>
+                    <p>12oz, full wrap print</p>
+                </div>
+            </div>
+
+            <!-- Paper Cup -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="paper-cup-mockup">
+                        <svg viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shadow -->
+                            <ellipse cx="100" cy="305" rx="60" ry="10" fill="rgba(0,0,0,0.3)"/>
+                            <!-- Cup Body -->
+                            <path d="M35 50 L50 290 Q55 300 100 300 Q145 300 150 290 L165 50" fill="#C63333"/>
+                            <!-- Lid -->
+                            <ellipse cx="100" cy="40" rx="70" ry="15" fill="#2D2D2D"/>
+                            <ellipse cx="100" cy="35" rx="65" ry="12" fill="#3a3a3a"/>
+                            <!-- Lid Hole -->
+                            <ellipse cx="100" cy="32" rx="15" ry="4" fill="#222"/>
+                            <!-- Sleeve -->
+                            <path d="M42 120 L52 220 Q55 225 100 225 Q145 225 148 220 L158 120 Q155 115 100 115 Q45 115 42 120" fill="#C9882B"/>
+                            <!-- Stripe -->
+                            <path d="M35 80 L40 100 Q100 105 160 100 L165 80 Q100 85 35 80" fill="#8B2500"/>
+                            <!-- Cup Rim Detail -->
+                            <ellipse cx="100" cy="50" rx="68" ry="12" fill="none" stroke="#b02828" stroke-width="2"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Icon/Icon_Transparent.png" class="paper-cup-logo" alt="Logo" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>To-Go Cup</h3>
+                    <p>16oz, branded sleeve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packaging -->
+    <section class="section section-dark">
+        <h2 class="section-title">Packaging</h2>
+
+        <div class="showcase">
+            <!-- Fries Box -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="fries-mockup">
+                        <svg viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Fries -->
+                            <rect x="55" y="40" width="14" height="90" rx="3" fill="#f4d03f" transform="rotate(-12 55 40)"/>
+                            <rect x="75" y="30" width="14" height="100" rx="3" fill="#e6c22e" transform="rotate(-3 75 30)"/>
+                            <rect x="95" y="35" width="14" height="95" rx="3" fill="#f4d03f" transform="rotate(5 95 35)"/>
+                            <rect x="115" y="40" width="14" height="85" rx="3" fill="#d4a82a" transform="rotate(10 115 40)"/>
+                            <rect x="130" y="45" width="14" height="80" rx="3" fill="#f4d03f" transform="rotate(15 130 45)"/>
+                            <!-- Box Body -->
+                            <path d="M30 110 L45 300 Q50 310 100 310 Q150 310 155 300 L170 110 Q165 100 100 100 Q35 100 30 110" fill="#C63333"/>
+                            <!-- Box Front Panel -->
+                            <path d="M35 115 L48 295 Q53 303 100 303 Q147 303 152 295 L165 115 Q160 108 100 108 Q40 108 35 115" fill="#b02828"/>
+                            <!-- Stripes at bottom -->
+                            <path d="M45 250 L52 300 Q100 305 148 300 L155 250 Q100 255 45 250" fill="#C9882B"/>
+                            <path d="M47 260 L53 295" stroke="#b8861f" stroke-width="8"/>
+                            <path d="M67 258 L72 295" stroke="#b8861f" stroke-width="8"/>
+                            <path d="M87 257 L91 295" stroke="#b8861f" stroke-width="8"/>
+                            <path d="M107 257 L109 295" stroke="#b8861f" stroke-width="8"/>
+                            <path d="M127 258 L128 295" stroke="#b8861f" stroke-width="8"/>
+                            <path d="M147 260 L147 295" stroke="#b8861f" stroke-width="8"/>
+                            <!-- Top Rim -->
+                            <ellipse cx="100" cy="110" rx="72" ry="15" fill="#d43d3d"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Icon/Icon_Transparent.png" class="fries-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Fries Box</h3>
+                    <p>Food-grade cardboard</p>
+                </div>
+            </div>
+
+            <!-- Paper Bag -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="bag-mockup">
+                        <svg viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shadow -->
+                            <ellipse cx="140" cy="370" rx="100" ry="8" fill="rgba(0,0,0,0.2)"/>
+                            <!-- Bag Body -->
+                            <path d="M30 60 L30 360 Q30 370 45 370 L235 370 Q250 370 250 360 L250 60" fill="url(#bagGradient)"/>
+                            <!-- Fold -->
+                            <path d="M30 60 L30 30 Q30 20 45 20 L235 20 Q250 20 250 30 L250 60" fill="url(#foldGradient)"/>
+                            <line x1="30" y1="60" x2="250" y2="60" stroke="#a07850" stroke-width="2"/>
+                            <!-- Handles -->
+                            <path d="M90 20 Q90 -10 140 -10 Q190 -10 190 20" stroke="#9a7550" stroke-width="10" fill="none" stroke-linecap="round"/>
+                            <!-- Side Creases -->
+                            <line x1="40" y1="60" x2="40" y2="365" stroke="#b8956a" stroke-width="1"/>
+                            <line x1="240" y1="60" x2="240" y2="365" stroke="#b8956a" stroke-width="1"/>
+                            <defs>
+                                <linearGradient id="bagGradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#c4a070"/>
+                                    <stop offset="50%" stop-color="#d4b080"/>
+                                    <stop offset="100%" stop-color="#b89060"/>
+                                </linearGradient>
+                                <linearGradient id="foldGradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#b89060"/>
+                                    <stop offset="50%" stop-color="#c4a070"/>
+                                    <stop offset="100%" stop-color="#a88050"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <img src="../../Assets/Logo_Full/Logo_Transparent.png" class="bag-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Takeout Bag</h3>
+                    <p>Kraft paper, 2-color print</p>
+                </div>
+            </div>
+
+            <!-- Salad Bowl -->
+            <div class="showcase-item">
+                <div class="showcase-visual">
+                    <div class="bowl-mockup">
+                        <svg viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shadow -->
+                            <ellipse cx="170" cy="265" rx="140" ry="12" fill="rgba(0,0,0,0.15)"/>
+                            <!-- Bowl Base -->
+                            <path d="M20 100 Q20 250 170 250 Q320 250 320 100" fill="rgba(255,255,255,0.9)" stroke="#ddd" stroke-width="2"/>
+                            <!-- Salad Contents -->
+                            <ellipse cx="170" cy="140" rx="130" ry="60" fill="#6b8e23"/>
+                            <circle cx="120" cy="120" r="15" fill="#ff6347"/>
+                            <circle cx="200" cy="130" r="12" fill="#ffd700"/>
+                            <circle cx="160" cy="150" r="18" fill="#8fbc8f"/>
+                            <circle cx="220" cy="115" r="10" fill="#ff6347"/>
+                            <circle cx="100" cy="145" r="14" fill="#98fb98"/>
+                            <circle cx="240" cy="145" r="16" fill="#90ee90"/>
+                            <!-- Lid -->
+                            <path d="M10 100 Q10 30 170 30 Q330 30 330 100 Q330 110 170 110 Q10 110 10 100" fill="rgba(255,255,255,0.4)" stroke="rgba(200,200,200,0.5)" stroke-width="2"/>
+                            <!-- Lid Highlight -->
+                            <path d="M50 70 Q170 40 290 70" stroke="rgba(255,255,255,0.5)" stroke-width="3" fill="none"/>
+                        </svg>
+                        <img src="../../Assets/Logo_Full/Logo_Transparent.png" class="bowl-logo-placement" alt="Logo">
+                    </div>
+                </div>
+                <div class="showcase-label">
+                    <h3>Salad Container</h3>
+                    <p>Clear PET, branded label</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- External Mockup Tools -->
+        <div class="mockup-tools">
+            <h3>Generate Professional Mockups</h3>
+            <div class="tool-grid">
+                <a href="https://mockey.ai/" target="_blank" class="tool-link">
+                    <strong>Mockey.ai</strong>
+                    <span>15,000+ free templates</span>
+                </a>
+                <a href="https://www.recraft.ai/mockup-generator" target="_blank" class="tool-link">
+                    <strong>Recraft AI</strong>
+                    <span>AI-powered mockups</span>
+                </a>
+                <a href="https://mediamodifier.com/mockups/all" target="_blank" class="tool-link">
+                    <strong>Mediamodifier</strong>
+                    <span>100 free API calls</span>
+                </a>
+                <a href="https://www.freepik.com/free-photos-vectors/mockup-restaurant" target="_blank" class="tool-link">
+                    <strong>Freepik</strong>
+                    <span>Free restaurant vectors</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="../../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja" class="footer-logo">
+        <p>Brasa Roja Brand Package</p>
+        <p style="margin-top: 10px; font-size: 0.75rem;">For production-ready assets, see Assets/Apparel/ and Assets/Packaging/</p>
+    </footer>
+</body>
+</html>

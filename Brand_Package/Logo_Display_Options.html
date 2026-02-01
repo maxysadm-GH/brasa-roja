@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASA ROJA - Logo Display Options Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+            --dark-gold: #A06F1F;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #f0f0f0;
+            padding: 40px;
+            color: var(--charcoal);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .option-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .option-header {
+            background: var(--charcoal);
+            color: white;
+            padding: 20px 25px;
+        }
+
+        .option-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .option-header p {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .option-demo {
+            padding: 40px;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .demo-label {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 280px;
+            height: auto;
+        }
+
+        /* ============ OPTION 1: Dark Container ============ */
+        .option-1 .option-demo {
+            background: white;
+        }
+
+        .dark-container {
+            background: var(--charcoal);
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .dark-container img {
+            max-width: 380px;
+        }
+
+        /* ============ OPTION 2: Shadow Effect ============ */
+        .option-2 .option-demo {
+            background: white;
+        }
+
+        .shadow-effect img {
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15)) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            max-width: 380px;
+        }
+
+        /* ============ OPTION 3: Cream Background ============ */
+        .option-3 .option-demo {
+            background: var(--crema);
+        }
+
+        .cream-bg img {
+            max-width: 380px;
+        }
+
+        /* ============ OPTION 4: Enhanced Gold (CSS filter) ============ */
+        .option-4 .option-demo {
+            background: white;
+        }
+
+        .enhanced-gold img {
+            max-width: 380px;
+            filter: contrast(1.1) saturate(1.15);
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            margin-top: 60px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .comparison-section h2 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--roja-red);
+        }
+
+        .side-by-side {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .mini-demo {
+            text-align: center;
+        }
+
+        .mini-demo .demo-box {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mini-demo img {
+            max-width: 260px;
+            height: auto;
+        }
+
+        .mini-demo h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            margin-bottom: 5px;
+        }
+
+        .mini-demo p {
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        /* Email Signature Example */
+        .real-world {
+            margin-top: 60px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .real-world h2 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--roja-red);
+        }
+
+        .signature-examples {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .sig-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .sig-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--brasa-gold);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Signature Style */
+        .signature {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .sig-logo {
+            flex-shrink: 0;
+        }
+
+        .sig-logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        .sig-logo.with-dark-bg {
+            background: var(--charcoal);
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        .sig-logo.with-dark-bg img {
+            width: 200px;
+        }
+
+        .sig-logo.with-shadow img {
+            width: 200px;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+        }
+
+        .sig-logo.with-cream-bg {
+            background: var(--crema);
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        .sig-logo.with-enhanced img {
+            width: 200px;
+            filter: contrast(1.1) saturate(1.15);
+        }
+
+        .sig-info {
+            border-left: 3px solid var(--brasa-gold);
+            padding-left: 15px;
+        }
+
+        .sig-info .name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin-bottom: 3px;
+        }
+
+        .sig-info .title {
+            color: var(--brasa-gold);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .sig-info .contact {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer-note {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            background: var(--charcoal);
+            color: var(--crema);
+            border-radius: 12px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-note h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--brasa-gold);
+            margin-bottom: 15px;
+        }
+
+        .footer-note p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 1000px) {
+            .options-grid, .side-by-side, .signature-examples {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Display Options</h1>
+    <p class="subtitle">Solving the gold-on-white visibility issue while keeping the approved logo intact</p>
+
+    <!-- 4 Options Grid -->
+    <div class="options-grid">
+        <!-- Option 1: Dark Container -->
+        <div class="option-card option-1">
+            <div class="option-header">
+                <h2>Option 1: Dark Container</h2>
+                <p>Place logo in charcoal box on light backgrounds</p>
+            </div>
+            <div class="option-demo">
+                <span class="demo-label">On White Background</span>
+                <div class="dark-container">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja">
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 2: Shadow Effect -->
+        <div class="option-card option-2">
+            <div class="option-header">
+                <h2>Option 2: Drop Shadow</h2>
+                <p>CSS shadow lifts gold off the background</p>
+            </div>
+            <div class="option-demo">
+                <span class="demo-label">On White Background</span>
+                <div class="shadow-effect">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja">
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 3: Cream Background -->
+        <div class="option-card option-3">
+            <div class="option-header">
+                <h2>Option 3: Cream Background</h2>
+                <p>Use brand cream (#F5EFE0) instead of white</p>
+            </div>
+            <div class="option-demo">
+                <span class="demo-label">On Cream Background</span>
+                <div class="cream-bg">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja">
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 4: Enhanced Gold -->
+        <div class="option-card option-4">
+            <div class="option-header">
+                <h2>Option 4: Enhanced Contrast</h2>
+                <p>CSS filter boosts contrast slightly on display</p>
+            </div>
+            <div class="option-demo">
+                <span class="demo-label">On White Background</span>
+                <div class="enhanced-gold">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side by Side Comparison -->
+    <div class="comparison-section">
+        <h2>Side-by-Side Comparison</h2>
+        <div class="side-by-side">
+            <div class="mini-demo">
+                <div class="demo-box" style="background: var(--charcoal);">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Dark Container">
+                </div>
+                <h4>Dark Container</h4>
+                <p>Maximum contrast, premium feel</p>
+            </div>
+            <div class="mini-demo">
+                <div class="demo-box" style="background: white;">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Shadow" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));">
+                </div>
+                <h4>Drop Shadow</h4>
+                <p>Subtle lift, clean look</p>
+            </div>
+            <div class="mini-demo">
+                <div class="demo-box" style="background: var(--crema);">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Cream">
+                </div>
+                <h4>Cream Background</h4>
+                <p>Warm, on-brand tone</p>
+            </div>
+            <div class="mini-demo">
+                <div class="demo-box" style="background: white;">
+                    <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Enhanced" style="filter: contrast(1.1) saturate(1.15);">
+                </div>
+                <h4>Enhanced Contrast</h4>
+                <p>Bolder gold, same logo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Real World: Email Signatures -->
+    <div class="real-world">
+        <h2>Applied to Email Signatures</h2>
+        <div class="signature-examples">
+            <!-- Option 1 Signature -->
+            <div class="sig-card">
+                <h4>Option 1: Dark Container</h4>
+                <div class="signature">
+                    <div class="sig-logo with-dark-bg">
+                        <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Logo">
+                    </div>
+                    <div class="sig-info">
+                        <div class="name">Juan Carlos Méndez</div>
+                        <div class="title">Gerente General</div>
+                        <div class="contact">
+                            T: (011) 4555-1234<br>
+                            juan@brasaroja.com<br>
+                            brasaroja.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 2 Signature -->
+            <div class="sig-card">
+                <h4>Option 2: Drop Shadow</h4>
+                <div class="signature">
+                    <div class="sig-logo with-shadow">
+                        <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Logo">
+                    </div>
+                    <div class="sig-info">
+                        <div class="name">Juan Carlos Méndez</div>
+                        <div class="title">Gerente General</div>
+                        <div class="contact">
+                            T: (011) 4555-1234<br>
+                            juan@brasaroja.com<br>
+                            brasaroja.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 3 Signature -->
+            <div class="sig-card">
+                <h4>Option 3: Cream Background</h4>
+                <div class="signature">
+                    <div class="sig-logo with-cream-bg">
+                        <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Logo">
+                    </div>
+                    <div class="sig-info">
+                        <div class="name">Juan Carlos Méndez</div>
+                        <div class="title">Gerente General</div>
+                        <div class="contact">
+                            T: (011) 4555-1234<br>
+                            juan@brasaroja.com<br>
+                            brasaroja.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 4 Signature -->
+            <div class="sig-card">
+                <h4>Option 4: Enhanced Contrast</h4>
+                <div class="signature">
+                    <div class="sig-logo with-enhanced">
+                        <img src="../Assets/Logo_Full/Logo_Transparent.png" alt="Logo">
+                    </div>
+                    <div class="sig-info">
+                        <div class="name">Juan Carlos Méndez</div>
+                        <div class="title">Gerente General</div>
+                        <div class="contact">
+                            T: (011) 4555-1234<br>
+                            juan@brasaroja.com<br>
+                            brasaroja.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommendation -->
+    <div class="footer-note">
+        <h3>Recommendation</h3>
+        <p>
+            <strong>Option 1 (Dark Container)</strong> provides the best visibility and premium feel.<br>
+            <strong>Option 3 (Cream Background)</strong> is the most on-brand for documents and menus.<br>
+            All options use your approved logo unchanged - only the display context is modified.
+        </p>
+    </div>
+</body>
+</html>

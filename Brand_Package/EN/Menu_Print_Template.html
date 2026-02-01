@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASA ROJA - Menu Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+            --humo: #8B7355;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 8.5in 11in;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #e0e0e0;
+            color: var(--charcoal);
+            line-height: 1.5;
+        }
+
+        .menu-page {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 20px auto;
+            background: var(--crema);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .menu-page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        /* Decorative Border */
+        .menu-border {
+            position: absolute;
+            top: 0.4in;
+            left: 0.4in;
+            right: 0.4in;
+            bottom: 0.4in;
+            border: 2px solid var(--brasa-gold);
+            pointer-events: none;
+        }
+
+        .menu-border::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 1px solid var(--humo);
+        }
+
+        /* Corner Decorations */
+        .corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-color: var(--brasa-gold);
+            border-style: solid;
+        }
+        .corner.tl { top: 0.5in; left: 0.5in; border-width: 3px 0 0 3px; }
+        .corner.tr { top: 0.5in; right: 0.5in; border-width: 3px 3px 0 0; }
+        .corner.bl { bottom: 0.5in; left: 0.5in; border-width: 0 0 3px 3px; }
+        .corner.br { bottom: 0.5in; right: 0.5in; border-width: 0 3px 3px 0; }
+
+        .menu-content {
+            padding: 0.7in 0.8in;
+            min-height: 11in;
+        }
+
+        /* Header */
+        .menu-header {
+            text-align: center;
+            margin-bottom: 0.4in;
+            padding-bottom: 0.25in;
+            border-bottom: 1px solid var(--humo);
+        }
+
+        .menu-logo {
+            width: 2.2in;
+            margin-bottom: 0.15in;
+        }
+
+        .menu-tagline {
+            font-family: 'Parisienne', cursive;
+            font-size: 20pt;
+            color: var(--humo);
+        }
+
+        /* Section Styling */
+        .menu-section {
+            margin-bottom: 0.35in;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 14pt;
+            font-weight: 600;
+            color: var(--roja-red);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-align: center;
+            margin-bottom: 0.15in;
+            position: relative;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: '~';
+            color: var(--brasa-gold);
+            margin: 0 15px;
+        }
+
+        .section-subtitle {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 9pt;
+            color: var(--humo);
+            text-align: center;
+            margin-bottom: 0.2in;
+        }
+
+        /* Menu Items */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.12in;
+            padding-bottom: 0.08in;
+        }
+
+        .item-left {
+            flex: 1;
+        }
+
+        .item-name {
+            font-family: 'Cinzel', serif;
+            font-size: 10.5pt;
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        .item-name .badge {
+            display: inline-block;
+            font-size: 7pt;
+            padding: 1px 5px;
+            margin-left: 8px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            vertical-align: middle;
+        }
+
+        .badge.signature {
+            background: var(--roja-red);
+            color: white;
+        }
+
+        .badge.spicy {
+            background: var(--deep-ember);
+            color: white;
+        }
+
+        .badge.popular {
+            background: var(--brasa-gold);
+            color: white;
+        }
+
+        .item-description {
+            font-size: 8.5pt;
+            color: var(--humo);
+            font-style: italic;
+            margin-top: 2px;
+            padding-right: 20px;
+        }
+
+        .item-dots {
+            flex: 1;
+            border-bottom: 1px dotted var(--humo);
+            margin: 0 10px 4px;
+            min-width: 30px;
+        }
+
+        .item-price {
+            font-family: 'Cinzel', serif;
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: var(--brasa-gold);
+            white-space: nowrap;
+        }
+
+        /* Two Column Layout */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4in;
+        }
+
+        /* Featured Item */
+        .featured-item {
+            background: rgba(201, 136, 43, 0.08);
+            padding: 0.15in 0.2in;
+            margin: 0.15in 0;
+            border-left: 3px solid var(--brasa-gold);
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.25in 0;
+            color: var(--brasa-gold);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--humo), transparent);
+        }
+
+        .divider-icon {
+            margin: 0 15px;
+            font-size: 12pt;
+        }
+
+        /* Footer */
+        .menu-footer {
+            text-align: center;
+            padding-top: 0.2in;
+            border-top: 1px solid var(--humo);
+            margin-top: 0.3in;
+        }
+
+        .footer-note {
+            font-size: 8pt;
+            color: var(--humo);
+            font-style: italic;
+        }
+
+        .footer-icons {
+            margin-top: 10px;
+            font-size: 8pt;
+            color: var(--humo);
+        }
+
+        .footer-icons span {
+            margin: 0 10px;
+        }
+
+        /* Page 2 - Drinks/Desserts */
+        .drinks-header {
+            background: var(--charcoal);
+            color: var(--crema);
+            margin: -0.7in -0.8in 0.4in;
+            padding: 0.4in 0.8in;
+            text-align: center;
+        }
+
+        .drinks-header .menu-logo {
+            filter: brightness(1.2);
+        }
+
+        .drinks-header .menu-tagline {
+            color: var(--brasa-gold);
+        }
+
+        .drink-category {
+            margin-bottom: 0.3in;
+        }
+
+        .category-title {
+            font-family: 'Cinzel', serif;
+            font-size: 11pt;
+            font-weight: 600;
+            color: var(--brasa-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.1in;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(201, 136, 43, 0.3);
+        }
+
+        .drink-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 9.5pt;
+            padding: 4px 0;
+        }
+
+        .drink-name {
+            color: var(--charcoal);
+        }
+
+        .drink-price {
+            color: var(--brasa-gold);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- PAGE 1: Main Menu -->
+    <div class="menu-page">
+        <div class="menu-border"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+
+        <div class="menu-content">
+            <!-- Header -->
+            <div class="menu-header">
+                <img src="../../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja" class="menu-logo">
+                <p class="menu-tagline">Tradici&oacute;n Familiar</p>
+            </div>
+
+            <!-- Appetizers -->
+            <div class="menu-section">
+                <h2 class="section-title">Aperitivos</h2>
+                <p class="section-subtitle">Start your meal with our fire-kissed appetizers</p>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Empanadas de Carne <span class="badge signature">Signature</span></div>
+                        <div class="item-description">Hand-folded pastries filled with seasoned beef, olives & raisins</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$12</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Chorizo a la Parrilla <span class="badge spicy">Spicy</span></div>
+                        <div class="item-description">Grilled Argentine chorizo with chimichurri sauce</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$14</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Provoleta</div>
+                        <div class="item-description">Grilled provolone with oregano & red pepper flakes</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$11</div>
+                </div>
+            </div>
+
+            <div class="divider">
+                <span class="divider-icon">&#10022;</span>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="menu-section">
+                <h2 class="section-title">Platos Principales</h2>
+                <p class="section-subtitle">All meats cooked over open flame with natural hardwoods</p>
+
+                <div class="featured-item">
+                    <div class="menu-item" style="margin-bottom: 0;">
+                        <div class="item-left">
+                            <div class="item-name">Parrillada Mixta <span class="badge popular">Chef's Choice</span></div>
+                            <div class="item-description">The ultimate grill experience: ribeye, short ribs, chorizo, morcilla, sweetbreads & chicken. Serves 2-3</div>
+                        </div>
+                        <div class="item-dots"></div>
+                        <div class="item-price">$68</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Bife de Chorizo</div>
+                        <div class="item-description">16oz prime New York strip, grilled to perfection</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$42</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Costillas de Res</div>
+                        <div class="item-description">Slow-roasted beef short ribs with red wine reduction</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$38</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Pollo a la Brasa <span class="badge signature">Signature</span></div>
+                        <div class="item-description">Free-range chicken marinated 24 hours, rotisserie grilled</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$26</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Cordero al Asador</div>
+                        <div class="item-description">Lamb rack with rosemary, garlic & mint chimichurri</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$44</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-left">
+                        <div class="item-name">Salm&oacute;n a la Plancha</div>
+                        <div class="item-description">Atlantic salmon with lemon caper butter</div>
+                    </div>
+                    <div class="item-dots"></div>
+                    <div class="item-price">$32</div>
+                </div>
+            </div>
+
+            <div class="divider">
+                <span class="divider-icon">&#10022;</span>
+            </div>
+
+            <!-- Sides -->
+            <div class="menu-section">
+                <h2 class="section-title">Acompa&ntilde;amientos</h2>
+
+                <div class="two-columns">
+                    <div>
+                        <div class="menu-item">
+                            <span class="item-name">Papas Fritas</span>
+                            <span class="item-price">$8</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Ensalada Mixta</span>
+                            <span class="item-price">$9</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Pur&eacute; de Papa</span>
+                            <span class="item-price">$7</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="menu-item">
+                            <span class="item-name">Vegetales Asados</span>
+                            <span class="item-price">$10</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Arroz con Hongos</span>
+                            <span class="item-price">$8</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Espinacas Salteadas</span>
+                            <span class="item-price">$9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="menu-footer">
+                <p class="footer-note">Consuming raw or undercooked meats may increase your risk of foodborne illness. Please inform your server of any allergies.</p>
+                <p class="footer-icons">
+                    <span>&#9733; Signature</span>
+                    <span>&#127798; Spicy</span>
+                    <span>&#9679; Gluten-Free Available</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: Drinks & Desserts -->
+    <div class="menu-page">
+        <div class="menu-border"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+
+        <div class="menu-content">
+            <!-- Dark Header for Page 2 -->
+            <div class="drinks-header">
+                <img src="../../Assets/Logo_Full/Logo_Transparent.png" alt="Brasa Roja" class="menu-logo" style="width: 2.2in;">
+                <p class="menu-tagline">Bebidas y Postres</p>
+            </div>
+
+            <div class="two-columns">
+                <!-- Left Column: Drinks -->
+                <div>
+                    <div class="drink-category">
+                        <h3 class="category-title">Vinos Tintos</h3>
+                        <div class="drink-item">
+                            <span class="drink-name">Malbec, Mendoza</span>
+                            <span class="drink-price">$12 / $48</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Cabernet Sauvignon, Valle Central</span>
+                            <span class="drink-price">$11 / $44</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Carmenere, Colchagua</span>
+                            <span class="drink-price">$13 / $52</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Reserva Especial Blend</span>
+                            <span class="drink-price">$16 / $64</span>
+                        </div>
+                    </div>
+
+                    <div class="drink-category">
+                        <h3 class="category-title">Vinos Blancos</h3>
+                        <div class="drink-item">
+                            <span class="drink-name">Torront&eacute;s, Salta</span>
+                            <span class="drink-price">$10 / $40</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Chardonnay, Casablanca</span>
+                            <span class="drink-price">$11 / $44</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Sauvignon Blanc, Leyda</span>
+                            <span class="drink-price">$12 / $48</span>
+                        </div>
+                    </div>
+
+                    <div class="drink-category">
+                        <h3 class="category-title">C&oacute;cteles de la Casa</h3>
+                        <div class="drink-item">
+                            <span class="drink-name">Brasa Old Fashioned</span>
+                            <span class="drink-price">$14</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Pisco Sour</span>
+                            <span class="drink-price">$12</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Mojito de Maracuy&aacute;</span>
+                            <span class="drink-price">$13</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Sangr&iacute;a (Glass/Pitcher)</span>
+                            <span class="drink-price">$9 / $32</span>
+                        </div>
+                    </div>
+
+                    <div class="drink-category">
+                        <h3 class="category-title">Cervezas</h3>
+                        <div class="drink-item">
+                            <span class="drink-name">Quilmes Lager</span>
+                            <span class="drink-price">$6</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Patagonia Amber Lager</span>
+                            <span class="drink-price">$7</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Austral IPA</span>
+                            <span class="drink-price">$8</span>
+                        </div>
+                    </div>
+
+                    <div class="drink-category">
+                        <h3 class="category-title">Bebidas Sin Alcohol</h3>
+                        <div class="drink-item">
+                            <span class="drink-name">Limonada de la Casa</span>
+                            <span class="drink-price">$5</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Agua con Gas / Sin Gas</span>
+                            <span class="drink-price">$4</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Jugos Naturales</span>
+                            <span class="drink-price">$6</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Caf&eacute; / Espresso</span>
+                            <span class="drink-price">$4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Desserts -->
+                <div>
+                    <div class="menu-section">
+                        <h2 class="section-title" style="text-align: left; font-size: 11pt;">Postres</h2>
+
+                        <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; width: 100%; justify-content: space-between;">
+                                <span class="item-name">Flan Casero <span class="badge signature">House Made</span></span>
+                                <span class="item-price">$10</span>
+                            </div>
+                            <div class="item-description">Traditional caramel custard with dulce de leche drizzle</div>
+                        </div>
+
+                        <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; width: 100%; justify-content: space-between;">
+                                <span class="item-name">Churros con Chocolate</span>
+                                <span class="item-price">$9</span>
+                            </div>
+                            <div class="item-description">Crispy cinnamon churros with warm chocolate sauce</div>
+                        </div>
+
+                        <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; width: 100%; justify-content: space-between;">
+                                <span class="item-name">Tres Leches</span>
+                                <span class="item-price">$11</span>
+                            </div>
+                            <div class="item-description">Classic three-milk cake with whipped cream & berries</div>
+                        </div>
+
+                        <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; width: 100%; justify-content: space-between;">
+                                <span class="item-name">Alfajores</span>
+                                <span class="item-price">$8</span>
+                            </div>
+                            <div class="item-description">Shortbread cookies filled with dulce de leche (3 pcs)</div>
+                        </div>
+
+                        <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; width: 100%; justify-content: space-between;">
+                                <span class="item-name">Helado Artesanal</span>
+                                <span class="item-price">$7</span>
+                            </div>
+                            <div class="item-description">Two scoops: vanilla, chocolate, or dulce de leche</div>
+                        </div>
+                    </div>
+
+                    <div class="divider" style="margin: 0.4in 0;">
+                        <span class="divider-icon">&#10022;</span>
+                    </div>
+
+                    <div class="menu-section">
+                        <h2 class="section-title" style="text-align: left; font-size: 11pt;">Digestivos</h2>
+
+                        <div class="drink-item">
+                            <span class="drink-name">Fernet Branca</span>
+                            <span class="drink-price">$9</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Grappa</span>
+                            <span class="drink-price">$10</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Port Wine</span>
+                            <span class="drink-price">$12</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Cognac VSOP</span>
+                            <span class="drink-price">$14</span>
+                        </div>
+                    </div>
+
+                    <div class="divider" style="margin: 0.4in 0;">
+                        <span class="divider-icon">&#10022;</span>
+                    </div>
+
+                    <div class="menu-section">
+                        <h2 class="section-title" style="text-align: left; font-size: 11pt;">Caf&eacute; & T&eacute;</h2>
+
+                        <div class="drink-item">
+                            <span class="drink-name">Espresso</span>
+                            <span class="drink-price">$4</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Cortado</span>
+                            <span class="drink-price">$5</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Caf&eacute; con Leche</span>
+                            <span class="drink-price">$5</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">T&eacute; / Infusiones</span>
+                            <span class="drink-price">$4</span>
+                        </div>
+                        <div class="drink-item">
+                            <span class="drink-name">Caf&eacute; Irlandés</span>
+                            <span class="drink-price">$11</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="menu-footer" style="margin-top: auto;">
+                <p class="footer-note">
+                    Private dining rooms available for parties of 10+<br>
+                    Ask about our catering services for your next event
+                </p>
+                <p style="margin-top: 15px; font-size: 10pt; color: var(--brasa-gold);">
+                    <strong>brasaroja.com</strong> &nbsp;|&nbsp; @brasaroja
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
