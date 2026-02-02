@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
+import os
 from google import genai
 
-client = genai.Client(api_key="AIzaSyAu9WSLO7DKlCSl_SFdzlw8X7Bx0XQx1PI")
+api_key = os.environ.get("GEMINI_API_KEY")
+if not api_key:
+    raise ValueError("GEMINI_API_KEY environment variable not set")
+
+client = genai.Client(api_key=api_key)
 
 print("Available models:")
 for model in client.models.list():

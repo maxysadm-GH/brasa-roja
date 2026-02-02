@@ -12,7 +12,10 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-GEMINI_API_KEY = "AIzaSyAu9WSLO7DKlCSl_SFdzlw8X7Bx0XQx1PI"
+import os
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise ValueError("GEMINI_API_KEY environment variable not set")
 OUTPUT_DIR = Path(r"C:\Users\maxys\OneDrive\Imágenes\BrasaRoja\Sign_Concepts")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
