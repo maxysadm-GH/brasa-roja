@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C068"/>
+      <stop offset="50%" style="stop-color:#D4A84B"/>
+      <stop offset="100%" style="stop-color:#B8923D"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#C41E3A"/>
+      <stop offset="100%" style="stop-color:#E44D26"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main box face - charcoal background -->
+  <rect x="150" y="100" width="300" height="300" fill="#2D2D2D" stroke="#D4A84B" stroke-width="2"/>
+
+  <!-- Brand pattern overlay (subtle) -->
+  <g opacity="0.1">
+    <circle cx="200" cy="150" r="3" fill="#D4A84B"/>
+    <circle cx="400" cy="150" r="3" fill="#D4A84B"/>
+    <circle cx="200" cy="350" r="3" fill="#D4A84B"/>
+    <circle cx="400" cy="350" r="3" fill="#D4A84B"/>
+    <circle cx="300" cy="200" r="2" fill="#E44D26"/>
+    <circle cx="250" cy="300" r="2" fill="#E44D26"/>
+    <circle cx="350" cy="300" r="2" fill="#E44D26"/>
+  </g>
+
+  <!-- Logo placement area -->
+  <g transform="translate(300, 250)">
+    <!-- Embers -->
+    <circle cx="-5" cy="-80" r="2" fill="#D4A84B" opacity="0.8"/>
+    <circle cx="8" cy="-88" r="1.5" fill="#D4A84B" opacity="0.7"/>
+    <circle cx="2" cy="-70" r="1.8" fill="#D4A84B" opacity="0.75"/>
+
+    <!-- Flame -->
+    <path d="M0 -60 Q-4 -45 -12 -25 Q-16 -10 -12 0 Q-6 10 0 12 Q6 10 12 0 Q16 -10 12 -25 Q4 -45 0 -60 Z" fill="url(#flameGrad)"/>
+    <path d="M-12 -40 Q-20 -28 -22 -15 Q-24 -5 -18 2 Q-12 8 -6 5 Q-9 -3 -9 -12 Q-9 -28 -12 -40 Z" fill="#C41E3A"/>
+    <path d="M12 -40 Q20 -28 22 -15 Q24 -5 18 2 Q12 8 6 5 Q9 -3 9 -12 Q9 -28 12 -40 Z" fill="#C41E3A"/>
+
+    <!-- Swirl -->
+    <path d="M-35 12 Q-45 18 -40 28 Q-35 38 -15 40 Q0 42 15 40 Q35 38 40 28 Q45 18 35 12 Q20 8 0 6 Q-20 8 -35 12 Z M-28 18 Q-20 14 0 12 Q20 14 28 18 Q34 24 30 32 Q22 38 0 39 Q-22 38 -30 32 Q-34 24 -28 18 Z" fill="url(#goldGrad)" fill-rule="evenodd"/>
+    <path d="M-35 12 Q-48 8 -55 18 Q-60 30 -50 38 Q-42 44 -32 38 Q-38 32 -36 26 Q-35 18 -35 12 Z" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="300" y="330" font-family="Georgia, serif" font-size="28" font-weight="bold" text-anchor="middle">
+    <tspan fill="url(#goldGrad)">BRASA</tspan><tspan fill="#C41E3A">ROJA</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="300" y="355" font-family="'Brush Script MT', cursive" font-size="16" fill="url(#goldGrad)" text-anchor="middle" font-style="italic">Tradición Familiar</text>
+
+  <!-- Gold border accent -->
+  <rect x="160" y="380" width="280" height="2" fill="url(#goldGrad)"/>
+
+  <!-- Side flaps (fold lines) -->
+  <line x1="150" y1="100" x2="100" y2="50" stroke="#D4A84B" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="450" y1="100" x2="500" y2="50" stroke="#D4A84B" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="150" y1="400" x2="100" y2="450" stroke="#D4A84B" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="450" y1="400" x2="500" y2="450" stroke="#D4A84B" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Dieline labels -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">BRASA ROJA - TAKEOUT BOX DIELINE</text>
+  <text x="300" y="480" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Front Panel Design - Scale: 1:2</text>
+</svg>

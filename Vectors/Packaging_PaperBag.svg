@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C068"/>
+      <stop offset="50%" style="stop-color:#D4A84B"/>
+      <stop offset="100%" style="stop-color:#B8923D"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#C41E3A"/>
+      <stop offset="100%" style="stop-color:#E44D26"/>
+    </linearGradient>
+    <!-- Kraft paper texture simulation -->
+    <filter id="kraftTexture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#E8DCC8" surfaceScale="2">
+        <feDistantLight azimuth="45" elevation="60"/>
+      </feDiffuseLighting>
+    </filter>
+  </defs>
+
+  <!-- Kraft paper bag shape -->
+  <path d="M50 50 L350 50 L350 450 L50 450 Z" fill="#D4C4A8" stroke="#B8A888" stroke-width="2"/>
+
+  <!-- Bag fold lines -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#C4B498" stroke-width="1"/>
+  <line x1="80" y1="50" x2="80" y2="450" stroke="#C4B498" stroke-width="1" stroke-dasharray="10,5"/>
+  <line x1="320" y1="50" x2="320" y2="450" stroke="#C4B498" stroke-width="1" stroke-dasharray="10,5"/>
+
+  <!-- Logo area - centered -->
+  <g transform="translate(200, 200)">
+    <!-- Embers -->
+    <circle cx="-8" cy="-95" r="3" fill="#D4A84B" opacity="0.9"/>
+    <circle cx="10" cy="-105" r="2.5" fill="#D4A84B" opacity="0.8"/>
+    <circle cx="3" cy="-85" r="2.2" fill="#D4A84B" opacity="0.85"/>
+
+    <!-- Main flame -->
+    <path d="M0 -75 Q-6 -55 -18 -30 Q-24 -10 -18 5 Q-10 18 0 22 Q10 18 18 5 Q24 -10 18 -30 Q6 -55 0 -75 Z" fill="url(#flameGrad)"/>
+    <path d="M-18 -50 Q-30 -35 -33 -18 Q-36 -5 -27 5 Q-18 14 -9 10 Q-13 0 -13 -12 Q-13 -35 -18 -50 Z" fill="#C41E3A"/>
+    <path d="M18 -50 Q30 -35 33 -18 Q36 -5 27 5 Q18 14 9 10 Q13 0 13 -12 Q13 -35 18 -50 Z" fill="#C41E3A"/>
+
+    <!-- Swirl -->
+    <path d="M-50 22 Q-65 30 -58 45 Q-50 58 -22 62 Q0 65 22 62 Q50 58 58 45 Q65 30 50 22 Q30 15 0 12 Q-30 15 -50 22 Z M-40 30 Q-28 24 0 22 Q28 24 40 30 Q48 40 42 52 Q32 60 0 62 Q-32 60 -42 52 Q-48 40 -40 30 Z" fill="url(#goldGrad)" fill-rule="evenodd"/>
+    <path d="M-50 22 Q-70 14 -80 30 Q-88 48 -72 60 Q-60 68 -46 60 Q-55 50 -52 40 Q-50 30 -50 22 Z" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Brand text -->
+  <text x="200" y="295" font-family="Georgia, serif" font-size="36" font-weight="bold" text-anchor="middle">
+    <tspan fill="#D4A84B">BRASA</tspan><tspan fill="#C41E3A">ROJA</tspan>
+  </text>
+  <text x="200" y="325" font-family="'Brush Script MT', cursive" font-size="20" fill="#D4A84B" text-anchor="middle" font-style="italic">Tradición Familiar</text>
+
+  <!-- Decorative bottom band -->
+  <rect x="50" y="400" width="300" height="30" fill="#2D2D2D"/>
+  <rect x="50" y="398" width="300" height="4" fill="#D4A84B"/>
+
+  <!-- Label -->
+  <text x="200" y="25" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">BRASA ROJA - PAPER BAG DESIGN</text>
+</svg>

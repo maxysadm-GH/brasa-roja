@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <pattern id="brasaPatternLight" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- Light cream background -->
+      <rect width="200" height="200" fill="#F6F0E6"/>
+
+      <!-- Mini flame icon - center -->
+      <g transform="translate(100, 100) scale(0.4)">
+        <path d="M0 -50 Q-5 -30 -15 -10 Q-20 5 -15 15 Q-8 25 0 28 Q8 25 15 15 Q20 5 15 -10 Q5 -30 0 -50 Z" fill="#E44D26" opacity="0.08"/>
+        <ellipse cx="0" cy="25" rx="25" ry="8" fill="#D4A84B" opacity="0.06"/>
+      </g>
+
+      <!-- Corner flames -->
+      <g transform="translate(0, 0) scale(0.3)">
+        <path d="M0 -50 Q-5 -30 -15 -10 Q-20 5 -15 15 Q-8 25 0 28 Q8 25 15 15 Q20 5 15 -10 Q5 -30 0 -50 Z" fill="#C41E3A" opacity="0.06"/>
+      </g>
+      <g transform="translate(200, 0) scale(0.3)">
+        <path d="M0 -50 Q-5 -30 -15 -10 Q-20 5 -15 15 Q-8 25 0 28 Q8 25 15 15 Q20 5 15 -10 Q5 -30 0 -50 Z" fill="#C41E3A" opacity="0.06"/>
+      </g>
+      <g transform="translate(0, 200) scale(0.3)">
+        <path d="M0 -50 Q-5 -30 -15 -10 Q-20 5 -15 15 Q-8 25 0 28 Q8 25 15 15 Q20 5 15 -10 Q5 -30 0 -50 Z" fill="#C41E3A" opacity="0.06"/>
+      </g>
+      <g transform="translate(200, 200) scale(0.3)">
+        <path d="M0 -50 Q-5 -30 -15 -10 Q-20 5 -15 15 Q-8 25 0 28 Q8 25 15 15 Q20 5 15 -10 Q5 -30 0 -50 Z" fill="#C41E3A" opacity="0.06"/>
+      </g>
+
+      <!-- Embers -->
+      <circle cx="30" cy="50" r="2" fill="#D4A84B" opacity="0.12"/>
+      <circle cx="170" cy="50" r="1.5" fill="#D4A84B" opacity="0.1"/>
+      <circle cx="50" cy="150" r="1.8" fill="#D4A84B" opacity="0.11"/>
+      <circle cx="150" cy="150" r="2" fill="#D4A84B" opacity="0.12"/>
+
+      <!-- Swirl accents -->
+      <path d="M20 100 Q40 95 60 100 Q80 105 100 100" stroke="#D4A84B" stroke-width="1" fill="none" opacity="0.05"/>
+      <path d="M100 100 Q120 95 140 100 Q160 105 180 100" stroke="#D4A84B" stroke-width="1" fill="none" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#brasaPatternLight)"/>
+</svg>

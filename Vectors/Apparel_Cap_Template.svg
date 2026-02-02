@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C068"/>
+      <stop offset="50%" style="stop-color:#D4A84B"/>
+      <stop offset="100%" style="stop-color:#B8923D"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#C41E3A"/>
+      <stop offset="100%" style="stop-color:#E44D26"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cap crown - black -->
+  <ellipse cx="200" cy="150" rx="150" ry="80" fill="#1A1A1A"/>
+
+  <!-- Cap panels (seam lines) -->
+  <path d="M200 70 L200 230" stroke="#333" stroke-width="1"/>
+  <path d="M100 95 L300 205" stroke="#333" stroke-width="1" opacity="0.5"/>
+  <path d="M100 205 L300 95" stroke="#333" stroke-width="1" opacity="0.5"/>
+
+  <!-- Front panel (lighter for embroidery visibility) -->
+  <ellipse cx="200" cy="150" rx="80" ry="50" fill="#222" opacity="0.5"/>
+
+  <!-- Bill/brim -->
+  <path d="M80 200 Q200 280 320 200 Q280 220 200 230 Q120 220 80 200 Z" fill="#1A1A1A" stroke="#333" stroke-width="1"/>
+
+  <!-- Brim edge -->
+  <path d="M80 200 Q200 280 320 200" fill="none" stroke="#0D0D0D" stroke-width="3"/>
+
+  <!-- Logo on front panel -->
+  <g transform="translate(200, 140) scale(0.55)">
+    <!-- Embers -->
+    <circle cx="-5" cy="-65" r="2" fill="#D4A84B" opacity="0.9"/>
+    <circle cx="7" cy="-72" r="1.5" fill="#D4A84B" opacity="0.8"/>
+    <circle cx="2" cy="-55" r="1.8" fill="#D4A84B" opacity="0.85"/>
+
+    <!-- Flame -->
+    <path d="M0 -48 Q-4 -35 -12 -15 Q-16 0 -12 8 Q-6 16 0 18 Q6 16 12 8 Q16 0 12 -15 Q4 -35 0 -48 Z" fill="url(#flameGrad)"/>
+    <path d="M-12 -32 Q-20 -22 -22 -10 Q-24 0 -18 6 Q-12 12 -6 9 Q-9 2 -9 -6 Q-9 -20 -12 -32 Z" fill="#C41E3A"/>
+    <path d="M12 -32 Q20 -22 22 -10 Q24 0 18 6 Q12 12 6 9 Q9 2 9 -6 Q9 -20 12 -32 Z" fill="#C41E3A"/>
+
+    <!-- Swirl -->
+    <path d="M-32 15 Q-42 20 -38 30 Q-32 40 -15 42 Q0 44 15 42 Q32 40 38 30 Q42 20 32 15 Q18 10 0 8 Q-18 10 -32 15 Z M-26 20 Q-18 16 0 14 Q18 16 26 20 Q30 26 28 34 Q20 40 0 41 Q-20 40 -28 34 Q-30 26 -26 20 Z" fill="url(#goldGrad)" fill-rule="evenodd"/>
+    <path d="M-32 15 Q-45 10 -52 20 Q-58 32 -48 40 Q-40 46 -30 40 Q-38 32 -36 26 Q-34 20 -32 15 Z" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Top button -->
+  <circle cx="200" cy="75" r="8" fill="#0D0D0D" stroke="#333" stroke-width="1"/>
+
+  <!-- Stitching detail on bill -->
+  <path d="M100 208 Q200 260 300 208" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <path d="M110 214 Q200 258 290 214" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="3,2"/>
+
+  <!-- Label -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">BRASA ROJA - CAP EMBROIDERY TEMPLATE</text>
+</svg>

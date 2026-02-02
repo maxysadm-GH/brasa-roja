@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C068"/>
+      <stop offset="50%" style="stop-color:#D4A84B"/>
+      <stop offset="100%" style="stop-color:#B8923D"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#C41E3A"/>
+      <stop offset="100%" style="stop-color:#E44D26"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Apron silhouette - black -->
+  <path d="M100 80
+           Q80 80 70 100 L70 500
+           Q70 530 100 530 L300 530
+           Q330 530 330 500 L330 100
+           Q320 80 300 80
+           L260 80 Q230 120 200 120 Q170 120 140 80 Z"
+        fill="#1A1A1A" stroke="#333" stroke-width="2"/>
+
+  <!-- Neck strap -->
+  <path d="M140 80 Q160 30 200 20 Q240 30 260 80" fill="none" stroke="#333" stroke-width="8"/>
+
+  <!-- Waist ties -->
+  <line x1="70" y1="300" x2="20" y2="320" stroke="#333" stroke-width="6"/>
+  <line x1="330" y1="300" x2="380" y2="320" stroke="#333" stroke-width="6"/>
+
+  <!-- Pocket -->
+  <rect x="120" y="380" width="160" height="100" rx="5" fill="#0D0D0D" stroke="#333" stroke-width="1"/>
+
+  <!-- Logo on chest -->
+  <g transform="translate(200, 200) scale(0.9)">
+    <!-- Embers -->
+    <circle cx="-8" cy="-85" r="2.8" fill="#D4A84B" opacity="0.9"/>
+    <circle cx="10" cy="-95" r="2.2" fill="#D4A84B" opacity="0.8"/>
+    <circle cx="3" cy="-75" r="2.5" fill="#D4A84B" opacity="0.85"/>
+    <circle cx="-16" cy="-70" r="1.8" fill="#D4A84B" opacity="0.7"/>
+    <circle cx="20" cy="-80" r="1.5" fill="#D4A84B" opacity="0.6"/>
+
+    <!-- Flame -->
+    <path d="M0 -65 Q-6 -45 -18 -18 Q-24 2 -18 15 Q-10 28 0 32 Q10 28 18 15 Q24 2 18 -18 Q6 -45 0 -65 Z" fill="url(#flameGrad)"/>
+    <path d="M-18 -42 Q-30 -28 -33 -12 Q-36 2 -27 12 Q-18 20 -9 15 Q-14 6 -14 -6 Q-14 -28 -18 -42 Z" fill="#C41E3A"/>
+    <path d="M18 -42 Q30 -28 33 -12 Q36 2 27 12 Q18 20 9 15 Q14 6 14 -6 Q14 -28 18 -42 Z" fill="#C41E3A"/>
+
+    <!-- Swirl -->
+    <path d="M-48 28 Q-62 35 -56 52 Q-48 68 -22 72 Q0 75 22 72 Q48 68 56 52 Q62 35 48 28 Q30 20 0 16 Q-30 20 -48 28 Z M-40 36 Q-28 28 0 26 Q28 28 40 36 Q48 46 44 60 Q34 70 0 72 Q-34 70 -44 60 Q-48 46 -40 36 Z" fill="url(#goldGrad)" fill-rule="evenodd"/>
+    <path d="M-48 28 Q-68 20 -80 35 Q-90 55 -72 68 Q-60 78 -45 68 Q-55 56 -52 46 Q-50 35 -48 28 Z" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Brand text -->
+  <text x="200" y="310" font-family="Georgia, serif" font-size="34" font-weight="bold" text-anchor="middle">
+    <tspan fill="#D4A84B">BRASA</tspan><tspan fill="#C41E3A">ROJA</tspan>
+  </text>
+  <text x="200" y="342" font-family="'Brush Script MT', cursive" font-size="20" fill="#D4A84B" text-anchor="middle" font-style="italic">Tradición Familiar</text>
+
+  <!-- Label -->
+  <text x="200" y="25" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">BRASA ROJA - APRON DESIGN</text>
+  <text x="200" y="575" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Staff Uniform Apron - Full Color Print</text>
+</svg>
