@@ -25,6 +25,20 @@
 .sym-rec { background:#8B2500; color:white; }
 .sym-pic { background:transparent; }
 
+
+.footer-info { margin-top:10px; padding-top:8px; border-top:2px solid var(--gold); font-size:9px; text-align:center; line-height:1.6; }
+.footer-info-light { color: var(--charcoal); }
+.footer-info-dark { color: var(--cream); }
+.fi-locations { display:flex; justify-content:center; gap:30px; margin-bottom:4px; flex-wrap:wrap; }
+.fi-loc { font-size:8.5px; }
+.fi-contact { margin-bottom:4px; font-size:9px; }
+.fi-social { margin-bottom:6px; font-size:8px; letter-spacing:0.5px; }
+.fi-social span { margin:0 4px; }
+.fi-events { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px; }
+.fi-qr { width:52px; height:52px; background:white; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:7px; color:#555; font-family:monospace; }
+.fi-qr-text { text-align:left; font-size:9px; font-weight:600; }
+.fi-qr-text small { font-size:7.5px; font-weight:400; }
+
 .page-divider { display: block; }
 @media print { .page-divider { display: none; } }
 
@@ -36,13 +50,13 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .header img { height: 85px; filter: brightness(1.1); }
 .header .line { width: 60%; height: 1px; background: rgba(201,136,43,0.4); margin: 8px auto; }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 3px; margin: 14px 0 6px; text-align: center; }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 13px; letter-spacing: 3px; margin: 14px 0 6px; text-align: center; }
 .sec-title::before, .sec-title::after { content: ' ~ '; color: rgba(201,136,43,0.5); }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 2.5px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 11px; color: rgba(255,255,255,0.9); font-weight: 400; }
-.item-desc { font-size: 8.5px; color: rgba(255,255,255,0.4); font-style: italic; }
-.item-price { font-size: 10.5px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
+.item-name { font-size: 12px; color: rgba(255,255,255,0.9); font-weight: 400; }
+.item-desc { font-size: 9.5px; color: rgba(255,255,255,0.4); font-style: italic; }
+.item-price { font-size: 11.5px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
 .item-note { font-size: 8px; color: rgba(255,255,255,0.35); font-style: italic; margin-top: 2px; }
 .menu-section { margin-bottom: 4px; }
 .combo-box { border: 1px dashed rgba(201,136,43,0.4); border-radius: 6px; padding: 6px 10px; margin-bottom: 6px; }
@@ -64,8 +78,8 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <div class="combo-box">
 <div class="menu-section">
 <h3 class="sec-title">⚡ COMBO DEPORTIVO</h3>
-<div class="item"><div class="item-left"><span class="item-name">Combo Milanesa</span><span class="item-desc">Milanesa de pollo + guarnicion + agua</span></div><span class="item-price">25.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Combo Pasta</span><span class="item-desc">Tallarines con salsa a eleccion + agua</span></div><span class="item-price">20.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Combo Milanesa</span><span class="item-desc">Milanesa de pollo + guarnicion + agua | ~850 kcal</span></div><span class="item-price">25.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Combo Pasta</span><span class="item-desc">Tallarines con salsa a eleccion + agua | ~650 kcal</span></div><span class="item-price">20.000</span></div>
 </div>
 
 </div>
@@ -73,58 +87,58 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <div>
 <div class="menu-section">
 <h3 class="sec-title">🥪 SANDWICHES Y HAMBURGUESAS</h3>
-<div class="item"><div class="item-left"><span class="item-name">Sandwich de Colita de Cuadril</span> <span class="sym sym-sg">SG</span> <span class="sym sym-rec">★</span><span class="item-desc">Colita a la parrilla en pan artesanal</span></div><span class="item-price">12.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Sandwich de Bondiola</span><span class="item-desc">Bondiola braseada, pan artesanal</span></div><span class="item-price">11.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Sandwich de Milanesa de Pollo</span><span class="item-desc">Milanesa casera de pollo en pan</span></div><span class="item-price">9.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Sandwich de J&Q (Arabe)</span><span class="item-desc">Pan arabe, jamon cocido, queso</span></div><span class="item-price">9.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Sandwich de J&Q (Pebete)</span><span class="item-desc">Pan pebete, jamon cocido, queso</span></div><span class="item-price">8.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Sandwich de J&Q (Frances)</span><span class="item-desc">Pan frances tostado, jamon, queso</span></div><span class="item-price">7.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Choripan</span> <span class="sym sym-rec">★</span><span class="item-desc">Chorizo criollo en pan frances, chimichurri</span></div><span class="item-price">7.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Hamburguesa Clasica</span><span class="item-desc">Medallon de carne 200g en pan de papa</span></div><span class="item-price">6.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Sandwich de Colita de Cuadril</span> <span class="sym sym-sg">SG</span> <span class="sym sym-rec">★</span><span class="item-desc">Colita a la parrilla en pan artesanal | ~620 kcal</span></div><span class="item-price">12.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Sandwich de Bondiola</span><span class="item-desc">Bondiola braseada, pan artesanal | ~580 kcal</span></div><span class="item-price">11.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Sandwich de Milanesa de Pollo</span><span class="item-desc">Milanesa casera de pollo en pan | ~550 kcal</span></div><span class="item-price">9.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Sandwich de J&Q (Arabe)</span><span class="item-desc">Pan arabe, jamon cocido, queso | ~420 kcal</span></div><span class="item-price">9.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Sandwich de J&Q (Pebete)</span><span class="item-desc">Pan pebete, jamon cocido, queso | ~400 kcal</span></div><span class="item-price">8.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Sandwich de J&Q (Frances)</span><span class="item-desc">Pan frances tostado, jamon, queso | ~380 kcal</span></div><span class="item-price">7.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Choripan</span> <span class="sym sym-rec">★</span><span class="item-desc">Chorizo criollo en pan frances, chimichurri | ~450 kcal</span></div><span class="item-price">7.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Hamburguesa Clasica</span><span class="item-desc">Medallon de carne 200g en pan de papa | ~520 kcal</span></div><span class="item-price">6.500</span></div>
 </div>
 
 <div class="menu-section">
 <h3 class="sec-title">🔥 NUESTROS PLATOS</h3>
-<div class="item"><div class="item-left"><span class="item-name">Colita de Cuadril</span> <span class="sym sym-sg">SG</span> <span class="sym sym-rec">★</span><span class="item-desc">A la parrilla, corte premium</span></div><span class="item-price">22.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Bondiola</span> <span class="sym sym-sg">SG</span><span class="item-desc">Braseada lenta, tierna y jugosa</span></div><span class="item-price">22.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Milanesa Napolitana (Carne)</span><span class="item-desc">Con salsa, jamon y queso gratinado</span></div><span class="item-price">22.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Milanesa Napolitana (Pollo)</span><span class="item-desc">Suprema napo con salsa, jamon y queso</span></div><span class="item-price">22.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Milanesa de Carne</span><span class="item-desc">Milanesa casera de nalga, empanada a mano</span></div><span class="item-price">18.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Milanesa de Pollo</span><span class="item-desc">Suprema de pollo empanada casera</span></div><span class="item-price">18.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Pollo Grille</span> <span class="sym sym-sg">SG</span><span class="item-desc">Pechuga a la plancha con hierbas</span></div><span class="item-price">18.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Colita de Cuadril</span> <span class="sym sym-sg">SG</span> <span class="sym sym-rec">★</span><span class="item-desc">A la parrilla, corte premium | ~480 kcal</span></div><span class="item-price">22.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Bondiola</span> <span class="sym sym-sg">SG</span><span class="item-desc">Braseada lenta, tierna y jugosa | ~520 kcal</span></div><span class="item-price">22.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Milanesa Napolitana (Carne)</span><span class="item-desc">Con salsa, jamon y queso gratinado | ~780 kcal</span></div><span class="item-price">22.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Milanesa Napolitana (Pollo)</span><span class="item-desc">Suprema napo con salsa, jamon y queso | ~720 kcal</span></div><span class="item-price">22.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Milanesa de Carne</span><span class="item-desc">Milanesa casera de nalga, empanada a mano | ~580 kcal</span></div><span class="item-price">18.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Milanesa de Pollo</span><span class="item-desc">Suprema de pollo empanada casera | ~520 kcal</span></div><span class="item-price">18.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Pollo Grille</span> <span class="sym sym-sg">SG</span><span class="item-desc">Pechuga a la plancha con hierbas | ~350 kcal</span></div><span class="item-price">18.000</span></div>
 </div>
 
 </div>
 <div>
 <div class="menu-section">
 <h3 class="sec-title">🍝 PASTAS CASERAS</h3>
-<div class="item"><div class="item-left"><span class="item-name">Sorrentinos de Jamon y Queso</span><span class="item-desc">Masa casera rellena</span></div><span class="item-price">19.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Ravioles de Verdura</span> <span class="sym sym-v">V</span><span class="item-desc">Masa casera, verdura y ricota</span></div><span class="item-price">19.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Noquis de Papa</span> <span class="sym sym-v">V</span><span class="item-desc">Noquis caseros de papa</span></div><span class="item-price">15.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Tallarines al Huevo</span> <span class="sym sym-v">V</span><span class="item-desc">Tallarines caseros al huevo</span></div><span class="item-price">15.000</span></div>
-<div class="item-note">Salsas: Fileto 2.500 | Crema 3.000 | Mixta 5.000 | 4 Quesos 6.500 | Bolognesa 6.500</div>
+<div class="item"><div class="item-left"><span class="item-name">Sorrentinos de Jamon y Queso</span><span class="item-desc">Masa casera rellena | ~620 kcal</span></div><span class="item-price">19.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Ravioles de Verdura</span> <span class="sym sym-v">V</span><span class="item-desc">Masa casera, verdura y ricota | ~480 kcal</span></div><span class="item-price">19.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Noquis de Papa</span> <span class="sym sym-v">V</span><span class="item-desc">Noquis caseros de papa | ~420 kcal</span></div><span class="item-price">15.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Tallarines al Huevo</span> <span class="sym sym-v">V</span><span class="item-desc">Tallarines caseros al huevo | ~450 kcal</span></div><span class="item-price">15.000</span></div>
+<div class="item-note">Salsas: Fileto 2.500 (+80 kcal) | Crema 3.000 (+150 kcal) | Mixta 5.000 (+120 kcal) | 4 Quesos 6.500 (+250 kcal) | Bolognesa 6.500 (+180 kcal)</div>
 </div>
 
 <div class="menu-section">
 <h3 class="sec-title">🥗 ENSALADAS</h3>
-<div class="item"><div class="item-left"><span class="item-name">Gourmet</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">3 verduras, huevo, choclo, aderezo de la casa</span></div><span class="item-price">15.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Mediterranea</span> <span class="sym sym-sg">SG</span><span class="item-desc">3 verduras, atun, aceitunas negras</span></div><span class="item-price">14.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Campestre</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">Mix de 3 verduras de estacion con parmesano</span></div><span class="item-price">13.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Rucula con Parmesano</span> <span class="sym sym-v">V</span><span class="item-desc">Rucula fresca, lascas de parmesano, oliva</span></div><span class="item-price">12.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Gourmet</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">3 verduras, huevo, choclo, aderezo de la casa | ~320 kcal</span></div><span class="item-price">15.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Mediterranea</span> <span class="sym sym-sg">SG</span><span class="item-desc">3 verduras, atun, aceitunas negras | ~280 kcal</span></div><span class="item-price">14.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Campestre</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">Mix de 3 verduras de estacion con parmesano | ~250 kcal</span></div><span class="item-price">13.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Rucula con Parmesano</span> <span class="sym sym-v">V</span><span class="item-desc">Rucula fresca, lascas de parmesano, oliva | ~220 kcal</span></div><span class="item-price">12.000</span></div>
 </div>
 
 <div class="menu-section">
 <h3 class="sec-title">🍟 GUARNICIONES</h3>
-<div class="item"><div class="item-left"><span class="item-name">Papas Fritas</span> <span class="sym sym-sg">SG</span><span class="item-desc">Porcion abundante</span></div><span class="item-price">7.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Pure de Papas</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">Casero, cremoso</span></div><span class="item-price">6.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Huevo Frito (c/u)</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">A la plancha</span></div><span class="item-price">2.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Papas Fritas</span> <span class="sym sym-sg">SG</span><span class="item-desc">Porcion abundante | ~380 kcal</span></div><span class="item-price">7.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Pure de Papas</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">Casero, cremoso | ~250 kcal</span></div><span class="item-price">6.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Huevo Frito (c/u)</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">A la plancha | ~90 kcal</span></div><span class="item-price">2.500</span></div>
 </div>
 
 <div class="menu-section">
 <h3 class="sec-title">🍮 POSTRES</h3>
-<div class="item"><div class="item-left"><span class="item-name">Panqueques de Dulce de Leche</span> <span class="sym sym-v">V</span><span class="item-desc">Panqueques caseros, dulce de leche</span></div><span class="item-price">9.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Queso y Dulce</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">Queso fresco con dulce de batata o membrillo</span></div><span class="item-price">8.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Postre Helado</span> <span class="sym sym-v">V</span><span class="item-desc">Bomba helada del dia</span></div><span class="item-price">8.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Panqueques de Dulce de Leche</span> <span class="sym sym-v">V</span><span class="item-desc">Panqueques caseros, dulce de leche | ~420 kcal</span></div><span class="item-price">9.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Queso y Dulce</span> <span class="sym sym-v">V</span> <span class="sym sym-sg">SG</span><span class="item-desc">Queso fresco con dulce de batata o membrillo | ~350 kcal</span></div><span class="item-price">8.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Postre Helado</span> <span class="sym sym-v">V</span><span class="item-desc">Bomba helada del dia | ~280 kcal</span></div><span class="item-price">8.000</span></div>
 </div>
 
 </div>
@@ -132,30 +146,30 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <div class="drinks-strip">
 <div class="menu-section">
 <h3 class="sec-title">🍸 TRAGOS Y COCTELES</h3>
-<div class="item"><div class="item-left"><span class="item-name">La Brasa</span> <span class="sym sym-rec">★</span></div><span class="item-price">18.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">El Tercer Tiempo</span> <span class="sym sym-rec">★</span></div><span class="item-price">14.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Scrum Sour</span></div><span class="item-price">17.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Try Line Spritz</span></div><span class="item-price">17.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Gin Tonic Clasico</span></div><span class="item-price">16.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Campari con Naranja</span></div><span class="item-price">16.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Fernet con Coca</span></div><span class="item-price">14.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Whisky</span></div><span class="item-price">10.000</span></div>
-<div class="item-note">★ La Brasa y El Tercer Tiempo: cocteles de la casa, creados para Brasa Roja</div>
+<div class="item"><div class="item-left"><span class="item-name">La Brasa ★</span> <span class="sym sym-rec">★</span><span class="item-desc">Gin, pomelo rosado, romero y tonica | ~180 kcal</span></div><span class="item-price">18.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">El Tercer Tiempo ★</span> <span class="sym sym-rec">★</span><span class="item-desc">Fernet Branca, Coca-Cola, twist de limon | ~220 kcal</span></div><span class="item-price">14.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Scrum Sour</span><span class="item-desc">Whisky, limon, azucar, clara de huevo | ~190 kcal</span></div><span class="item-price">17.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Try Line Spritz</span><span class="item-desc">Aperol, espumante, soda, naranja | ~160 kcal</span></div><span class="item-price">17.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Gin Tonic Clasico</span><span class="item-desc">Gin, tonica premium, botanicos | ~170 kcal</span></div><span class="item-price">16.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Campari con Naranja</span><span class="item-desc">Campari, jugo de naranja, hielo | ~150 kcal</span></div><span class="item-price">16.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Fernet con Coca</span><span class="item-desc">Fernet Branca, Coca-Cola, hielo | ~220 kcal</span></div><span class="item-price">14.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Whisky</span><span class="item-desc">Medida simple, hielo | ~105 kcal</span></div><span class="item-price">10.000</span></div>
+<div class="item-note">★ Cocteles de la casa, creados para Brasa Roja</div>
 </div>
 
 <div class="menu-section">
 <h3 class="sec-title">🍺 CERVEZAS Y VINOS</h3>
-<div class="item"><div class="item-left"><span class="item-name">Vino de la Casa</span></div><span class="item-price">20.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Cerveza Litro</span></div><span class="item-price">12.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Cerveza Lata</span></div><span class="item-price">5.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Vino de la Casa</span><span class="item-desc">Tinto o blanco, botella | ~600 kcal (botella)</span></div><span class="item-price">20.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Cerveza Litro</span><span class="item-desc">Botella 1L | ~430 kcal</span></div><span class="item-price">12.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Cerveza Lata</span><span class="item-desc">Lata 473ml | ~200 kcal</span></div><span class="item-price">5.500</span></div>
 </div>
 
 <div class="menu-section">
 <h3 class="sec-title">💧 SIN ALCOHOL</h3>
-<div class="item"><div class="item-left"><span class="item-name">Gatorade</span></div><span class="item-price">3.500</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Gaseosa</span></div><span class="item-price">3.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Agua Saborizada</span></div><span class="item-price">3.000</span></div>
-<div class="item"><div class="item-left"><span class="item-name">Agua Mineral</span></div><span class="item-price">2.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Gatorade</span><span class="item-desc">Deportiva, sabores varios | ~130 kcal</span></div><span class="item-price">3.500</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Gaseosa</span><span class="item-desc">Coca-Cola, Sprite, Fanta | ~140 kcal</span></div><span class="item-price">3.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Agua Saborizada</span><span class="item-desc">Levite / Villa del Sur | ~80 kcal</span></div><span class="item-price">3.000</span></div>
+<div class="item"><div class="item-left"><span class="item-name">Agua Mineral</span><span class="item-desc">Con o sin gas, 500ml | 0 kcal</span></div><span class="item-price">2.500</span></div>
 </div>
 
 </div>
@@ -167,6 +181,20 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <span class="sym sym-rec">★</span> Recomendado &nbsp;
 <span class="sym sym-pic">🌶</span> Picante
 <br><em>Informanos sobre alergias o restricciones alimentarias. Consultá a tu mozo.</em>
+</div>
+<div class="footer-info footer-info-dark">
+<div class="fi-locations">
+    <div class="fi-loc">📍 <strong>SEDE 1:</strong> [Direccion Sede 1, Ciudad]</div>
+    <div class="fi-loc">📍 <strong>SEDE 2:</strong> [Direccion Sede 2, Ciudad]</div>
+</div>
+<div class="fi-contact">📞 <strong>[Telefono Principal]</strong></div>
+<div class="fi-social" style="color:var(--smoke)">
+    <span>📸 @brasaroja</span> · <span>📘 /brasaroja</span> · <span>𝕏 @brasaroja</span> · <span>🎵 @brasaroja</span>
+</div>
+<div class="fi-events">
+    <div class="fi-qr">[QR]</div>
+    <div class="fi-qr-text">Explora nuestros EVENTOS<br><small style="color:var(--smoke)">Cumpleanos · Casamientos · Corporativos</small></div>
+</div>
 </div>
 </div>
 </div></body>

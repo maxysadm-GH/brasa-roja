@@ -25,6 +25,20 @@
 .sym-rec { background:#8B2500; color:white; }
 .sym-pic { background:transparent; }
 
+
+.footer-info { margin-top:10px; padding-top:8px; border-top:2px solid var(--gold); font-size:9px; text-align:center; line-height:1.6; }
+.footer-info-light { color: var(--charcoal); }
+.footer-info-dark { color: var(--cream); }
+.fi-locations { display:flex; justify-content:center; gap:30px; margin-bottom:4px; flex-wrap:wrap; }
+.fi-loc { font-size:8.5px; }
+.fi-contact { margin-bottom:4px; font-size:9px; }
+.fi-social { margin-bottom:6px; font-size:8px; letter-spacing:0.5px; }
+.fi-social span { margin:0 4px; }
+.fi-events { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px; }
+.fi-qr { width:52px; height:52px; background:white; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:7px; color:#555; font-family:monospace; }
+.fi-qr-text { text-align:left; font-size:9px; font-weight:600; }
+.fi-qr-text small { font-size:7.5px; font-weight:400; }
+
 .page-divider { display: block; }
 @media print { .page-divider { display: none; } }
 
@@ -56,17 +70,30 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <div class="sub">NUESTRO MENÚ</div>
 </div>
 <div class="top-title">★ LOS MAS PEDIDOS ★</div>
-<div class="top-item"><span class="name">Combo Milanesa + Guarnicion + Agua</span><span class="price">25.000</span></div>
-<div class="top-item"><span class="name">Choripan con Chimichurri</span><span class="price">7.500</span></div>
-<div class="top-item"><span class="name">Colita de Cuadril a la Parrilla</span><span class="price">22.000</span></div>
-<div class="top-item"><span class="name">Milanesa Napolitana</span><span class="price">22.000</span></div>
-<div class="top-item"><span class="name">Fernet con Coca</span><span class="price">14.000</span></div>
+<div class="top-item"><span class="name">Combo Milanesa + Guarnicion + Agua <small style="color:var(--smoke);font-size:9px">(~850 kcal)</small></span><span class="price">25.000</span></div>
+<div class="top-item"><span class="name">Choripan con Chimichurri <small style="color:var(--smoke);font-size:9px">(~450 kcal)</small></span><span class="price">7.500</span></div>
+<div class="top-item"><span class="name">Colita de Cuadril a la Parrilla <small style="color:var(--smoke);font-size:9px">(~480 kcal)</small></span><span class="price">22.000</span></div>
+<div class="top-item"><span class="name">Milanesa Napolitana <small style="color:var(--smoke);font-size:9px">(~780 kcal)</small></span><span class="price">22.000</span></div>
+<div class="top-item"><span class="name">Fernet con Coca <small style="color:var(--smoke);font-size:9px">(~220 kcal)</small></span><span class="price">14.000</span></div>
 <div class="qr-section">
     <div class="qr-box"><span>[QR CODE]</span></div>
     <div class="qr-label">ESCANEA PARA VER TODO EL MENU</div>
     <div class="qr-sub">Bebidas, Pastas, Ensaladas, Postres y mas</div>
 </div>
-<div class="footer">Tradición Familiar</div>
+<div class="footer-info footer-info-dark">
+<div class="fi-locations">
+    <div class="fi-loc">📍 <strong>SEDE 1:</strong> [Direccion Sede 1, Ciudad]</div>
+    <div class="fi-loc">📍 <strong>SEDE 2:</strong> [Direccion Sede 2, Ciudad]</div>
+</div>
+<div class="fi-contact">📞 <strong>[Telefono Principal]</strong></div>
+<div class="fi-social" style="color:var(--smoke)">
+    <span>📸 @brasaroja</span> · <span>📘 /brasaroja</span> · <span>𝕏 @brasaroja</span> · <span>🎵 @brasaroja</span>
+</div>
+<div class="fi-events">
+    <div class="fi-qr">[QR]</div>
+    <div class="fi-qr-text">Explora nuestros EVENTOS<br><small style="color:var(--smoke)">Cumpleanos · Casamientos · Corporativos</small></div>
+</div>
+</div>
 </div>
 </div></body>
 </html>

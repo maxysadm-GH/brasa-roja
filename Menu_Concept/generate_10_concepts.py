@@ -79,101 +79,101 @@ MENU = {
         "title": "COMBO DEPORTIVO",
         "icon": "⚡",
         "items": [
-            ("Combo Milanesa", "Milanesa de pollo + guarnicion + agua", "25.000", ""),
-            ("Combo Pasta", "Tallarines con salsa a eleccion + agua", "20.000", ""),
+            ("Combo Milanesa", "Milanesa de pollo + guarnicion + agua | ~850 kcal", "25.000", ""),
+            ("Combo Pasta", "Tallarines con salsa a eleccion + agua | ~650 kcal", "20.000", ""),
         ]
     },
     "sandwiches": {
         "title": "SANDWICHES Y HAMBURGUESAS",
         "icon": "🥪",
         "items": [
-            ("Sandwich de Colita de Cuadril", "Colita a la parrilla en pan artesanal", "12.500", "sg rec"),
-            ("Sandwich de Bondiola", "Bondiola braseada, pan artesanal", "11.500", ""),
-            ("Sandwich de Milanesa de Pollo", "Milanesa casera de pollo en pan", "9.500", ""),
-            ("Sandwich de J&Q (Arabe)", "Pan arabe, jamon cocido, queso", "9.000", ""),
-            ("Sandwich de J&Q (Pebete)", "Pan pebete, jamon cocido, queso", "8.000", ""),
-            ("Sandwich de J&Q (Frances)", "Pan frances tostado, jamon, queso", "7.500", ""),
-            ("Choripan", "Chorizo criollo en pan frances, chimichurri", "7.500", "rec"),
-            ("Hamburguesa Clasica", "Medallon de carne 200g en pan de papa", "6.500", ""),
+            ("Sandwich de Colita de Cuadril", "Colita a la parrilla en pan artesanal | ~620 kcal", "12.500", "sg rec"),
+            ("Sandwich de Bondiola", "Bondiola braseada, pan artesanal | ~580 kcal", "11.500", ""),
+            ("Sandwich de Milanesa de Pollo", "Milanesa casera de pollo en pan | ~550 kcal", "9.500", ""),
+            ("Sandwich de J&Q (Arabe)", "Pan arabe, jamon cocido, queso | ~420 kcal", "9.000", ""),
+            ("Sandwich de J&Q (Pebete)", "Pan pebete, jamon cocido, queso | ~400 kcal", "8.000", ""),
+            ("Sandwich de J&Q (Frances)", "Pan frances tostado, jamon, queso | ~380 kcal", "7.500", ""),
+            ("Choripan", "Chorizo criollo en pan frances, chimichurri | ~450 kcal", "7.500", "rec"),
+            ("Hamburguesa Clasica", "Medallon de carne 200g en pan de papa | ~520 kcal", "6.500", ""),
         ]
     },
     "platos": {
         "title": "NUESTROS PLATOS",
         "icon": "🔥",
         "items": [
-            ("Colita de Cuadril", "A la parrilla, corte premium", "22.000", "sg rec"),
-            ("Bondiola", "Braseada lenta, tierna y jugosa", "22.000", "sg"),
-            ("Milanesa Napolitana (Carne)", "Con salsa, jamon y queso gratinado", "22.000", ""),
-            ("Milanesa Napolitana (Pollo)", "Suprema napo con salsa, jamon y queso", "22.000", ""),
-            ("Milanesa de Carne", "Milanesa casera de nalga, empanada a mano", "18.000", ""),
-            ("Milanesa de Pollo", "Suprema de pollo empanada casera", "18.000", ""),
-            ("Pollo Grille", "Pechuga a la plancha con hierbas", "18.000", "sg"),
+            ("Colita de Cuadril", "A la parrilla, corte premium | ~480 kcal", "22.000", "sg rec"),
+            ("Bondiola", "Braseada lenta, tierna y jugosa | ~520 kcal", "22.000", "sg"),
+            ("Milanesa Napolitana (Carne)", "Con salsa, jamon y queso gratinado | ~780 kcal", "22.000", ""),
+            ("Milanesa Napolitana (Pollo)", "Suprema napo con salsa, jamon y queso | ~720 kcal", "22.000", ""),
+            ("Milanesa de Carne", "Milanesa casera de nalga, empanada a mano | ~580 kcal", "18.000", ""),
+            ("Milanesa de Pollo", "Suprema de pollo empanada casera | ~520 kcal", "18.000", ""),
+            ("Pollo Grille", "Pechuga a la plancha con hierbas | ~350 kcal", "18.000", "sg"),
         ]
     },
     "pastas": {
         "title": "PASTAS CASERAS",
         "icon": "🍝",
         "items": [
-            ("Sorrentinos de Jamon y Queso", "Masa casera rellena", "19.000", ""),
-            ("Ravioles de Verdura", "Masa casera, verdura y ricota", "19.000", "v"),
-            ("Noquis de Papa", "Noquis caseros de papa", "15.000", "v"),
-            ("Tallarines al Huevo", "Tallarines caseros al huevo", "15.000", "v"),
+            ("Sorrentinos de Jamon y Queso", "Masa casera rellena | ~620 kcal", "19.000", ""),
+            ("Ravioles de Verdura", "Masa casera, verdura y ricota | ~480 kcal", "19.000", "v"),
+            ("Noquis de Papa", "Noquis caseros de papa | ~420 kcal", "15.000", "v"),
+            ("Tallarines al Huevo", "Tallarines caseros al huevo | ~450 kcal", "15.000", "v"),
         ],
-        "note": "Salsas: Fileto 2.500 | Crema 3.000 | Mixta 5.000 | 4 Quesos 6.500 | Bolognesa 6.500"
+        "note": "Salsas: Fileto 2.500 (+80 kcal) | Crema 3.000 (+150 kcal) | Mixta 5.000 (+120 kcal) | 4 Quesos 6.500 (+250 kcal) | Bolognesa 6.500 (+180 kcal)"
     },
     "ensaladas": {
         "title": "ENSALADAS",
         "icon": "🥗",
         "items": [
-            ("Gourmet", "3 verduras, huevo, choclo, aderezo de la casa", "15.000", "v sg"),
-            ("Mediterranea", "3 verduras, atun, aceitunas negras", "14.000", "sg"),
-            ("Campestre", "Mix de 3 verduras de estacion con parmesano", "13.000", "v sg"),
-            ("Rucula con Parmesano", "Rucula fresca, lascas de parmesano, oliva", "12.000", "v"),
+            ("Gourmet", "3 verduras, huevo, choclo, aderezo de la casa | ~320 kcal", "15.000", "v sg"),
+            ("Mediterranea", "3 verduras, atun, aceitunas negras | ~280 kcal", "14.000", "sg"),
+            ("Campestre", "Mix de 3 verduras de estacion con parmesano | ~250 kcal", "13.000", "v sg"),
+            ("Rucula con Parmesano", "Rucula fresca, lascas de parmesano, oliva | ~220 kcal", "12.000", "v"),
         ]
     },
     "guarniciones": {
         "title": "GUARNICIONES",
         "icon": "🍟",
         "items": [
-            ("Papas Fritas", "Porcion abundante", "7.000", "sg"),
-            ("Pure de Papas", "Casero, cremoso", "6.000", "v sg"),
-            ("Huevo Frito (c/u)", "A la plancha", "2.500", "v sg"),
+            ("Papas Fritas", "Porcion abundante | ~380 kcal", "7.000", "sg"),
+            ("Pure de Papas", "Casero, cremoso | ~250 kcal", "6.000", "v sg"),
+            ("Huevo Frito (c/u)", "A la plancha | ~90 kcal", "2.500", "v sg"),
         ]
     },
     "postres": {
         "title": "POSTRES",
         "icon": "🍮",
         "items": [
-            ("Panqueques de Dulce de Leche", "Panqueques caseros, dulce de leche", "9.500", "v"),
-            ("Queso y Dulce", "Queso fresco con dulce de batata o membrillo", "8.000", "v sg"),
-            ("Postre Helado", "Bomba helada del dia", "8.000", "v"),
+            ("Panqueques de Dulce de Leche", "Panqueques caseros, dulce de leche | ~420 kcal", "9.500", "v"),
+            ("Queso y Dulce", "Queso fresco con dulce de batata o membrillo | ~350 kcal", "8.000", "v sg"),
+            ("Postre Helado", "Bomba helada del dia | ~280 kcal", "8.000", "v"),
         ]
     },
     "sin_alcohol": {
         "title": "SIN ALCOHOL",
         "icon": "💧",
         "items": [
-            ("Gatorade", "Deportiva, sabores varios", "3.500", ""),
-            ("Gaseosa", "Coca-Cola, Sprite, Fanta", "3.000", ""),
-            ("Agua Saborizada", "Levite / Villa del Sur", "3.000", ""),
-            ("Agua Mineral", "Con o sin gas, 500ml", "2.500", ""),
+            ("Gatorade", "Deportiva, sabores varios | ~130 kcal", "3.500", ""),
+            ("Gaseosa", "Coca-Cola, Sprite, Fanta | ~140 kcal", "3.000", ""),
+            ("Agua Saborizada", "Levite / Villa del Sur | ~80 kcal", "3.000", ""),
+            ("Agua Mineral", "Con o sin gas, 500ml | 0 kcal", "2.500", ""),
         ]
     },
     "cervezas_vinos": {
         "title": "CERVEZAS Y VINOS",
         "icon": "🍺",
         "items": [
-            ("Vino de la Casa", "Tinto o blanco, botella", "20.000", ""),
-            ("Cerveza Litro", "Botella 1L", "12.000", ""),
-            ("Cerveza Lata", "Lata 473ml", "5.500", ""),
+            ("Vino de la Casa", "Tinto o blanco, botella | ~600 kcal (botella)", "20.000", ""),
+            ("Cerveza Litro", "Botella 1L | ~430 kcal", "12.000", ""),
+            ("Cerveza Lata", "Lata 473ml | ~200 kcal", "5.500", ""),
         ]
     },
     "tragos": {
         "title": "TRAGOS Y COCTELES",
         "icon": "🍸",
         "items": [
-            ("La Brasa", "Gin, pomelo rosado, romero y tonica | ~180 kcal", "18.000", "rec"),
-            ("El Tercer Tiempo", "Fernet Branca, Coca-Cola, twist de limon | ~220 kcal", "14.000", "rec"),
+            ("La Brasa ★", "Gin, pomelo rosado, romero y tonica | ~180 kcal", "18.000", "rec"),
+            ("El Tercer Tiempo ★", "Fernet Branca, Coca-Cola, twist de limon | ~220 kcal", "14.000", "rec"),
             ("Scrum Sour", "Whisky, limon, azucar, clara de huevo | ~190 kcal", "17.000", ""),
             ("Try Line Spritz", "Aperol, espumante, soda, naranja | ~160 kcal", "17.000", ""),
             ("Gin Tonic Clasico", "Gin, tonica premium, botanicos | ~170 kcal", "16.000", ""),
@@ -181,19 +181,19 @@ MENU = {
             ("Fernet con Coca", "Fernet Branca, Coca-Cola, hielo | ~220 kcal", "14.000", ""),
             ("Whisky", "Medida simple, hielo | ~105 kcal", "10.000", ""),
         ],
-        "note": "★ La Brasa y El Tercer Tiempo: cocteles de la casa, creados para Brasa Roja"
+        "note": "★ Cocteles de la casa, creados para Brasa Roja"
     },
     "cafeteria": {
         "title": "CAFETERIA",
         "icon": "☕",
         "items": [
-            ("Cafe Espresso", "Espresso simple", "4.000", ""),
-            ("Cafe en Jarrito", "Cafe doble en jarrito de ceramica", "5.000", ""),
-            ("Cafe Doble", "Doble shot de espresso", "5.000", ""),
-            ("Te", "Seleccion de saquitos", "4.500", ""),
-            ("Submarino", "Leche caliente con barra de chocolate", "5.000", "v"),
-            ("Medialuna", "Medialuna de manteca", "1.500", "v"),
-            ("Medialuna de Jamon y Queso", "Rellena, tostada", "3.500", ""),
+            ("Cafe Espresso", "Espresso simple | ~5 kcal", "4.000", ""),
+            ("Cafe en Jarrito", "Cafe doble en jarrito de ceramica | ~10 kcal", "5.000", ""),
+            ("Cafe Doble", "Doble shot de espresso | ~10 kcal", "5.000", ""),
+            ("Te", "Seleccion de saquitos | ~2 kcal", "4.500", ""),
+            ("Submarino", "Leche caliente con barra de chocolate | ~250 kcal", "5.000", "v"),
+            ("Medialuna", "Medialuna de manteca | ~180 kcal", "1.500", "v"),
+            ("Medialuna de Jamon y Queso", "Rellena, tostada | ~280 kcal", "3.500", ""),
         ]
     },
 }
@@ -230,6 +230,7 @@ def html_head(title, extra_css=""):
 }}
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 {SYM_CSS}
+{FOOTER_CSS}
 .page-divider {{ display: block; }}
 @media print {{ .page-divider {{ display: none; }} }}
 {extra_css}
@@ -242,22 +243,58 @@ def html_foot():
     return "</body>\n</html>"
 
 
-PAGE_DIVIDER = """
+def divider(label="✂ DA VUELTA ✂"):
+    return f"""
 <div class="page-divider" style="
-    width:8.5in; margin:0 auto; padding:18px 0; text-align:center;
-    background:repeating-linear-gradient(90deg, #C9882B 0, #C9882B 12px, transparent 12px, transparent 18px);
-    background-size:100% 2px; background-position:center; background-repeat:no-repeat;
+    width:100%; max-width:11in; margin:0 auto; padding:20px 0; text-align:center; position:relative;
 ">
+    <div style="position:absolute;top:50%;left:0;right:0;height:0;
+        border-top:3px dashed #C9882B;"></div>
     <span style="
-        display:inline-block; background:#e0e0e0; padding:4px 24px;
-        font-family:'Cinzel',serif; font-size:11px; letter-spacing:4px;
-        color:#C9882B; font-weight:600;
+        position:relative; display:inline-block; background:#e0e0e0; padding:6px 30px;
+        font-family:'Cinzel',serif; font-size:13px; letter-spacing:5px;
+        color:#C9882B; font-weight:700; border:2px solid #C9882B; border-radius:4px;
     ">{label}</span>
 </div>
 """
 
-def divider(label="DA VUELTA"):
-    return PAGE_DIVIDER.replace("{label}", label)
+
+# ============================================================
+# SHARED: Footer with locations, socials, phone, QR
+# ============================================================
+FOOTER_CSS = """
+.footer-info { margin-top:10px; padding-top:8px; border-top:2px solid var(--gold); font-size:9px; text-align:center; line-height:1.6; }
+.footer-info-light { color: var(--charcoal); }
+.footer-info-dark { color: var(--cream); }
+.fi-locations { display:flex; justify-content:center; gap:30px; margin-bottom:4px; flex-wrap:wrap; }
+.fi-loc { font-size:8.5px; }
+.fi-contact { margin-bottom:4px; font-size:9px; }
+.fi-social { margin-bottom:6px; font-size:8px; letter-spacing:0.5px; }
+.fi-social span { margin:0 4px; }
+.fi-events { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px; }
+.fi-qr { width:52px; height:52px; background:white; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:7px; color:#555; font-family:monospace; }
+.fi-qr-text { text-align:left; font-size:9px; font-weight:600; }
+.fi-qr-text small { font-size:7.5px; font-weight:400; }
+"""
+
+
+def footer_info(dark=True):
+    cls = "footer-info-dark" if dark else "footer-info-light"
+    smoke = "var(--smoke)" if dark else "var(--smoke)"
+    return f"""<div class="footer-info {cls}">
+<div class="fi-locations">
+    <div class="fi-loc">📍 <strong>SEDE 1:</strong> [Direccion Sede 1, Ciudad]</div>
+    <div class="fi-loc">📍 <strong>SEDE 2:</strong> [Direccion Sede 2, Ciudad]</div>
+</div>
+<div class="fi-contact">📞 <strong>[Telefono Principal]</strong></div>
+<div class="fi-social" style="color:{smoke}">
+    <span>📸 @brasaroja</span> · <span>📘 /brasaroja</span> · <span>𝕏 @brasaroja</span> · <span>🎵 @brasaroja</span>
+</div>
+<div class="fi-events">
+    <div class="fi-qr">[QR]</div>
+    <div class="fi-qr-text">Explora nuestros EVENTOS<br><small style="color:{smoke}">Cumpleanos · Casamientos · Corporativos</small></div>
+</div>
+</div>"""
 
 
 def render_items_dark(sec_key, show_desc=True, show_icon=True):
@@ -307,24 +344,23 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .page { width: 8.5in; min-height: 11in; margin: 10px auto; position: relative; overflow: hidden; }
 .page-front { background: var(--charcoal); color: var(--cream); padding: 0.35in; }
 .page-back { background: var(--dark); display: flex; align-items: center; justify-content: center; }
-.header { text-align: center; padding: 12px 0 8px; border-bottom: 1px solid var(--gold); margin-bottom: 10px; }
-.header img { height: 90px; }
-.header .tagline { font-family:'Parisienne',cursive; color: var(--gold); font-size: 13px; margin-top: 2px; }
+.header { text-align: center; padding: 8px 0 6px; border-bottom: 2px solid var(--gold); margin-bottom: 8px; }
+.header img { height: 80px; }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 11px; letter-spacing: 2px; margin: 10px 0 5px; padding-bottom: 3px; border-bottom: 1px solid #444; }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 2px; margin: 8px 0 4px; padding-bottom: 3px; border-bottom: 1px solid #444; }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 2px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 10.5px; color: var(--cream); font-weight: 600; }
-.item-desc { font-size: 8.5px; color: var(--smoke); font-style: italic; margin-top: 0; }
-.item-price { font-size: 10px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
-.item-note { font-size: 8px; color: var(--smoke); font-style: italic; margin-top: 3px; padding: 3px 6px; background: rgba(255,255,255,0.03); border-radius: 3px; }
-.menu-section { margin-bottom: 4px; }
-.drinks-bar { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--gold); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 16px; }
-.legend { margin-top: 6px; padding-top: 5px; border-top: 1px solid #444; font-size: 7.5px; color: var(--smoke); text-align: center; }
+.item-name { font-size: 11.5px; color: var(--cream); font-weight: 600; }
+.item-desc { font-size: 9px; color: var(--smoke); font-style: italic; margin-top: 0; }
+.item-price { font-size: 11px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
+.item-note { font-size: 8.5px; color: var(--smoke); font-style: italic; margin-top: 3px; padding: 3px 6px; background: rgba(255,255,255,0.03); border-radius: 3px; }
+.menu-section { margin-bottom: 3px; }
+.drinks-bar { margin-top: 5px; padding-top: 5px; border-top: 2px solid var(--gold); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 16px; }
+.legend { margin-top: 5px; padding-top: 4px; border-top: 1px solid #444; font-size: 8px; color: var(--smoke); text-align: center; }
 .legend em { font-size: 7px; color: #666; }
-.back-logo { width: 280px; filter: drop-shadow(0 0 40px rgba(201,136,43,0.3)); }
-.back-tagline { font-family:'Parisienne',cursive; color: var(--gold); font-size: 22px; margin-top: 12px; text-align: center; }
-.combo-box { background: rgba(201,136,43,0.08); border: 1px solid var(--gold); border-radius: 6px; padding: 6px 10px; margin-bottom: 6px; }
+.back-logo { width: 320px; filter: drop-shadow(0 0 40px rgba(201,136,43,0.3)); }
+.back-tagline { font-family:'Parisienne',cursive; color: var(--gold); font-size: 24px; margin-top: 12px; text-align: center; }
+.combo-box { background: rgba(201,136,43,0.08); border: 1px solid var(--gold); border-radius: 6px; padding: 6px 10px; margin-bottom: 5px; }
 .combo-box .sec-title { margin-top: 2px; border-bottom: none; }
 @media print { body{background:white;} .page{margin:0;box-shadow:none;} .page-back{page-break-before:always;} }
 """
@@ -348,11 +384,12 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 <div class="drinks-bar">
-{render_items_dark("tragos", show_desc=False)}
-{render_items_dark("cervezas_vinos", show_desc=False)}
-{render_items_dark("sin_alcohol", show_desc=False)}
+{render_items_dark("tragos")}
+{render_items_dark("cervezas_vinos")}
+{render_items_dark("sin_alcohol")}
 </div>
 {LEGEND}
+{footer_info(dark=True)}
 </div>"""
 
     back = f"""<div class="page page-back">
@@ -376,21 +413,21 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .page { width: 8.5in; min-height: 11in; margin: 10px auto; position: relative; overflow: hidden; }
 .page-a { background: var(--cream); color: var(--charcoal); padding: 0.5in 0.6in; }
 .page-b { background: var(--charcoal); color: var(--cream); padding: 0.5in 0.6in; }
-.header-a { text-align: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--gold); }
-.header-a img { height: 100px; }
-.header-b { text-align: center; margin-bottom: 16px; }
-.header-b img { height: 60px; }
-.header-b h2 { font-family:'Cinzel',serif; color: var(--gold); font-size: 16px; letter-spacing: 4px; margin-top: 8px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 2.5px; margin: 18px 0 6px; padding-bottom: 4px; border-bottom: 1px solid var(--gold); }
+.header-a { text-align: center; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--gold); }
+.header-a img { height: 90px; }
+.header-b { text-align: center; margin-bottom: 14px; }
+.header-b img { height: 55px; }
+.header-b h2 { font-family:'Cinzel',serif; color: var(--gold); font-size: 17px; letter-spacing: 4px; margin-top: 8px; }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 13px; letter-spacing: 2.5px; margin: 14px 0 5px; padding-bottom: 4px; border-bottom: 1px solid var(--gold); }
 .page-b .sec-title { border-bottom-color: #555; }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 30px; }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 3px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 12px; font-weight: 600; }
+.item-name { font-size: 13px; font-weight: 600; }
 .page-a .item-name { color: var(--charcoal); }
 .page-b .item-name { color: var(--cream); }
-.item-desc { font-size: 9.5px; color: var(--smoke); font-style: italic; }
-.item-price { font-size: 11px; color: var(--gold); font-weight: 600; margin-left: 10px; white-space: nowrap; }
+.item-desc { font-size: 10px; color: var(--smoke); font-style: italic; }
+.item-price { font-size: 12px; color: var(--gold); font-weight: 600; margin-left: 10px; white-space: nowrap; }
 .item-note { font-size: 8.5px; color: var(--smoke); font-style: italic; margin-top: 4px; }
 .menu-section { margin-bottom: 2px; }
 .combo-box { background: rgba(201,136,43,0.08); border: 1.5px solid var(--gold); border-radius: 8px; padding: 10px 16px; margin-bottom: 8px; }
@@ -419,7 +456,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 {LEGEND}
-<div class="footer">Tradición Familiar</div>
+{footer_info(dark=False)}
 </div>"""
 
     page_b = f"""<div class="page page-b">
@@ -439,10 +476,10 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 {LEGEND}
-<div class="footer">Tradición Familiar</div>
+{footer_info(dark=True)}
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 02: El Doble", css) + page_a + divider("DA VUELTA — LADO B: BEBIDAS Y POSTRES") + page_b + html_foot()
+    return html_head("Brasa Roja - Concepto 02: El Doble", css) + page_a + divider("✂ DA VUELTA — LADO B: BEBIDAS Y POSTRES ✂") + page_b + html_foot()
 
 
 # ============================================================
@@ -456,19 +493,19 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .spread { width: 11in; height: 8.5in; margin: 10px auto; display: grid; grid-template-columns: 1fr 1fr 1fr; position: relative; }
 .spread-inner { background: var(--cream); color: var(--charcoal); }
 .spread-outer { background: var(--charcoal); color: var(--cream); }
-.panel { padding: 0.35in; overflow: hidden; border-right: 1px solid rgba(0,0,0,0.1); }
+.panel { padding: 0.35in; overflow: hidden; border-right: 2px dashed rgba(201,136,43,0.4); }
 .panel:last-child { border-right: none; }
 .panel-cover { display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--dark); text-align: center; }
 .panel-cover img { width: 200px; filter: drop-shadow(0 0 20px rgba(201,136,43,0.3)); }
 .panel-cover .tagline { font-family:'Parisienne',cursive; color: var(--gold); font-size: 18px; margin-top: 10px; }
 .panel-cover .sub { color: var(--smoke); font-size: 10px; margin-top: 20px; letter-spacing: 2px; font-family:'Cinzel',serif; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 10px; letter-spacing: 2px; margin: 10px 0 4px; padding-bottom: 3px; border-bottom: 1px solid var(--gold); }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 11px; letter-spacing: 2px; margin: 10px 0 4px; padding-bottom: 3px; border-bottom: 1px solid var(--gold); }
 .spread-outer .sec-title { border-bottom-color: #555; }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 2px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 10px; font-weight: 600; }
-.item-desc { font-size: 8px; color: var(--smoke); font-style: italic; }
-.item-price { font-size: 9.5px; color: var(--gold); font-weight: 600; margin-left: 6px; white-space: nowrap; }
+.item-name { font-size: 11px; font-weight: 600; }
+.item-desc { font-size: 9px; color: var(--smoke); font-style: italic; }
+.item-price { font-size: 10.5px; color: var(--gold); font-weight: 600; margin-left: 6px; white-space: nowrap; }
 .item-note { font-size: 7.5px; color: var(--smoke); font-style: italic; margin-top: 2px; }
 .menu-section { margin-bottom: 2px; }
 .legend { margin-top: 6px; padding-top: 4px; border-top: 1px solid #ddd; font-size: 7px; color: var(--smoke); text-align: center; }
@@ -515,10 +552,11 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <img src="{LOGO_SRC}" alt="Brasa Roja">
     <div class="tagline">Tradición Familiar</div>
     <div class="sub">NUESTRO MENÚ</div>
+{footer_info(dark=True)}
 </div>
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 03: El Triptico", css) + inner + divider("DA VUELTA — EXTERIOR DEL TRIPTICO") + outer + html_foot()
+    return html_head("Brasa Roja - Concepto 03: El Triptico", css) + inner + divider("✂ DA VUELTA — EXTERIOR DEL TRIPTICO ✂") + outer + html_foot()
 
 
 # ============================================================
@@ -534,12 +572,12 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .card-b { background: var(--dark); color: var(--cream); padding: 0.3in; }
 .header { text-align: center; margin-bottom: 8px; }
 .header img { height: 65px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 11px; letter-spacing: 2.5px; margin: 12px 0 5px; padding-bottom: 3px; border-bottom: 2px solid var(--gold); }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 2.5px; margin: 12px 0 5px; padding-bottom: 3px; border-bottom: 2px solid var(--gold); }
 .item { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; }
 .item-left { flex: 1; }
-.item-name { font-size: 13px; font-weight: 600; color: var(--cream); }
-.item-desc { display: none; }
-.item-price { font-size: 13px; color: var(--gold); font-weight: 700; margin-left: 10px; }
+.item-name { font-size: 14px; font-weight: 600; color: var(--cream); }
+.item-desc { font-size: 10px; color: var(--smoke); font-style: italic; }
+.item-price { font-size: 14px; color: var(--gold); font-weight: 700; margin-left: 10px; }
 .item-note { font-size: 8px; color: var(--smoke); font-style: italic; margin-top: 2px; }
 .menu-section { margin-bottom: 4px; }
 .combo-box { background: rgba(201,136,43,0.12); border: 2px solid var(--gold); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; }
@@ -554,28 +592,29 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <div class="lam-badge">LAMINADO</div>
 <div class="header"><img src="{LOGO_SRC}" alt="Brasa Roja"></div>
 <div class="combo-box">
-{render_items_dark("combos", show_desc=False)}
+{render_items_dark("combos", show_desc=True)}
 </div>
-{render_items_dark("sandwiches", show_desc=False)}
-{render_items_dark("platos", show_desc=False)}
-{render_items_dark("pastas", show_desc=False)}
+{render_items_dark("sandwiches", show_desc=True)}
+{render_items_dark("platos", show_desc=True)}
+{render_items_dark("pastas", show_desc=True)}
 {LEGEND}
 </div>"""
 
     card_b = f"""<div class="card card-b">
 <div class="header"><img src="{ICON_SRC}" alt="BR" style="height:40px"></div>
-{render_items_dark("ensaladas", show_desc=False)}
-{render_items_dark("guarniciones", show_desc=False)}
-{render_items_dark("postres", show_desc=False)}
+{render_items_dark("ensaladas", show_desc=True)}
+{render_items_dark("guarniciones", show_desc=True)}
+{render_items_dark("postres", show_desc=True)}
 <div style="margin-top:10px;padding-top:8px;border-top:2px solid var(--gold)">
-{render_items_dark("tragos", show_desc=False)}
-{render_items_dark("cervezas_vinos", show_desc=False)}
-{render_items_dark("sin_alcohol", show_desc=False)}
+{render_items_dark("tragos", show_desc=True)}
+{render_items_dark("cervezas_vinos", show_desc=True)}
+{render_items_dark("sin_alcohol", show_desc=True)}
 </div>
 {LEGEND}
+{footer_info(dark=True)}
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 04: El Rapido", css) + card_a + divider("DA VUELTA — LADO B") + card_b + html_foot()
+    return html_head("Brasa Roja - Concepto 04: El Rapido", css) + card_a + divider("✂ DA VUELTA — LADO B ✂") + card_b + html_foot()
 
 
 # ============================================================
@@ -592,13 +631,13 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .header img { height: 85px; filter: brightness(1.1); }
 .header .line { width: 60%; height: 1px; background: rgba(201,136,43,0.4); margin: 8px auto; }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 3px; margin: 14px 0 6px; text-align: center; }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 13px; letter-spacing: 3px; margin: 14px 0 6px; text-align: center; }
 .sec-title::before, .sec-title::after { content: ' ~ '; color: rgba(201,136,43,0.5); }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 2.5px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 11px; color: rgba(255,255,255,0.9); font-weight: 400; }
-.item-desc { font-size: 8.5px; color: rgba(255,255,255,0.4); font-style: italic; }
-.item-price { font-size: 10.5px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
+.item-name { font-size: 12px; color: rgba(255,255,255,0.9); font-weight: 400; }
+.item-desc { font-size: 9.5px; color: rgba(255,255,255,0.4); font-style: italic; }
+.item-price { font-size: 11.5px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
 .item-note { font-size: 8px; color: rgba(255,255,255,0.35); font-style: italic; margin-top: 2px; }
 .menu-section { margin-bottom: 4px; }
 .combo-box { border: 1px dashed rgba(201,136,43,0.4); border-radius: 6px; padding: 6px 10px; margin-bottom: 6px; }
@@ -630,11 +669,12 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 <div class="drinks-strip">
-{render_items_dark("tragos", show_desc=False)}
-{render_items_dark("cervezas_vinos", show_desc=False)}
-{render_items_dark("sin_alcohol", show_desc=False)}
+{render_items_dark("tragos", show_desc=True)}
+{render_items_dark("cervezas_vinos", show_desc=True)}
+{render_items_dark("sin_alcohol", show_desc=True)}
 </div>
 {LEGEND}
+{footer_info(dark=True)}
 </div>
 </div>"""
 
@@ -656,12 +696,12 @@ body { font-family: 'Lora', Georgia, serif; background: #ccc; }
 .header img { height: 110px; filter: drop-shadow(0 0 20px rgba(201,136,43,0.2)); }
 .header .divider { width: 40%; height: 1px; background: var(--gold); margin: 10px auto; }
 .columns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 40px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 3px; margin: 16px 0 6px; padding-bottom: 4px; border-bottom: 1px solid rgba(201,136,43,0.3); }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 13px; letter-spacing: 3px; margin: 16px 0 6px; padding-bottom: 4px; border-bottom: 1px solid rgba(201,136,43,0.3); }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 3px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 12px; color: var(--cream); font-weight: 600; }
-.item-desc { font-size: 9px; color: var(--smoke); font-style: italic; }
-.item-price { font-size: 11px; color: var(--gold); font-weight: 600; margin-left: 10px; white-space: nowrap; }
+.item-name { font-size: 13px; color: var(--cream); font-weight: 600; }
+.item-desc { font-size: 10px; color: var(--smoke); font-style: italic; }
+.item-price { font-size: 12px; color: var(--gold); font-weight: 600; margin-left: 10px; white-space: nowrap; }
 .item-note { font-size: 8px; color: var(--smoke); font-style: italic; margin-top: 3px; }
 .menu-section { margin-bottom: 4px; }
 .combo-box { background: rgba(201,136,43,0.06); border: 1px solid rgba(201,136,43,0.3); border-radius: 8px; padding: 8px 14px; margin-bottom: 8px; }
@@ -700,7 +740,7 @@ body { font-family: 'Lora', Georgia, serif; background: #ccc; }
 </div>
 </div>
 {LEGEND}
-<div class="footer">Tradición Familiar</div>
+{footer_info(dark=True)}
 </div>"""
 
     return html_head("Brasa Roja - Concepto 06: El Premium", css) + page + html_foot()
@@ -737,17 +777,17 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <div class="sub">NUESTRO MENÚ</div>
 </div>
 <div class="top-title">★ LOS MAS PEDIDOS ★</div>
-<div class="top-item"><span class="name">Combo Milanesa + Guarnicion + Agua</span><span class="price">25.000</span></div>
-<div class="top-item"><span class="name">Choripan con Chimichurri</span><span class="price">7.500</span></div>
-<div class="top-item"><span class="name">Colita de Cuadril a la Parrilla</span><span class="price">22.000</span></div>
-<div class="top-item"><span class="name">Milanesa Napolitana</span><span class="price">22.000</span></div>
-<div class="top-item"><span class="name">Fernet con Coca</span><span class="price">14.000</span></div>
+<div class="top-item"><span class="name">Combo Milanesa + Guarnicion + Agua <small style="color:var(--smoke);font-size:9px">(~850 kcal)</small></span><span class="price">25.000</span></div>
+<div class="top-item"><span class="name">Choripan con Chimichurri <small style="color:var(--smoke);font-size:9px">(~450 kcal)</small></span><span class="price">7.500</span></div>
+<div class="top-item"><span class="name">Colita de Cuadril a la Parrilla <small style="color:var(--smoke);font-size:9px">(~480 kcal)</small></span><span class="price">22.000</span></div>
+<div class="top-item"><span class="name">Milanesa Napolitana <small style="color:var(--smoke);font-size:9px">(~780 kcal)</small></span><span class="price">22.000</span></div>
+<div class="top-item"><span class="name">Fernet con Coca <small style="color:var(--smoke);font-size:9px">(~220 kcal)</small></span><span class="price">14.000</span></div>
 <div class="qr-section">
     <div class="qr-box"><span>[QR CODE]</span></div>
     <div class="qr-label">ESCANEA PARA VER TODO EL MENU</div>
     <div class="qr-sub">Bebidas, Pastas, Ensaladas, Postres y mas</div>
 </div>
-<div class="footer">Tradición Familiar</div>
+{footer_info(dark=True)}
 </div>
 </div>"""
 
@@ -773,13 +813,13 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .insert-header img { height: 40px; }
 .insert-header h2 { font-family:'Cinzel',serif; color: var(--gold); font-size: 15px; letter-spacing: 3px; }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 11px; letter-spacing: 2px; margin: 14px 0 5px; padding-bottom: 3px; border-bottom: 1px solid var(--gold); }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 12px; letter-spacing: 2px; margin: 14px 0 5px; padding-bottom: 3px; border-bottom: 1px solid var(--gold); }
 .insert-dark .sec-title { border-bottom-color: #555; }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 3px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 11.5px; font-weight: 600; }
-.item-desc { font-size: 9px; color: var(--smoke); font-style: italic; }
-.item-price { font-size: 10.5px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
+.item-name { font-size: 12.5px; font-weight: 600; }
+.item-desc { font-size: 10px; color: var(--smoke); font-style: italic; }
+.item-price { font-size: 11.5px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
 .item-note { font-size: 8px; color: var(--smoke); font-style: italic; margin-top: 3px; }
 .menu-section { margin-bottom: 3px; }
 .combo-box { background: rgba(201,136,43,0.08); border: 1.5px solid var(--gold); border-radius: 8px; padding: 8px 14px; margin-bottom: 8px; }
@@ -817,6 +857,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 {LEGEND}
+{footer_info(dark=False)}
 </div>"""
 
     insert2 = f"""<div class="page insert-dark">
@@ -837,9 +878,10 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 {LEGEND}
+{footer_info(dark=True)}
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 08: El Modular", css) + cover + divider("HOJA 1 — COMIDAS") + insert1 + divider("HOJA 2 — BEBIDAS Y POSTRES") + insert2 + html_foot()
+    return html_head("Brasa Roja - Concepto 08: El Modular", css) + cover + divider("✂ HOJA 1 — COMIDAS ✂") + insert1 + divider("✂ HOJA 2 — BEBIDAS Y POSTRES ✂") + insert2 + html_foot()
 
 
 # ============================================================
@@ -863,12 +905,12 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .second-half { background: rgba(139,37,0,0.1); color: var(--cream); border: 1px solid rgba(139,37,0,0.3); }
 .third-time { background: rgba(201,136,43,0.15); color: var(--gold); border: 2px solid var(--gold); }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 10px; letter-spacing: 2px; margin: 10px 0 4px; padding-bottom: 3px; border-bottom: 1px solid #444; }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 11px; letter-spacing: 2px; margin: 10px 0 4px; padding-bottom: 3px; border-bottom: 1px solid #444; }
 .item { display: flex; justify-content: space-between; align-items: baseline; padding: 2.5px 0; }
 .item-left { display: flex; flex-direction: column; flex: 1; }
-.item-name { font-size: 11px; color: var(--cream); font-weight: 600; }
-.item-desc { font-size: 8.5px; color: var(--smoke); font-style: italic; }
-.item-price { font-size: 10px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
+.item-name { font-size: 12px; color: var(--cream); font-weight: 600; }
+.item-desc { font-size: 9.5px; color: var(--smoke); font-style: italic; }
+.item-price { font-size: 11px; color: var(--gold); font-weight: 600; margin-left: 8px; white-space: nowrap; }
 .item-note { font-size: 8px; color: var(--smoke); font-style: italic; margin-top: 2px; }
 .menu-section { margin-bottom: 3px; }
 .legend { margin-top: 8px; padding-top: 6px; border-top: 1px solid #444; font-size: 8px; color: var(--smoke); text-align: center; }
@@ -937,10 +979,10 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 
 {LEGEND}
-<div class="footer">Tradición Familiar</div>
+{footer_info(dark=True)}
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 09: El Deportivo", css) + page_a + divider("DA VUELTA — SEGUNDO TIEMPO Y TERCER TIEMPO") + page_b + html_foot()
+    return html_head("Brasa Roja - Concepto 09: El Deportivo", css) + page_a + divider("✂ DA VUELTA — SEGUNDO Y TERCER TIEMPO ✂") + page_b + html_foot()
 
 
 # ============================================================
@@ -953,14 +995,14 @@ def concept_10():
 body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 .card { width: 5.5in; min-height: 8.5in; margin: 10px auto; background: var(--cream); color: var(--charcoal); padding: 0.5in 0.45in; position: relative; }
 .header { text-align: center; margin-bottom: 16px; }
-.header img { height: 75px; }
-.header .line { width: 30%; height: 1px; background: var(--gold); margin: 10px auto; }
-.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 10px; letter-spacing: 3px; margin: 18px 0 6px; text-align: center; }
+.header img { height: 90px; }
+.header .line { width: 30%; height: 1px; background: var(--gold); margin: 6px auto; }
+.sec-title { font-family:'Cinzel',serif; color: var(--gold); font-size: 11px; letter-spacing: 3px; margin: 18px 0 6px; text-align: center; }
 .item { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; }
-.item-name { font-size: 11.5px; color: var(--charcoal); }
-.item-desc { display: none; }
+.item-name { font-size: 12.5px; color: var(--charcoal); }
+.item-desc { font-size: 10px; color: var(--smoke); font-style: italic; }
 .item-left { flex: 1; }
-.item-price { font-size: 11px; color: var(--gold); font-weight: 600; margin-left: 8px; }
+.item-price { font-size: 12px; color: var(--gold); font-weight: 600; margin-left: 8px; }
 .item-note { font-size: 8px; color: var(--smoke); font-style: italic; text-align: center; margin-top: 2px; }
 .menu-section { margin-bottom: 2px; }
 .divider { width: 20%; height: 1px; background: var(--gold); margin: 12px auto; opacity: 0.4; }
@@ -974,23 +1016,23 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <img src="{LOGO_SRC}" alt="Brasa Roja">
     <div class="line"></div>
 </div>
-{render_items_light("combos", show_desc=False, show_icon=False)}
+{render_items_light("combos", show_desc=True, show_icon=False)}
 <div class="divider"></div>
-{render_items_light("sandwiches", show_desc=False, show_icon=False)}
+{render_items_light("sandwiches", show_desc=True, show_icon=False)}
 <div class="divider"></div>
-{render_items_light("platos", show_desc=False, show_icon=False)}
+{render_items_light("platos", show_desc=True, show_icon=False)}
 <div class="divider"></div>
-{render_items_light("pastas", show_desc=False, show_icon=False)}
+{render_items_light("pastas", show_desc=True, show_icon=False)}
 <div class="divider"></div>
-{render_items_light("ensaladas", show_desc=False, show_icon=False)}
-{render_items_light("guarniciones", show_desc=False, show_icon=False)}
+{render_items_light("ensaladas", show_desc=True, show_icon=False)}
+{render_items_light("guarniciones", show_desc=True, show_icon=False)}
 <div class="divider"></div>
-{render_items_light("tragos", show_desc=False, show_icon=False)}
-{render_items_light("cervezas_vinos", show_desc=False, show_icon=False)}
+{render_items_light("tragos", show_desc=True, show_icon=False)}
+{render_items_light("cervezas_vinos", show_desc=True, show_icon=False)}
 <div class="divider"></div>
-{render_items_light("postres", show_desc=False, show_icon=False)}
+{render_items_light("postres", show_desc=True, show_icon=False)}
 {LEGEND}
-<div class="footer">Tradición Familiar</div>
+{footer_info(dark=False)}
 </div>"""
 
     return html_head("Brasa Roja - Concepto 10: El Minimalista", css) + card + html_foot()
