@@ -17,15 +17,15 @@
 4. **Typography** - "BRASA" (gold serif) + "ROJA" (red serif)
 5. **Tagline** - "Tradición Familiar" in gold script (REQUIRED on all branded materials)
 
-### Color Palette
-| Color | Hex | Use |
-|-------|-----|-----|
-| Primary Red | #E44D26 | Flame, accents |
-| Deep Red | #C41E3A | "ROJA" text |
-| Brasa Gold | #D4A84B | Swirl, "BRASA" text |
-| Accent Red | #B02D37 | Secondary elements |
-| Light Neutral | #F6F0E6 | Cream backgrounds |
-| Charcoal | #2D2D2D | Dark backgrounds |
+### Color Palette (AUTHORITATIVE - verified against brand guide + Pantone)
+| Color | Hex | Pantone | Use |
+|-------|-----|---------|-----|
+| Primary Red | #E44D26 | - | Flame LED glow |
+| Rojo Roja | #C63333 | PMS 1797 C | "ROJA" text |
+| Oro Brasa | #C9882B | PMS 7564 C | "BRASA" text, swirl, embers |
+| Brasa Profunda | #8B2500 | PMS 7622 C | Dark accents |
+| Light Neutral | #F6F0E6 | - | Cream backgrounds |
+| Charcoal | #2D2D2D | PMS Black 7 C | Dark backgrounds |
 
 ### Brand Rules
 - Logo must include ALL elements (flame, swirl, embers, text)
@@ -131,6 +131,42 @@ Location: `Mockups_v2/` and `Mockups_v3/`
 Location: `Sign_Concepts/`
 - 8 main concepts (flame-lit, ROJA+flame, neon, halo, blade, 3D, marquee, LED)
 - 5 round blade signs in `Round_Signs/`
+- **APPROVED DESIGN:** `08_smart_led_ember_animation.png` (Smart LED square panel)
+
+### Sign 6 Views (v4) - APPROVED SIGN MOCKUPS
+Location: `Sign_6Views/`
+- `01_frontal_noche.png` - Frontal straight-on, night (LEDs on)
+- `02_frontal_dia.png` - Frontal straight-on, daytime
+- `03_angulo_izq_noche.png` - 45 degrees from left, night
+- `04_angulo_der_dia.png` - 45 degrees from right, daytime
+- `05_perfil_lateral.png` - Side profile (edge-on), daytime
+- `06_contrapicado_noche.png` - Low angle looking up, night
+- Generated with `generate_sign_6views_v4.py` using approved sign as reference input
+- All views: SQUARE sign, WHITE wall, consistent logo layout
+
+---
+
+## Vendor Folders (Google Drive)
+
+Three self-contained vendor folders at `G:\My Drive\Projects\Brasa Roja\`:
+
+### Vendor_Letreros/ (Sign Maker)
+- 6 mockup views of the approved sign
+- ESPECIFICACIONES_LETRERO.md (full tech specs in Spanish/Argentina)
+- GUIA_INSTALACION_MANTENIMIENTO.md
+- Logos (PNG) + Vectors (SVG/PDF)
+
+### Vendor_Packaging/ (Packaging/Print)
+- CMYK 300dpi logos for print
+- Vectors: SVG, PDF, EPS (all variants)
+- Stickers (2" and 3", multiple backgrounds)
+- GUIA_COLORES_PACKAGING.md
+
+### Vendor_Ropa/ (Embroidery/Uniforms)
+- Embroidery-ready logos (light/dark garments, simplified)
+- Thread specs (Madeira Polyneon codes + Isacord alternatives)
+- ESPECIFICACIONES_BORDADO.md (per-garment placement, sizes, thread colors)
+- Vectors (SVG/PDF)
 
 ---
 
@@ -160,6 +196,13 @@ Before finalizing any mockup, verify:
 - Gemini Flash: Good fallback, faster
 - Always include rate limiting (3-4 sec between calls)
 
+### 5. Sign Generation Consistency (v4 lessons)
+- Use a SHARED text block (SIGN_LOCK) injected into every prompt for consistency
+- Explicitly state the sign SHAPE (square/rectangle) multiple times - AI varies it otherwise
+- Specify wall color explicitly ("CLEAN WHITE WALL") - AI defaults to brick
+- For multiple angles: use LEFT vs RIGHT, describe which frame edge is closer to camera
+- Always use the APPROVED sign image as image input, not the raw logo
+
 ---
 
 ## File Structure
@@ -176,8 +219,9 @@ BrasaRoja/
 ├── Vectors/             # SVG files
 ├── Mockups_v2/          # Product mockups
 ├── Mockups_v3/          # Fixed mockups
-├── Sign_Concepts/       # Restaurant signage
+├── Sign_Concepts/       # Restaurant signage concepts
 │   └── Round_Signs/     # Blade sign variations
+├── Sign_6Views/         # 6 approved sign mockups (v4)
 ├── _Source/             # Reference images
 ├── BrasaRoja_Brand_Guidelines.pdf
 ├── CLAUDE.md            # This file
