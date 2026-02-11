@@ -41,7 +41,7 @@ LEGEND = """<div class="legend">
 <span class="sym sym-sl">SL</span> Sin Lactosa &nbsp;
 <span class="sym sym-rec">★</span> Recomendado &nbsp;
 <span class="sym sym-pic">🌶</span> Picante
-<br><em>Informanos sobre alergias o restricciones. Consultale a tu mozo.</em>
+<br><em>Informanos sobre alergias o restricciones alimentarias. Consultá a tu mozo.</em>
 </div>"""
 
 SYM_CSS = """
@@ -84,7 +84,7 @@ MENU = {
         ]
     },
     "sandwiches": {
-        "title": "SANDWICHES & BURGERS",
+        "title": "SANDWICHES Y HAMBURGUESAS",
         "icon": "🥪",
         "items": [
             ("Sandwich de Colita de Cuadril", "Colita a la parrilla en pan artesanal", "12.500", "sg rec"),
@@ -160,7 +160,7 @@ MENU = {
         ]
     },
     "cervezas_vinos": {
-        "title": "CERVEZAS & VINOS",
+        "title": "CERVEZAS Y VINOS",
         "icon": "🍺",
         "items": [
             ("Vino de la Casa", "Tinto o blanco, botella", "20.000", ""),
@@ -169,14 +169,19 @@ MENU = {
         ]
     },
     "tragos": {
-        "title": "TRAGOS & COCKTAILS",
+        "title": "TRAGOS Y COCTELES",
         "icon": "🍸",
         "items": [
-            ("Gin Tonic", "Gin, tonica, botanicos", "16.000", ""),
-            ("Campari con Naranja", "Campari, jugo de naranja, hielo", "16.000", ""),
-            ("Fernet con Coca", "Fernet Branca, Coca-Cola, hielo", "14.000", "rec"),
-            ("Whisky", "Medida simple, hielo", "10.000", ""),
-        ]
+            ("La Brasa", "Gin, pomelo rosado, romero y tonica | ~180 kcal", "18.000", "rec"),
+            ("El Tercer Tiempo", "Fernet Branca, Coca-Cola, twist de limon | ~220 kcal", "14.000", "rec"),
+            ("Scrum Sour", "Whisky, limon, azucar, clara de huevo | ~190 kcal", "17.000", ""),
+            ("Try Line Spritz", "Aperol, espumante, soda, naranja | ~160 kcal", "17.000", ""),
+            ("Gin Tonic Clasico", "Gin, tonica premium, botanicos | ~170 kcal", "16.000", ""),
+            ("Campari con Naranja", "Campari, jugo de naranja, hielo | ~150 kcal", "16.000", ""),
+            ("Fernet con Coca", "Fernet Branca, Coca-Cola, hielo | ~220 kcal", "14.000", ""),
+            ("Whisky", "Medida simple, hielo | ~105 kcal", "10.000", ""),
+        ],
+        "note": "★ La Brasa y El Tercer Tiempo: cocteles de la casa, creados para Brasa Roja"
     },
     "cafeteria": {
         "title": "CAFETERIA",
@@ -225,6 +230,8 @@ def html_head(title, extra_css=""):
 }}
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 {SYM_CSS}
+.page-divider {{ display: block; }}
+@media print {{ .page-divider {{ display: none; }} }}
 {extra_css}
 </style>
 </head>
@@ -233,6 +240,24 @@ def html_head(title, extra_css=""):
 
 def html_foot():
     return "</body>\n</html>"
+
+
+PAGE_DIVIDER = """
+<div class="page-divider" style="
+    width:8.5in; margin:0 auto; padding:18px 0; text-align:center;
+    background:repeating-linear-gradient(90deg, #C9882B 0, #C9882B 12px, transparent 12px, transparent 18px);
+    background-size:100% 2px; background-position:center; background-repeat:no-repeat;
+">
+    <span style="
+        display:inline-block; background:#e0e0e0; padding:4px 24px;
+        font-family:'Cinzel',serif; font-size:11px; letter-spacing:4px;
+        color:#C9882B; font-weight:600;
+    ">{label}</span>
+</div>
+"""
+
+def divider(label="DA VUELTA"):
+    return PAGE_DIVIDER.replace("{label}", label)
 
 
 def render_items_dark(sec_key, show_desc=True, show_icon=True):
@@ -333,11 +358,11 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     back = f"""<div class="page page-back">
 <div style="text-align:center">
     <img class="back-logo" src="{LOGO_SRC}" alt="Brasa Roja">
-    <div class="back-tagline">Tradicion Familiar</div>
+    <div class="back-tagline">Tradición Familiar</div>
 </div>
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 01: El Clasico", css) + front + back + html_foot()
+    return html_head("Brasa Roja - Concepto 01: El Clasico", css) + front + divider("DA VUELTA — REVERSO") + back + html_foot()
 
 
 # ============================================================
@@ -394,13 +419,13 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 {LEGEND}
-<div class="footer">Tradicion Familiar</div>
+<div class="footer">Tradición Familiar</div>
 </div>"""
 
     page_b = f"""<div class="page page-b">
 <div class="header-b">
     <img src="{ICON_SRC}" alt="BR" style="height:50px">
-    <h2>BEBIDAS & POSTRES</h2>
+    <h2>BEBIDAS Y POSTRES</h2>
 </div>
 <div class="drink-grid">
 <div>
@@ -414,10 +439,10 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 </div>
 {LEGEND}
-<div class="footer">Tradicion Familiar</div>
+<div class="footer">Tradición Familiar</div>
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 02: El Doble", css) + page_a + page_b + html_foot()
+    return html_head("Brasa Roja - Concepto 02: El Doble", css) + page_a + divider("DA VUELTA — LADO B: BEBIDAS Y POSTRES") + page_b + html_foot()
 
 
 # ============================================================
@@ -484,16 +509,16 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <img src="{ICON_SRC}" alt="BR" style="width:80px;opacity:0.15;">
     <p style="font-family:'Parisienne',cursive;color:var(--gold);font-size:14px;margin-top:10px;">Bienvenidos a</p>
     <p style="font-family:'Cinzel',serif;color:var(--cream);font-size:18px;letter-spacing:4px;margin-top:4px;">BRASA<span style='color:var(--red)'>ROJA</span></p>
-    <p style="font-family:'Parisienne',cursive;color:var(--gold);font-size:14px;margin-top:4px;">Tradicion Familiar</p>
+    <p style="font-family:'Parisienne',cursive;color:var(--gold);font-size:14px;margin-top:4px;">Tradición Familiar</p>
 </div>
 <div class="panel panel-cover">
     <img src="{LOGO_SRC}" alt="Brasa Roja">
-    <div class="tagline">Tradicion Familiar</div>
-    <div class="sub">NUESTRO MENU</div>
+    <div class="tagline">Tradición Familiar</div>
+    <div class="sub">NUESTRO MENÚ</div>
 </div>
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 03: El Triptico", css) + inner + "\n<div style='height:20px'></div>\n" + outer + html_foot()
+    return html_head("Brasa Roja - Concepto 03: El Triptico", css) + inner + divider("DA VUELTA — EXTERIOR DEL TRIPTICO") + outer + html_foot()
 
 
 # ============================================================
@@ -550,7 +575,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 {LEGEND}
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 04: El Rapido", css) + card_a + card_b + html_foot()
+    return html_head("Brasa Roja - Concepto 04: El Rapido", css) + card_a + divider("DA VUELTA — LADO B") + card_b + html_foot()
 
 
 # ============================================================
@@ -675,7 +700,7 @@ body { font-family: 'Lora', Georgia, serif; background: #ccc; }
 </div>
 </div>
 {LEGEND}
-<div class="footer">Tradicion Familiar</div>
+<div class="footer">Tradición Familiar</div>
 </div>"""
 
     return html_head("Brasa Roja - Concepto 06: El Premium", css) + page + html_foot()
@@ -709,7 +734,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <div class="gold-frame">
 <div class="header">
     <img src="{LOGO_SRC}" alt="Brasa Roja">
-    <div class="sub">NUESTRO MENU</div>
+    <div class="sub">NUESTRO MENÚ</div>
 </div>
 <div class="top-title">★ LOS MAS PEDIDOS ★</div>
 <div class="top-item"><span class="name">Combo Milanesa + Guarnicion + Agua</span><span class="price">25.000</span></div>
@@ -722,7 +747,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <div class="qr-label">ESCANEA PARA VER TODO EL MENU</div>
     <div class="qr-sub">Bebidas, Pastas, Ensaladas, Postres y mas</div>
 </div>
-<div class="footer">Tradicion Familiar</div>
+<div class="footer">Tradición Familiar</div>
 </div>
 </div>"""
 
@@ -767,12 +792,12 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 """
     cover = f"""<div class="page cover">
     <img src="{LOGO_SRC}" alt="Brasa Roja">
-    <div class="tagline">Tradicion Familiar</div>
-    <div class="badge">NUESTRO MENU</div>
+    <div class="tagline">Tradición Familiar</div>
+    <div class="badge">NUESTRO MENÚ</div>
 </div>"""
 
     insert1 = f"""<div class="page insert">
-<div class="page-label">INSERT 1 — COMIDAS</div>
+<div class="page-label">HOJA 1 — COMIDAS</div>
 <div class="insert-header">
     <img src="{ICON_SRC}" alt="BR">
     <h2>COMIDAS</h2>
@@ -795,10 +820,10 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>"""
 
     insert2 = f"""<div class="page insert-dark">
-<div class="page-label" style="color:#666">INSERT 2 — BEBIDAS & POSTRES</div>
+<div class="page-label" style="color:#666">HOJA 2 — BEBIDAS Y POSTRES</div>
 <div class="insert-header">
     <img src="{ICON_SRC}" alt="BR">
-    <h2>BEBIDAS & POSTRES</h2>
+    <h2>BEBIDAS Y POSTRES</h2>
 </div>
 <div class="columns">
 <div>
@@ -814,7 +839,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 {LEGEND}
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 08: El Modular", css) + cover + insert1 + insert2 + html_foot()
+    return html_head("Brasa Roja - Concepto 08: El Modular", css) + cover + divider("HOJA 1 — COMIDAS") + insert1 + divider("HOJA 2 — BEBIDAS Y POSTRES") + insert2 + html_foot()
 
 
 # ============================================================
@@ -858,7 +883,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
     <div class="divider"></div>
 </div>
 
-<div class="time-title warmup">⚡ WARM-UP</div>
+<div class="time-title warmup">⚡ ENTRADA EN CALOR</div>
 <div class="time-sub">Para arrancar rapido. Combos y sandwiches.</div>
 {render_items_dark("combos")}
 {render_items_dark("sandwiches")}
@@ -912,10 +937,10 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 </div>
 
 {LEGEND}
-<div class="footer">Tradicion Familiar</div>
+<div class="footer">Tradición Familiar</div>
 </div>"""
 
-    return html_head("Brasa Roja - Concepto 09: El Deportivo", css) + page_a + page_b + html_foot()
+    return html_head("Brasa Roja - Concepto 09: El Deportivo", css) + page_a + divider("DA VUELTA — SEGUNDO TIEMPO Y TERCER TIEMPO") + page_b + html_foot()
 
 
 # ============================================================
@@ -965,7 +990,7 @@ body { font-family: 'Lora', Georgia, serif; background: #e0e0e0; }
 <div class="divider"></div>
 {render_items_light("postres", show_desc=False, show_icon=False)}
 {LEGEND}
-<div class="footer">Tradicion Familiar</div>
+<div class="footer">Tradición Familiar</div>
 </div>"""
 
     return html_head("Brasa Roja - Concepto 10: El Minimalista", css) + card + html_foot()
