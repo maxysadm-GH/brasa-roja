@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASA ROJA - Estrategia de Menu - 10 Conceptos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brasa-gold: #C9882B;
+            --roja-red: #C63333;
+            --deep-ember: #8B2500;
+            --charcoal: #2D2D2D;
+            --crema: #F5EFE0;
+            --humo: #8B7355;
+            --bg-dark: #1a1a1a;
+            --bg-section: #242424;
+            --text-light: #e8e0d4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* COVER */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #0d0d0d 0%, var(--bg-dark) 50%, #1a1510 100%);
+            text-align: center;
+            padding: 40px;
+            border-bottom: 3px solid var(--brasa-gold);
+        }
+        .cover .flame { font-size: 72px; margin-bottom: 20px; }
+        .cover h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            color: var(--brasa-gold);
+            letter-spacing: 6px;
+        }
+        .cover h1 span { color: var(--roja-red); }
+        .cover .subtitle {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 20px;
+            color: var(--humo);
+            margin-top: 10px;
+        }
+        .cover .doc-title {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--text-light);
+            margin-top: 40px;
+            letter-spacing: 2px;
+        }
+        .cover .doc-subtitle {
+            font-size: 16px;
+            color: var(--humo);
+            margin-top: 10px;
+        }
+        .cover .date {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* NAV */
+        .toc {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .toc h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: var(--brasa-gold);
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .toc-item {
+            padding: 16px 20px;
+            background: var(--bg-section);
+            border-left: 3px solid var(--brasa-gold);
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .toc-item:hover { background: #2a2520; border-left-color: var(--roja-red); }
+        .toc-item .num { color: var(--brasa-gold); font-weight: 700; font-size: 13px; }
+        .toc-item .label { color: var(--text-light); font-size: 14px; margin-top: 2px; }
+
+        /* SECTIONS */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            border-top: 1px solid #333;
+        }
+        section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: var(--brasa-gold);
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        section h2 span { color: var(--roja-red); }
+        section .section-sub {
+            font-size: 14px;
+            color: var(--humo);
+            margin-bottom: 30px;
+        }
+        section h3 {
+            font-size: 18px;
+            color: var(--brasa-gold);
+            margin: 30px 0 12px;
+            font-weight: 600;
+        }
+        section h4 {
+            font-size: 15px;
+            color: var(--roja-red);
+            margin: 20px 0 8px;
+            font-weight: 600;
+        }
+        p { margin-bottom: 12px; font-size: 15px; color: #bbb; }
+        ul, ol { margin: 0 0 16px 20px; font-size: 15px; color: #bbb; }
+        li { margin-bottom: 6px; }
+        strong { color: var(--text-light); }
+        em { color: var(--brasa-gold); font-style: normal; }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+        th {
+            background: var(--bg-section);
+            color: var(--brasa-gold);
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--brasa-gold);
+        }
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #333;
+            color: #bbb;
+        }
+        tr:hover td { background: rgba(201,136,43,0.05); }
+        .price { color: var(--brasa-gold); font-weight: 600; text-align: right; }
+        .category-row td {
+            background: var(--bg-section);
+            color: var(--brasa-gold);
+            font-weight: 700;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            padding: 12px 14px;
+            border-bottom: 2px solid #444;
+        }
+
+        /* CONCEPT CARDS */
+        .concept-card {
+            background: var(--bg-section);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 24px 0;
+            border: 1px solid #333;
+            position: relative;
+        }
+        .concept-card .concept-num {
+            position: absolute;
+            top: -14px;
+            left: 24px;
+            background: var(--brasa-gold);
+            color: var(--bg-dark);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+        .concept-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: var(--text-light);
+            margin: 8px 0 4px;
+        }
+        .concept-card .concept-tagline {
+            font-style: italic;
+            color: var(--humo);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .concept-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .spec-box {
+            background: rgba(0,0,0,0.3);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .spec-box .spec-label {
+            font-size: 10px;
+            color: var(--humo);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .spec-box .spec-value {
+            font-size: 14px;
+            color: var(--brasa-gold);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        .concept-card .pros { color: #6dba6d; }
+        .concept-card .cons { color: var(--roja-red); }
+
+        /* SYMBOLS */
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .symbol-card {
+            background: var(--bg-section);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .symbol-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .symbol-card .symbol-name { font-weight: 600; color: var(--text-light); font-size: 14px; }
+        .symbol-card .symbol-desc { color: var(--humo); font-size: 12px; margin-top: 4px; }
+
+        /* FLOW DIAGRAM */
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 20px 0;
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 20px;
+            background: var(--bg-section);
+            border-radius: 8px;
+            border-left: 4px solid var(--brasa-gold);
+        }
+        .flow-step .flow-num {
+            background: var(--brasa-gold);
+            color: var(--bg-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+        .flow-step .flow-title { font-weight: 600; color: var(--text-light); font-size: 14px; }
+        .flow-step .flow-reason { color: var(--humo); font-size: 12px; }
+        .flow-step.highlight { border-left-color: var(--roja-red); background: rgba(198,51,51,0.08); }
+        .flow-arrow { text-align: center; color: var(--brasa-gold); font-size: 18px; }
+
+        /* RECOMMENDATION */
+        .reco-box {
+            background: rgba(201,136,43,0.1);
+            border: 2px solid var(--brasa-gold);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .reco-box h4 { color: var(--brasa-gold); margin-bottom: 12px; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .badge-gold { background: var(--brasa-gold); color: var(--bg-dark); }
+        .badge-red { background: var(--roja-red); color: white; }
+        .badge-green { background: #2d6b2d; color: white; }
+        .badge-blue { background: #2d4a6b; color: white; }
+
+        @media print {
+            body { background: white; color: #333; }
+            .cover { min-height: auto; padding: 40px; }
+            section { border-top: 1px solid #ddd; }
+            .concept-card { border: 1px solid #ccc; background: #f9f9f9; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+    <div class="flame">🔥</div>
+    <h1>BRASA<span>ROJA</span></h1>
+    <div class="subtitle">Tradicion Familiar</div>
+    <div class="doc-title">ESTRATEGIA DE MENU</div>
+    <div class="doc-subtitle">10 Conceptos de Formato + Optimizacion de Flujo + Normalizacion de Items</div>
+    <div class="date">Febrero 2026 | Preparado por MBACIO</div>
+</div>
+
+<!-- ============ TABLE OF CONTENTS ============ -->
+<div class="toc">
+    <h2>CONTENIDO</h2>
+    <div class="toc-grid">
+        <div class="toc-item"><div class="num">01</div><div class="label">Menu Actual - Auditoria y Normalizacion</div></div>
+        <div class="toc-item"><div class="num">02</div><div class="label">Psicologia del Menu - Flujo Optimo</div></div>
+        <div class="toc-item"><div class="num">03</div><div class="label">Sistema de Simbolos Dieteticos</div></div>
+        <div class="toc-item"><div class="num">04</div><div class="label">Estrategia de Precios</div></div>
+        <div class="toc-item"><div class="num">05</div><div class="label">10 Conceptos de Formato</div></div>
+        <div class="toc-item"><div class="num">06</div><div class="label">Recomendaciones Finales</div></div>
+    </div>
+</div>
+
+<!-- ============ 01: AUDITORIA ============ -->
+<section id="auditoria">
+    <h2>01. MENU ACTUAL — <span>AUDITORIA</span></h2>
+    <div class="section-sub">Analisis del spreadsheet Menu V1.2 con normalizacion propuesta</div>
+
+    <h3>Problemas Detectados</h3>
+    <ul>
+        <li><strong>Nombres inconsistentes:</strong> "JYQ" en vez de "Jamon y Queso", "paty" en vez de "Hamburguesa", mayusculas/minusculas mezcladas</li>
+        <li><strong>Sin descripciones:</strong> Ningun item tiene descripcion. Las descripciones aumentan ventas un 27-30% (estudio Cornell)</li>
+        <li><strong>Bebidas mezcladas:</strong> Agua mineral, gaseosas, cerveza, vino, fernet y gin tonic estan todos juntos. Necesitan separacion</li>
+        <li><strong>Precio faltante:</strong> Ensalada Mediterranea no tiene precio</li>
+        <li><strong>"Adicionales" confusos:</strong> Los adicionales de sandwiches y pastas estan como secciones sueltas, no integrados</li>
+        <li><strong>Sin simbolos dieteticos:</strong> No hay indicacion de opciones sin gluten, veganas, vegetarianas</li>
+        <li><strong>Menu Deportivo aislado:</strong> El combo deportivo esta escondido al final, deberia ser mas prominente</li>
+    </ul>
+
+    <h3>Menu Normalizado (Propuesta)</h3>
+    <p>Reorganizado con nombres limpios, categorias optimizadas y precios en formato ARS legible:</p>
+
+    <table>
+        <thead>
+            <tr><th>Item</th><th>Descripcion Sugerida</th><th style="text-align:right">Precio</th></tr>
+        </thead>
+        <tbody>
+            <!-- CAFETERIA -->
+            <tr class="category-row"><td colspan="3">☕ CAFETERIA</td></tr>
+            <tr><td>Cafe Espresso</td><td>Espresso simple</td><td class="price">$4.000</td></tr>
+            <tr><td>Cafe en Jarrito</td><td>Cafe doble en jarrito de ceramica</td><td class="price">$5.000</td></tr>
+            <tr><td>Cafe Doble</td><td>Doble shot de espresso</td><td class="price">$5.000</td></tr>
+            <tr><td>Te</td><td>Seleccion de saquitos</td><td class="price">$4.500</td></tr>
+            <tr><td>Submarino</td><td>Leche caliente con barra de chocolate</td><td class="price">$5.000</td></tr>
+            <tr><td>Medialuna</td><td>Medialuna de manteca</td><td class="price">$1.500</td></tr>
+            <tr><td>Medialuna de Jamon y Queso</td><td>Medialuna rellena, tostada</td><td class="price">$3.500</td></tr>
+
+            <!-- SANDWICHES -->
+            <tr class="category-row"><td colspan="3">🥪 SANDWICHES & BURGERS</td></tr>
+            <tr><td>Sandwich de Jamon y Queso (Frances)</td><td>Pan frances tostado, jamon cocido, queso</td><td class="price">$7.500</td></tr>
+            <tr><td>Sandwich de Jamon y Queso (Pebete)</td><td>Pan pebete, jamon cocido, queso</td><td class="price">$8.000</td></tr>
+            <tr><td>Sandwich de Jamon y Queso (Arabe)</td><td>Pan arabe, jamon cocido, queso</td><td class="price">$9.000</td></tr>
+            <tr><td>Sandwich de Milanesa de Pollo</td><td>Milanesa casera de pollo en pan</td><td class="price">$9.500</td></tr>
+            <tr><td>Sandwich de Colita de Cuadril</td><td>Colita a la parrilla en pan artesanal</td><td class="price">$12.500</td></tr>
+            <tr><td>Sandwich de Bondiola</td><td>Bondiola braseada, pan artesanal</td><td class="price">$11.500</td></tr>
+            <tr><td>Choripan</td><td>Chorizo criollo en pan frances, chimichurri</td><td class="price">$7.500</td></tr>
+            <tr><td>Hamburguesa Clasica</td><td>Medallon de carne 200g en pan de papa</td><td class="price">$6.500</td></tr>
+            <tr><td colspan="2" style="color:var(--humo);font-style:italic">Adicionales c/u: Lechuga, Tomate, Jamon, Queso</td><td class="price">$500</td></tr>
+            <tr><td>Cono de Papas Fritas</td><td>Papas fritas crocantes en cono</td><td class="price">$5.500</td></tr>
+
+            <!-- PLATOS PRINCIPALES -->
+            <tr class="category-row"><td colspan="3">🔥 NUESTROS PLATOS</td></tr>
+            <tr><td>Milanesa de Carne</td><td>Milanesa casera de nalga, empanada a mano</td><td class="price">$18.000</td></tr>
+            <tr><td>Milanesa de Pollo</td><td>Suprema de pollo empanada casera</td><td class="price">$18.000</td></tr>
+            <tr><td>Milanesa Napolitana (Carne)</td><td>Con salsa, jamon y queso gratinado</td><td class="price">$22.000</td></tr>
+            <tr><td>Milanesa Napolitana (Pollo)</td><td>Suprema napo con salsa, jamon y queso</td><td class="price">$22.000</td></tr>
+            <tr><td>Colita de Cuadril</td><td>A la parrilla, corte premium</td><td class="price">$22.000</td></tr>
+            <tr><td>Bondiola</td><td>Braseada lenta, tierna y jugosa</td><td class="price">$22.000</td></tr>
+            <tr><td>Pollo Grille</td><td>Pechuga a la plancha con hierbas</td><td class="price">$18.000</td></tr>
+
+            <!-- PASTAS -->
+            <tr class="category-row"><td colspan="3">🍝 PASTAS CASERAS</td></tr>
+            <tr><td>Noquis</td><td>Noquis de papa caseros</td><td class="price">$15.000</td></tr>
+            <tr><td>Tallarines</td><td>Tallarines al huevo caseros</td><td class="price">$15.000</td></tr>
+            <tr><td>Ravioles de Verdura</td><td>Masa casera rellena de verdura y ricota</td><td class="price">$19.000</td></tr>
+            <tr><td>Sorrentinos de Jamon y Queso</td><td>Masa casera rellena de jamon y queso</td><td class="price">$19.000</td></tr>
+            <tr><td colspan="2" style="color:var(--humo);font-style:italic">Salsas: Fileto $2.500 | Crema $3.000 | Mixta $5.000 | 4 Quesos $6.500 | Bolognesa $6.500</td><td></td></tr>
+
+            <!-- ENSALADAS -->
+            <tr class="category-row"><td colspan="3">🥗 ENSALADAS</td></tr>
+            <tr><td>Rucula con Parmesano</td><td>Rucula fresca, lascas de parmesano, oliva</td><td class="price">$12.000</td></tr>
+            <tr><td>Campestre</td><td>Mix de 3 verduras de estacion con parmesano</td><td class="price">$13.000</td></tr>
+            <tr><td>Mediterranea</td><td>3 verduras, atun, aceitunas negras</td><td class="price">$14.000*</td></tr>
+            <tr><td>Gourmet</td><td>3 verduras, huevo, choclo, aderezo de la casa</td><td class="price">$15.000</td></tr>
+
+            <!-- GUARNICIONES -->
+            <tr class="category-row"><td colspan="3">🍟 GUARNICIONES</td></tr>
+            <tr><td>Papas Fritas</td><td>Porcion abundante</td><td class="price">$7.000</td></tr>
+            <tr><td>Pure de Papas</td><td>Casero, cremoso</td><td class="price">$6.000</td></tr>
+            <tr><td>Huevo Frito (c/u)</td><td>Huevo frito a la plancha</td><td class="price">$2.500</td></tr>
+
+            <!-- POSTRES -->
+            <tr class="category-row"><td colspan="3">🍮 POSTRES</td></tr>
+            <tr><td>Queso y Dulce</td><td>Queso fresco con dulce de batata o membrillo</td><td class="price">$8.000</td></tr>
+            <tr><td>Panqueques de Dulce de Leche</td><td>Panqueques caseros, dulce de leche, azucar</td><td class="price">$9.500</td></tr>
+            <tr><td>Postre Helado</td><td>Bomba helada del dia</td><td class="price">$8.000</td></tr>
+
+            <!-- BEBIDAS SIN ALCOHOL -->
+            <tr class="category-row"><td colspan="3">💧 BEBIDAS SIN ALCOHOL</td></tr>
+            <tr><td>Agua Mineral</td><td>Con o sin gas, 500ml</td><td class="price">$2.500</td></tr>
+            <tr><td>Gaseosa</td><td>Coca-Cola, Sprite, Fanta</td><td class="price">$3.000</td></tr>
+            <tr><td>Agua Saborizada</td><td>Levite / Villa del Sur</td><td class="price">$3.000</td></tr>
+            <tr><td>Gatorade</td><td>Deportiva, sabores varios</td><td class="price">$3.500</td></tr>
+
+            <!-- CERVEZAS Y VINOS -->
+            <tr class="category-row"><td colspan="3">🍺 CERVEZAS & VINOS</td></tr>
+            <tr><td>Cerveza Lata</td><td>Lata 473ml</td><td class="price">$5.500</td></tr>
+            <tr><td>Cerveza Litro</td><td>Botella 1L</td><td class="price">$12.000</td></tr>
+            <tr><td>Vino de la Casa</td><td>Tinto o blanco, botella</td><td class="price">$20.000</td></tr>
+
+            <!-- TRAGOS -->
+            <tr class="category-row"><td colspan="3">🍸 TRAGOS & COCKTAILS</td></tr>
+            <tr><td>Fernet con Coca</td><td>Fernet Branca, Coca-Cola, hielo</td><td class="price">$14.000</td></tr>
+            <tr><td>Gin Tonic</td><td>Gin, tonica, botanicos</td><td class="price">$16.000</td></tr>
+            <tr><td>Campari con Naranja</td><td>Campari, jugo de naranja, hielo</td><td class="price">$16.000</td></tr>
+            <tr><td>Whisky</td><td>Medida simple, hielo</td><td class="price">$10.000</td></tr>
+
+            <!-- COMBO -->
+            <tr class="category-row"><td colspan="3">⚡ COMBO DEPORTIVO</td></tr>
+            <tr><td>Combo Milanesa</td><td>Milanesa de pollo + guarnicion (pure o ensalada) + agua</td><td class="price">$25.000</td></tr>
+            <tr><td>Combo Pasta</td><td>Tallarines con salsa a eleccion + agua</td><td class="price">$20.000</td></tr>
+        </tbody>
+    </table>
+
+    <p style="font-size:13px;color:var(--humo)">* Precio estimado para Ensalada Mediterranea (faltaba en el original). Confirmar con el cliente.</p>
+
+    <div class="reco-box">
+        <h4>NOTAS DE NORMALIZACION</h4>
+        <ul style="color:#bbb">
+            <li>"JYQ" expandido a "Jamon y Queso" en todos los items</li>
+            <li>"Paty" renombrado a "Hamburguesa Clasica"</li>
+            <li>Todas las mayusculas normalizadas (Title Case)</li>
+            <li>Adicionales integrados bajo su seccion padre (no como seccion separada)</li>
+            <li>Bebidas divididas en 3 categorias: Sin Alcohol / Cervezas & Vinos / Tragos & Cocktails</li>
+            <li>Se agrego descripcion breve a cada item para aumentar percepcion de valor</li>
+            <li>Precios formateados con separador de miles ($18.000 en vez de 18000)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ 02: PSICOLOGIA ============ -->
+<section id="psicologia">
+    <h2>02. PSICOLOGIA DEL <span>MENU</span></h2>
+    <div class="section-sub">Flujo optimo basado en comportamiento del consumidor en entorno de club deportivo</div>
+
+    <h3>Contexto: Rugby Club</h3>
+    <ul>
+        <li><strong>Publico:</strong> Socios con poder adquisitivo, familias, jugadores post-partido</li>
+        <li><strong>Atencion:</strong> Baja. Estan mirando partidos, hablando, con hijos</li>
+        <li><strong>Patron de compra:</strong> Bebida primero, despues comida rapida, tal vez un plato si se quedan</li>
+        <li><strong>Objetivo:</strong> Maximizar ticket promedio con minima friccion de decision</li>
+    </ul>
+
+    <h3>Principios Aplicados</h3>
+
+    <h4>1. Efecto Primacia (lo primero que ves = lo que recordas)</h4>
+    <p>El primer item de cada seccion se vende hasta 30% mas. Colocar los items de mayor margen primero en cada categoria.</p>
+
+    <h4>2. Efecto Anclaje (el precio caro hace que todo lo demas parezca razonable)</h4>
+    <p>Abrir con el item mas premium de cada seccion. Ejemplo: Colita $22.000 primero, despues Milanesa $18.000 parece accesible.</p>
+
+    <h4>3. Paradoja de Eleccion (demasiadas opciones = paralisis)</h4>
+    <p>Maximo 7 items por categoria. Nuestro menu ya cumple esto naturalmente.</p>
+
+    <h4>4. No usar signo $ ni decimales</h4>
+    <p>Estudios demuestran que "18.000" sin signo de pesos genera menos "dolor de pago" que "$18.000". En Argentina se acepta con signo, pero evitar centavos.</p>
+
+    <h3>Flujo Optimo Propuesto</h3>
+    <p>Orden de secciones en el menu impreso, basado en psicologia y el contexto del club:</p>
+
+    <div class="flow-container">
+        <div class="flow-step highlight">
+            <div class="flow-num">1</div>
+            <div>
+                <div class="flow-title">⚡ COMBO DEPORTIVO</div>
+                <div class="flow-reason">Primero. Decision rapida para los apurados. Alto margen, bajo esfuerzo cognitivo. "Ya elegi".</div>
+            </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+            <div class="flow-num">2</div>
+            <div>
+                <div class="flow-title">🥪 SANDWICHES & BURGERS</div>
+                <div class="flow-reason">Lo mas pedido en un club. Rapido de preparar, rapido de elegir. Margen alto en pan.</div>
+            </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+            <div class="flow-num">3</div>
+            <div>
+                <div class="flow-title">🔥 NUESTROS PLATOS</div>
+                <div class="flow-reason">Platos fuertes para los que se quedan. Milanesas primero (las mas pedidas), luego premium.</div>
+            </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+            <div class="flow-num">4</div>
+            <div>
+                <div class="flow-title">🍝 PASTAS CASERAS</div>
+                <div class="flow-reason">Opcion reconfortante. "Caseras" agrega percepcion de valor. Salsas como upsell.</div>
+            </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+            <div class="flow-num">5</div>
+            <div>
+                <div class="flow-title">🥗 ENSALADAS</div>
+                <div class="flow-reason">Para los que buscan algo mas liviano. No prominente, pero presente.</div>
+            </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+            <div class="flow-num">6</div>
+            <div>
+                <div class="flow-title">🍟 GUARNICIONES</div>
+                <div class="flow-reason">Add-on. "Agrego papas fritas?" Ticket promedio sube $6.000-7.000.</div>
+            </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+            <div class="flow-num">7</div>
+            <div>
+                <div class="flow-title">🍮 POSTRES</div>
+                <div class="flow-reason">Efecto recencia: ultimo en el menu = ultimo en la mente cuando preguntan "algo mas?"</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Bebidas: Seccion Separada</h3>
+    <p>Las bebidas NO van intercaladas con la comida. En un club deportivo, muchos piden solo bebidas. La estrategia:</p>
+    <ul>
+        <li><strong>Formato 1 (una cara):</strong> Franja lateral derecha o banda inferior dedicada a bebidas</li>
+        <li><strong>Formato 2 (doble cara):</strong> Cara A = Comida, Cara B = Bebidas completas + Postres</li>
+        <li><strong>Orden bebidas:</strong> Tragos & Cocktails primero (mayor margen), luego Cervezas & Vinos, ultimo Sin Alcohol</li>
+    </ul>
+
+    <h3>Cafeteria: Caso Especial</h3>
+    <p>Cafeteria funciona en horarios especificos (manana, merienda). Opciones:</p>
+    <ul>
+        <li><strong>Opcion A:</strong> Mini-seccion al final del menu principal ("Tambien servimos cafeteria")</li>
+        <li><strong>Opcion B:</strong> Menu de cafeteria separado (mejor si tienen horario split)</li>
+        <li><strong>Recomendacion:</strong> Opcion B. Cafeteria en un insert aparte o en la barra.</li>
+    </ul>
+</section>
+
+<!-- ============ 03: SIMBOLOS ============ -->
+<section id="simbolos">
+    <h2>03. SISTEMA DE <span>SIMBOLOS</span></h2>
+    <div class="section-sub">Iconos dieteticos para identificacion rapida — una leyenda en cada menu</div>
+
+    <h3>Iconografia Propuesta</h3>
+    <p>Simbolos pequenos (8-10px impresos) al lado del nombre de cada item. Leyenda en la base del menu.</p>
+
+    <div class="symbol-grid">
+        <div class="symbol-card">
+            <div class="symbol-icon" style="background:#2d6b2d;color:white">V</div>
+            <div class="symbol-name">VEGETARIANO</div>
+            <div class="symbol-desc">Sin carne ni pescado</div>
+        </div>
+        <div class="symbol-card">
+            <div class="symbol-icon" style="background:#1a8a1a;color:white">VG</div>
+            <div class="symbol-name">VEGANO</div>
+            <div class="symbol-desc">Sin productos animales</div>
+        </div>
+        <div class="symbol-card">
+            <div class="symbol-icon" style="background:var(--brasa-gold);color:var(--bg-dark)">SG</div>
+            <div class="symbol-name">SIN GLUTEN</div>
+            <div class="symbol-desc">Sin TACC / Celiaco</div>
+        </div>
+        <div class="symbol-card">
+            <div class="symbol-icon" style="background:var(--roja-red);color:white">🌶</div>
+            <div class="symbol-name">PICANTE</div>
+            <div class="symbol-desc">Tiene un toque de picor</div>
+        </div>
+        <div class="symbol-card">
+            <div class="symbol-icon" style="background:var(--deep-ember);color:white">★</div>
+            <div class="symbol-name">RECOMENDADO</div>
+            <div class="symbol-desc">Favorito de la casa</div>
+        </div>
+        <div class="symbol-card">
+            <div class="symbol-icon" style="background:#444;color:var(--brasa-gold)">SL</div>
+            <div class="symbol-name">SIN LACTOSA</div>
+            <div class="symbol-desc">Sin lacteos</div>
+        </div>
+    </div>
+
+    <h3>Aplicacion en el Menu de Brasa Roja</h3>
+    <table>
+        <thead><tr><th>Item</th><th>Simbolos</th><th>Notas</th></tr></thead>
+        <tbody>
+            <tr><td>Ensalada Rucula con Parmesano</td><td><span class="badge badge-green">V</span></td><td>Vegetariano (tiene queso, no es vegano)</td></tr>
+            <tr><td>Ensalada Campestre</td><td><span class="badge badge-green">V</span> <span class="badge badge-gold">SG</span></td><td>Vegetariano + Sin Gluten</td></tr>
+            <tr><td>Ensalada Gourmet</td><td><span class="badge badge-green">V</span> <span class="badge badge-gold">SG</span></td><td>Con huevo, no vegano</td></tr>
+            <tr><td>Noquis (con fileto)</td><td><span class="badge badge-green">V</span></td><td>Opcion vegetariana con salsa de tomate</td></tr>
+            <tr><td>Ravioles de Verdura</td><td><span class="badge badge-green">V</span></td><td>Relleno vegetal + ricota</td></tr>
+            <tr><td>Pure de Papas</td><td><span class="badge badge-green">V</span> <span class="badge badge-gold">SG</span></td><td>Sin gluten y vegetariano</td></tr>
+            <tr><td>Papas Fritas</td><td><span class="badge badge-gold">SG</span></td><td>Confirmar que se frien solas (cross-contamination)</td></tr>
+            <tr><td>Pollo Grille</td><td><span class="badge badge-gold">SG</span></td><td>Sin rebozado</td></tr>
+            <tr><td>Colita de Cuadril</td><td><span class="badge badge-gold">SG</span> <span class="badge badge-red">★</span></td><td>Recomendado de la casa + Sin Gluten</td></tr>
+            <tr><td>Choripan</td><td><span class="badge badge-red">★</span></td><td>Clasico recomendado</td></tr>
+            <tr><td>Queso y Dulce</td><td><span class="badge badge-green">V</span> <span class="badge badge-gold">SG</span></td><td>Vegetariano + Sin Gluten</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Leyenda (impresa en cada menu)</h3>
+    <div style="background:var(--bg-section);padding:20px;border-radius:8px;margin:16px 0;font-size:13px;">
+        <span class="badge badge-green">V</span> Vegetariano &nbsp;&nbsp;
+        <span class="badge" style="background:#1a8a1a;color:white">VG</span> Vegano &nbsp;&nbsp;
+        <span class="badge badge-gold">SG</span> Sin Gluten / Sin TACC &nbsp;&nbsp;
+        <span class="badge" style="background:#444;color:var(--brasa-gold)">SL</span> Sin Lactosa &nbsp;&nbsp;
+        <span class="badge badge-red">★</span> Recomendado &nbsp;&nbsp;
+        🌶 Picante
+        <br><br>
+        <em style="color:var(--humo)">Informanos sobre tus alergias o restricciones alimentarias. Consultale a tu mozo.</em>
+    </div>
+</section>
+
+<!-- ============ 04: PRECIOS ============ -->
+<section id="precios">
+    <h2>04. ESTRATEGIA DE <span>PRECIOS</span></h2>
+    <div class="section-sub">Tecnicas de anclaje, agrupacion y percepcion de valor</div>
+
+    <h3>Anclaje de Precios</h3>
+    <p>En cada seccion, el primer item listado debe ser el de mayor precio. Esto establece el "ancla" mental:</p>
+    <ul>
+        <li><strong>Nuestros Platos:</strong> Arrancar con Napolitana ($22.000), despues Milanesa simple ($18.000) parece accesible</li>
+        <li><strong>Sandwiches:</strong> Arrancar con Colita ($12.500), despues Choripan ($7.500) parece barato</li>
+        <li><strong>Tragos:</strong> Gin Tonic ($16.000) primero, Whisky ($10.000) despues parece regalo</li>
+    </ul>
+
+    <h3>Combo Deportivo como Ancla Inversa</h3>
+    <p>El Combo Deportivo ($20.000-$25.000) es excelente como "deal percibido". Plato + guarnicion + agua por $25.000 vs plato solo $18.000 + guarnicion $7.000 + agua $2.500 = $27.500. <strong>El combo ahorra $2.500 y lo siente.</strong></p>
+
+    <h3>Formato de Precios</h3>
+    <ul>
+        <li>Usar <strong>"18.000"</strong> sin signo $ (reduce dolor de pago)</li>
+        <li>NO usar lineas punteadas hasta el precio (guian el ojo al precio, no al item)</li>
+        <li>Precio debajo del item o alineado discretamente a la derecha</li>
+        <li>Nunca en columna separada (hace comparacion vertical = buscar lo barato)</li>
+    </ul>
+
+    <h3>Items "Decoy" (Senuelo)</h3>
+    <p>Si agregan items premium en el futuro (ej: "Bife de Chorizo" a $28.000), funciona como decoy que hace que la Colita a $22.000 parezca mas razonable.</p>
+</section>
+
+<!-- ============ 05: 10 CONCEPTOS ============ -->
+<section id="conceptos">
+    <h2>05. DIEZ <span>CONCEPTOS</span></h2>
+    <div class="section-sub">10 formatos de menu impreso con sus pros, contras y caso de uso</div>
+
+    <!-- CONCEPTO 1 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 01</div>
+        <h4>EL CLASICO</h4>
+        <div class="concept-tagline">Una cara. Todo el menu. Brasa Roja en el dorso.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">A4 / Carta</div></div>
+            <div class="spec-box"><div class="spec-label">Caras</div><div class="spec-value">1 (comida)</div></div>
+            <div class="spec-box"><div class="spec-label">Dorso</div><div class="spec-value">Logo BR negro</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Una sola cara con todo el menu principal (sin cafeteria). Fondo negro/charcoal, texto crema, detalles en oro y rojo. El dorso es full negro con el logo Brasa Roja grande y "Tradicion Familiar" — funciona como branding puro cuando esta apoyado en la mesa.</p>
+        <p><strong>Layout:</strong> 2 columnas. Izquierda: Combos + Sandwiches + Platos. Derecha: Pastas + Ensaladas + Guarniciones + Postres. Franja inferior: Bebidas en 3 sub-columnas (Sin Alcohol | Cervezas & Vinos | Tragos). Leyenda de simbolos en la base.</p>
+        <ul>
+            <li class="pros">+ Decision rapida, todo a la vista</li>
+            <li class="pros">+ Bajo costo de impresion</li>
+            <li class="pros">+ El dorso funciona como branding en la mesa</li>
+            <li class="cons">- Tipografia pequena si hay muchos items</li>
+            <li class="cons">- Sin espacio para descripciones largas</li>
+        </ul>
+        <p><span class="badge badge-gold">IDEAL PARA</span> Servicio rapido, dias de partido, alta rotacion</p>
+    </div>
+
+    <!-- CONCEPTO 2 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 02</div>
+        <h4>EL DOBLE</h4>
+        <div class="concept-tagline">Dos caras. Comida adelante, Bebidas + Postres atras.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">A4 / Carta</div></div>
+            <div class="spec-box"><div class="spec-label">Cara A</div><div class="spec-value">Comida</div></div>
+            <div class="spec-box"><div class="spec-label">Cara B</div><div class="spec-value">Bebidas + Postres</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Cara A: Header con logo, menu de comidas completo con descripciones, combos destacados con marco dorado. Cara B: Fondo oscuro elegante, bebidas organizadas en categorias con iconografia, postres, cafeteria. La Cara B es donde el mozo dice "da vuelta para los tragos".</p>
+        <p><strong>Layout Cara A:</strong> Logo centrado arriba. Combo Deportivo destacado en caja. 2 columnas de comida. Simbolos al pie.</p>
+        <p><strong>Layout Cara B:</strong> Tragos & Cocktails (premium primero), Cervezas & Vinos, Sin Alcohol, luego Postres y Cafeteria.</p>
+        <ul>
+            <li class="pros">+ Espacio para descripciones completas</li>
+            <li class="pros">+ Separacion natural comida/bebida</li>
+            <li class="pros">+ El mozo puede guiar ("para los tragos, da vuelta")</li>
+            <li class="cons">- Doble costo de impresion</li>
+            <li class="cons">- El comensal puede no dar vuelta la hoja</li>
+        </ul>
+        <p><span class="badge badge-gold">IDEAL PARA</span> Menu permanente del restaurante, uso diario</p>
+    </div>
+
+    <!-- CONCEPTO 3 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 03</div>
+        <h4>EL TRIPTICO</h4>
+        <div class="concept-tagline">Tri-fold. 6 paneles. Experiencia completa en las manos.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">A4 triplado</div></div>
+            <div class="spec-box"><div class="spec-label">Paneles</div><div class="spec-value">6 (3 por lado)</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Cartulina 300g</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Folleto tri-fold en cartulina gruesa. Tapa: Logo BR grande sobre negro. Interior: 3 paneles con comida completa + descripciones. Contratapa: Bebidas + Postres. Permite recorrido narrativo.</p>
+        <p><strong>Layout Interior (abierto):</strong> Panel izq: Combos + Sandwiches. Panel centro: Nuestros Platos + Pastas. Panel der: Ensaladas + Guarniciones + Postres.</p>
+        <p><strong>Layout Exterior:</strong> Panel izq (contratapa): Bebidas completas. Panel centro (tapa interior): Bienvenida + historia corta. Panel der (tapa): Logo + nombre.</p>
+        <ul>
+            <li class="pros">+ Sensacion premium, tactil</li>
+            <li class="pros">+ Espacio abundante, descripciones ricas</li>
+            <li class="pros">+ La tapa es branding puro</li>
+            <li class="cons">- Mas caro de producir</li>
+            <li class="cons">- Puede ser lento para el publico del club</li>
+            <li class="cons">- Se deteriora con uso repetido</li>
+        </ul>
+        <p><span class="badge badge-blue">IDEAL PARA</span> Eventos especiales, salon VIP, invitados nuevos</p>
+    </div>
+
+    <!-- CONCEPTO 4 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 04</div>
+        <h4>EL RAPIDO</h4>
+        <div class="concept-tagline">Tarjeta A5 laminada. Indestructible. Velocidad maxima.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">A5 (media carta)</div></div>
+            <div class="spec-box"><div class="spec-label">Caras</div><div class="spec-value">2 (laminado)</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Laminado mate</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Tarjeta pequena, laminada, irrompible. Cara A: Solo los items (sin descripciones), numeros grandes, combos arriba. Cara B: Bebidas + logo. El mozo no necesita explicar nada. Cabe en la mano. Resiste cerveza, ketchup, lluvia.</p>
+        <p><strong>Layout:</strong> Tipografia mas grande que lo normal (14pt+). Sin decoracion excesiva. Solo nombre + precio. Secciones separadas por lineas gruesas doradas. Combos con recuadro.</p>
+        <ul>
+            <li class="pros">+ Ultra-rapido para decidir</li>
+            <li class="pros">+ Indestructible (laminado)</li>
+            <li class="pros">+ Baratisimo de reimprimir</li>
+            <li class="pros">+ Cabe en la mano, no estorba en mesa chica</li>
+            <li class="cons">- Sin descripciones (depende del mozo)</li>
+            <li class="cons">- Menos "premium" visualmente</li>
+        </ul>
+        <p><span class="badge badge-red">IDEAL PARA</span> Cancha, area de parrilla al aire libre, dias de partido masivos</p>
+    </div>
+
+    <!-- CONCEPTO 5 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 05</div>
+        <h4>LA PIZARRA</h4>
+        <div class="concept-tagline">Estetica de pizarra/tiza. Casual, rustico, atractivo.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">A4 / Carta</div></div>
+            <div class="spec-box"><div class="spec-label">Caras</div><div class="spec-value">1</div></div>
+            <div class="spec-box"><div class="spec-label">Estetica</div><div class="spec-value">Chalk on Black</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Fondo negro textura pizarra. Tipografia estilo tiza blanca y dorada. Items escritos como en un pizarron de bar. Los precios parecen anotados a mano. Las secciones tienen lineas de tiza. Siente casual pero curado.</p>
+        <p><strong>Layout:</strong> Similar a Concepto 01 pero con estetica hand-drawn. Secciones con subrayados de tiza. Simbolos dieteticos como circulitos de tiza coloreados. Logo BR en dorado arriba.</p>
+        <ul>
+            <li class="pros">+ Feeling casual perfecto para un club</li>
+            <li class="pros">+ Muy instagrameable</li>
+            <li class="pros">+ Facil de actualizar (nueva version = "nuevo pizarron")</li>
+            <li class="cons">- Puede verse "barato" si no se ejecuta bien</li>
+            <li class="cons">- La legibilidad puede sufrir con fuentes cursivas</li>
+        </ul>
+        <p><span class="badge badge-gold">IDEAL PARA</span> Bar del club, terraza, zona casual</p>
+    </div>
+
+    <!-- CONCEPTO 6 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 06</div>
+        <h4>EL PREMIUM</h4>
+        <div class="concept-tagline">Gran formato. Impactante. El menu como experiencia.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">Tabloide (11x17")</div></div>
+            <div class="spec-box"><div class="spec-label">Caras</div><div class="spec-value">1</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Papel premium 200g</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Una hoja grande tabloide (doble carta) impresa de un solo lado. Gran impacto visual. Fondo negro con detalles dorados. Logo BR prominente arriba. 3 columnas bien espaciadas. Descripciones completas con lenguaje sensorial. Combos en caja destacada central. Se apoya plano en la mesa como un mantel individual premium.</p>
+        <ul>
+            <li class="pros">+ Impacto visual WOW</li>
+            <li class="pros">+ Espacio de sobra para descripciones y fotos</li>
+            <li class="pros">+ Funciona como individual/mantel de mesa</li>
+            <li class="cons">- Caro de imprimir</li>
+            <li class="cons">- Dificil de manejar en mesas chicas</li>
+            <li class="cons">- No se puede dar vuelta facilmente (solo una cara util)</li>
+        </ul>
+        <p><span class="badge badge-blue">IDEAL PARA</span> Cenas de gala, eventos corporativos del club, inauguracion</p>
+    </div>
+
+    <!-- CONCEPTO 7 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 07</div>
+        <h4>EL HIBRIDO QR</h4>
+        <div class="concept-tagline">Tarjeta fisica minima + QR al menu digital completo.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato Fisico</div><div class="spec-value">Tarjeta 10x15cm</div></div>
+            <div class="spec-box"><div class="spec-label">Digital</div><div class="spec-value">Menu mobile web</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Cartulina gruesa</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Tarjeta fisica elegante con: Logo BR, los 5 items mas vendidos con precio, un QR code grande, y el texto "Escanea para ver el menu completo". El QR lleva al menu digital mobile (ya existente en el Brand Package). El mozo puede decir "ahi tenes lo mas pedido, o escanea para ver todo".</p>
+        <ul>
+            <li class="pros">+ Costo de impresion minimo</li>
+            <li class="pros">+ Menu digital se actualiza sin reimprimir</li>
+            <li class="pros">+ Moderno, innovador</li>
+            <li class="pros">+ El socio se lleva la tarjeta como souvenir</li>
+            <li class="cons">- Requiere celular + internet (no todos quieren)</li>
+            <li class="cons">- Publico mayor puede resistirse al QR</li>
+            <li class="cons">- Dependencia de bateria/senal</li>
+        </ul>
+        <p><span class="badge badge-green">IDEAL PARA</span> Complemento de cualquier otro formato, area al aire libre</p>
+    </div>
+
+    <!-- CONCEPTO 8 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 08</div>
+        <h4>EL MODULAR</h4>
+        <div class="concept-tagline">Carpeta fija + inserts intercambiables. Precios actualizables.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">Carpeta A4</div></div>
+            <div class="spec-box"><div class="spec-label">Interior</div><div class="spec-value">Hojas insert</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Carpeta cuero/eco</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Una carpeta negra elegante con el logo BR estampado/grabado en la tapa. Adentro: hojas intercambiables en bolsillos transparentes o pinzas. Cuando cambian precios, solo se reimprimen las hojas internas (no la carpeta). Pueden agregar hojas de "Especiales del dia" o "Menu del partido".</p>
+        <ul>
+            <li class="pros">+ Precios actualizables sin tirar todo</li>
+            <li class="pros">+ Aspecto premium de restaurante serio</li>
+            <li class="pros">+ Flexibilidad para especiales rotativos</li>
+            <li class="pros">+ La carpeta dura anos</li>
+            <li class="cons">- Inversion inicial alta (carpetas)</li>
+            <li class="cons">- Se pueden perder/robar</li>
+            <li class="cons">- Mas lento de manejar (abrir, buscar)</li>
+        </ul>
+        <p><span class="badge badge-blue">IDEAL PARA</span> Salon principal, servicio de mesa formal</p>
+    </div>
+
+    <!-- CONCEPTO 9 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 09</div>
+        <h4>EL DEPORTIVO</h4>
+        <div class="concept-tagline">Tematica rugby. Secciones como tiempos de partido.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">A4 doble cara</div></div>
+            <div class="spec-box"><div class="spec-label">Tematica</div><div class="spec-value">Rugby / Deporte</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Laminado mate</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Menu con secciones tematizadas como un partido: <strong>"WARM-UP"</strong> (Sandwiches rapidos, Combos), <strong>"PRIMER TIEMPO"</strong> (Platos principales, Pastas), <strong>"SEGUNDO TIEMPO"</strong> (Ensaladas, Guarniciones), <strong>"TERCER TIEMPO"</strong> (Postres, Tragos — referencia al tercer tiempo del rugby). Visual deportivo pero elegante. Colores BR con toques de verde cancha.</p>
+        <ul>
+            <li class="pros">+ Identidad unica, memorable</li>
+            <li class="pros">+ Los socios del club lo van a amar</li>
+            <li class="pros">+ Diferenciador competitivo claro</li>
+            <li class="pros">+ "Tercer tiempo" posiciona bebidas perfectamente</li>
+            <li class="cons">- Puede parecer "novelty" si no se ejecuta con clase</li>
+            <li class="cons">- No funciona tan bien fuera del contexto deportivo</li>
+        </ul>
+        <p><span class="badge badge-red">IDEAL PARA</span> Identidad del club, merchandise, orgullo del socio</p>
+    </div>
+
+    <!-- CONCEPTO 10 -->
+    <div class="concept-card">
+        <div class="concept-num">CONCEPTO 10</div>
+        <h4>EL MINIMALISTA</h4>
+        <div class="concept-tagline">Medio carta. Maximo silencio. Elegancia por sustraccion.</div>
+        <div class="concept-specs">
+            <div class="spec-box"><div class="spec-label">Formato</div><div class="spec-value">Media carta (5.5x8.5")</div></div>
+            <div class="spec-box"><div class="spec-label">Caras</div><div class="spec-value">1</div></div>
+            <div class="spec-box"><div class="spec-label">Material</div><div class="spec-value">Papel texturado</div></div>
+        </div>
+        <p><strong>Descripcion:</strong> Media carta (la mitad de un A4), papel texturado color crema. Solo los items esenciales — sin descripciones, solo nombre y precio. Tipografia serif elegante en dorado/rojo sobre crema. Mucho espacio en blanco. El logo BR sutil en la esquina. Parece la carta de un bar de whisky japones. Minimo, refinado, confiado.</p>
+        <ul>
+            <li class="pros">+ Ultra-elegante, diferente a todo</li>
+            <li class="pros">+ Impresion barata, papel premium</li>
+            <li class="pros">+ Decide en 15 segundos</li>
+            <li class="pros">+ Sensacion de exclusividad</li>
+            <li class="cons">- Sin descripciones (requiere mozo informado)</li>
+            <li class="cons">- Puede percibirse como "incompleto" para algunos</li>
+        </ul>
+        <p><span class="badge badge-gold">IDEAL PARA</span> Bar nocturno, eventos exclusivos, after-party del tercer tiempo</p>
+    </div>
+</section>
+
+<!-- ============ 06: RECOMENDACIONES ============ -->
+<section id="recomendaciones">
+    <h2>06. <span>RECOMENDACIONES</span> FINALES</h2>
+    <div class="section-sub">Nuestra sugerencia de implementacion basada en el contexto del club</div>
+
+    <div class="reco-box">
+        <h4>COMBINACION RECOMENDADA: 3 MENUS SIMULTANEOS</h4>
+        <p>No elegir uno solo. El club tiene diferentes momentos y espacios. Nuestra recomendacion:</p>
+        <ol style="color:#bbb;margin-top:12px">
+            <li><strong>CONCEPTO 02 (El Doble)</strong> — Menu principal del salon. Doble cara, comida + bebidas. Uso diario.</li>
+            <li><strong>CONCEPTO 04 (El Rapido)</strong> — Para la cancha, parrilla al aire libre, dias de evento masivo. Laminado, irrompible.</li>
+            <li><strong>CONCEPTO 09 (El Deportivo)</strong> — Edicion especial para dias de partido y eventos. Branding del club. Merchandising.</li>
+        </ol>
+        <p style="margin-top:12px">+ <strong>CONCEPTO 07 (El Hibrido QR)</strong> como complemento en todas las mesas (tarjetita con QR al menu digital).</p>
+    </div>
+
+    <h3>Proximos Pasos</h3>
+    <ol>
+        <li><strong>Aprobar el menu normalizado</strong> — Confirmar items, precios, descripciones, simbolos dieteticos</li>
+        <li><strong>Elegir 2-3 conceptos</strong> para desarrollar como prototipos HTML/PDF</li>
+        <li><strong>Confirmar precio Ensalada Mediterranea</strong> (falta en el spreadsheet)</li>
+        <li><strong>Decidir sobre Cafeteria</strong> — Incluir en menu principal o separar?</li>
+        <li><strong>Sesion de fotos</strong> — 5-8 fotos de platos para conceptos que incluyan imagenes</li>
+        <li><strong>Impresion</strong> — Cotizar con proveedor local (nos pueden usar la misma carpeta Vendor del proyecto)</li>
+    </ol>
+
+    <h3>Costos Estimativos de Impresion (Argentina, Feb 2026)</h3>
+    <table>
+        <thead><tr><th>Concepto</th><th>Costo x 100 unidades (est.)</th><th>Durabilidad</th></tr></thead>
+        <tbody>
+            <tr><td>01 - El Clasico (1 cara)</td><td class="price">~$30.000-50.000</td><td>Descartable (reimprime mensual)</td></tr>
+            <tr><td>02 - El Doble (2 caras)</td><td class="price">~$50.000-80.000</td><td>Descartable (reimprime mensual)</td></tr>
+            <tr><td>03 - El Triptico</td><td class="price">~$120.000-180.000</td><td>2-3 meses</td></tr>
+            <tr><td>04 - El Rapido (laminado)</td><td class="price">~$80.000-120.000</td><td>6-12 meses</td></tr>
+            <tr><td>05 - La Pizarra</td><td class="price">~$30.000-50.000</td><td>Descartable</td></tr>
+            <tr><td>06 - El Premium (tabloide)</td><td class="price">~$150.000-250.000</td><td>Evento unico</td></tr>
+            <tr><td>07 - El Hibrido QR</td><td class="price">~$15.000-25.000</td><td>Permanente (QR no cambia)</td></tr>
+            <tr><td>08 - El Modular (carpeta)</td><td class="price">~$400.000-600.000</td><td>2-5 anos (carpeta)</td></tr>
+            <tr><td>09 - El Deportivo</td><td class="price">~$80.000-120.000</td><td>3-6 meses</td></tr>
+            <tr><td>10 - El Minimalista</td><td class="price">~$20.000-35.000</td><td>Descartable</td></tr>
+        </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--humo)">* Costos estimativos en ARS, febrero 2026. Varian segun proveedor, papel y cantidad. Solicitar cotizacion formal.</p>
+
+</section>
+
+<!-- FOOTER -->
+<div style="text-align:center;padding:60px 40px;border-top:1px solid #333;max-width:900px;margin:0 auto">
+    <div style="font-family:'Cinzel',serif;font-size:24px;color:var(--brasa-gold);letter-spacing:4px">BRASA<span style="color:var(--roja-red)">ROJA</span></div>
+    <div style="font-family:'Lora',serif;font-style:italic;color:var(--humo);margin-top:6px">Tradicion Familiar</div>
+    <div style="margin-top:30px;font-size:12px;color:#555">Documento preparado por MBACIO | Febrero 2026</div>
+    <div style="font-size:12px;color:#444;margin-top:4px">Estrategia de Menu — 10 Conceptos de Formato</div>
+</div>
+
+</body>
+</html>
